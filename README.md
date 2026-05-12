@@ -1,70 +1,115 @@
-# Getting Started with Create React App
+# 🚀 Innotix Solution — React + Tailwind CSS Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 📁 Folder Structure
 
-## Available Scripts
+```
+innotix-react-tailwind/
+│
+├── public/
+│   └── index.html              ← Main HTML file
+│
+├── src/
+│   ├── components/
+│   │   ├── Navbar/
+│   │   │   └── Navbar.jsx      ← Sticky navbar with mobile menu
+│   │   ├── Hero/
+│   │   │   └── Hero.jsx        ← Hero section with animations
+│   │   ├── Marquee/
+│   │   │   └── Marquee.jsx     ← Scrolling ticker
+│   │   ├── About/
+│   │   │   └── About.jsx       ← About us section
+│   │   ├── Services/
+│   │   │   └── Services.jsx    ← 9 service cards
+│   │   ├── WhyUs/
+│   │   │   └── WhyUs.jsx       ← Why choose us + stats
+│   │   ├── IoT/
+│   │   │   └── IoT.jsx         ← Industrial IoT + live dashboard
+│   │   ├── Training/
+│   │   │   └── Training.jsx    ← Student training programs
+│   │   ├── TechStack/
+│   │   │   └── TechStack.jsx   ← Technology stack grid
+│   │   ├── Portfolio/
+│   │   │   └── Portfolio.jsx   ← Filterable project cards
+│   │   ├── Testimonials/
+│   │   │   └── Testimonials.jsx← Client reviews
+│   │   ├── Industries/
+│   │   │   └── Industries.jsx  ← Industries we serve
+│   │   ├── CTA/
+│   │   │   └── CTA.jsx         ← Call to action banner
+│   │   ├── Contact/
+│   │   │   └── Contact.jsx     ← Contact form
+│   │   └── Footer/
+│   │       └── Footer.jsx      ← Footer with links
+│   │
+│   ├── data/
+│   │   └── siteData.js         ← ✏️  ALL your content lives here
+│   │
+│   ├── hooks/
+│   │   └── useScrollReveal.js  ← Scroll animation + counter hooks
+│   │
+│   ├── App.js                  ← Root component
+│   ├── index.js                ← Entry point
+│   └── index.css               ← Tailwind + custom CSS
+│
+├── tailwind.config.js          ← Tailwind config
+├── postcss.config.js           ← PostCSS config
+└── package.json                ← Dependencies
+```
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## ⚡ Setup on Mac (Step by Step)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Step 1 — Install Node.js
+Go to https://nodejs.org → Download "LTS" version → Install it
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Check it works:
+```
+node -v
+npm -v
+```
 
-### `npm test`
+### Step 2 — Open VS Code
+Open VS Code → File → Open Folder → Select the `innotix-react-tailwind` folder
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Step 3 — Open Terminal in VS Code
+Press `Ctrl + `` ` (backtick) OR go to Terminal → New Terminal
 
-### `npm run build`
+### Step 4 — Install Dependencies
+```bash
+npm install
+```
+Wait ~1 minute for packages to install.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Step 5 — Start the App
+```bash
+npm start
+```
+Your website opens at → http://localhost:3000 🎉
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## ✏️ How to Edit Content
 
-### `npm run eject`
+All your text, names, services, and data are in ONE file:
+```
+src/data/siteData.js
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Change company name, phone, email, services, testimonials — all in that one file.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🏗️ Build for Production
+```bash
+npm run build
+```
+This creates a `build/` folder — upload this to any hosting (Netlify, Vercel, etc.)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 🌐 Deploy Free on Netlify
+1. Run `npm run build`
+2. Go to https://netlify.com → Sign up
+3. Drag & drop the `build/` folder
+4. Done — live website! 🚀

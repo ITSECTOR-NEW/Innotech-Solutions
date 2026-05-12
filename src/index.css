@@ -1,13 +1,142 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* â”€â”€ Google Fonts â”€â”€ */
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap');
+
+/* â”€â”€ Base â”€â”€ */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'DM Sans', sans-serif;
+  background-color: #04060f;
+  color: #e8eaf6;
+  overflow-x: hidden;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Light mode body */
+body.light {
+  background-color: #f0f4ff;
+  color: #0f1535;
+}
+
+/* â”€â”€ Scrollbar â”€â”€ */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: #070c1a; }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#00d4ff, #8b5cf6);
+  border-radius: 99px;
+}
+
+::selection { background: rgba(0,212,255,0.25); color: #fff; }
+
+/* â”€â”€ Reusable gradient text â”€â”€ */
+.gradient-text {
+  background: linear-gradient(135deg, #00d4ff, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* â”€â”€ Glass card â”€â”€ */
+.glass {
+  background: rgba(255,255,255,0.04);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(100,160,255,0.12);
+  border-radius: 20px;
+}
+
+.glass2 {
+  background: rgba(255,255,255,0.07);
+  backdrop-filter: blur(24px);
+  border: 1px solid rgba(100,160,255,0.22);
+  border-radius: 20px;
+}
+
+/* Light mode glass */
+body.light .glass {
+  background: rgba(59,130,246,0.06);
+  border-color: rgba(59,130,246,0.18);
+}
+body.light .glass2 {
+  background: rgba(59,130,246,0.1);
+  border-color: rgba(59,130,246,0.3);
+}
+
+/* â”€â”€ Scroll Reveal â”€â”€ */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* â”€â”€ Section tag pulse dot â”€â”€ */
+@keyframes blink {
+  0%,100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+.blink { animation: blink 1.5s infinite; }
+
+/* â”€â”€ Marquee â”€â”€ */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.animate-marquee { animation: marquee 25s linear infinite; }
+
+/* â”€â”€ Float â”€â”€ */
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+.animate-float { animation: float 6s ease-in-out infinite; }
+.animate-float-slow { animation: float 8s ease-in-out infinite; }
+.animate-float-delay { animation: float 7s ease-in-out 2s infinite; }
+
+/* â”€â”€ FadeUp (hero animations) â”€â”€ */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-fadeUp { animation: fadeUp 0.8s ease both; }
+.animate-fadeUp-1 { animation: fadeUp 0.8s 0.1s ease both; }
+.animate-fadeUp-2 { animation: fadeUp 0.8s 0.2s ease both; }
+.animate-fadeUp-3 { animation: fadeUp 0.8s 0.3s ease both; }
+.animate-fadeUp-4 { animation: fadeUp 0.8s 0.4s ease both; }
+
+/* â”€â”€ Bar grow (IoT chart) â”€â”€ */
+@keyframes barGrow {
+  from { transform: scaleY(0); transform-origin: bottom; }
+  to   { transform: scaleY(1); transform-origin: bottom; }
+}
+.animate-barGrow { animation: barGrow 1s ease both; }
+
+/* â”€â”€ IoT live dot â”€â”€ */
+@keyframes livePulse {
+  0%,100% { opacity:1; transform:scale(1); }
+  50% { opacity:0.4; transform:scale(1.4); }
+}
+.live-dot { animation: livePulse 1s infinite; }
+
+/* Light mode text overrides */
+body.light .text-slate-400 { color: #5068a0; }
+body.light .text-slate-500 { color: #4a5a90; }
+body.light .border-white\/10 { border-color: rgba(59,130,246,0.18); }
+body.light .bg-white\/5 { background: rgba(59,130,246,0.06); }
+body.light .bg-dark-900 { background-color: #f0f4ff; }
+body.light .bg-dark-800 { background-color: #e8eeff; }
+
+/* â”€â”€ 3D tilt effect â”€â”€ */
+.tilt-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.tilt-card:hover {
+  transform: perspective(600px) rotateX(-2deg) rotateY(2deg) translateY(-4px);
 }

@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from "react";
 import Navbar       from "./components/Navbar/Navbar";
 import Hero         from "./components/Hero/Hero";
-import Marquee      from "./components/Marquee/Marquee";
+// import Marquee      from "./components/Marquee/Marquee";
 import About        from "./components/About/About";
 import Services     from "./components/Services/Services";
-import WhyUs        from "./components/WhyUs/WhyUs";
+// import WhyUs        from "./components/WhyUs/WhyUs";
 import IoT          from "./components/IoT/IoT";
 import Training     from "./components/Training/Training";
-import TechStack    from "./components/TechStack/TechStack";
+// import TechStack    from "./components/TechStack/TechStack";
 import Portfolio    from "./components/Portfolio/Portfolio";
 import Testimonials from "./components/Testimonials/Testimonials";
-import Industries   from "./components/Industries/Industries";
-import CTA          from "./components/CTA/CTA";
+// import Industries   from "./components/Industries/Industries";
+// import CTA          from "./components/CTA/CTA";
 import Contact      from "./components/Contact/Contact";
 import Footer       from "./components/Footer/Footer";
 
@@ -51,8 +51,8 @@ export default function App() {
         <TechStack />
         <Portfolio />
         <Testimonials />
-        <Industries /> */}
-        {/* {/* <CTA /> */}
+        <Industries />
+        <CTA />
         <Contact />
       </main>
 
