@@ -19,7 +19,35 @@ export const COMPANY = {
 export const NAV_LINKS = [
   { href: "#home", label: "Home" },
   { href: "#about", label: "About" },
-  { href: "#services", label: "Services" },
+  {
+  label: "Services",
+  dropdown: [
+    {
+      section: "IT Services",
+      items: [
+        { label: "Web Development", href: "#web" },
+        { label: "App Development", href: "#app" },
+        { label: "AI Solutions", href: "#ai" },
+      ],
+    },
+
+    {
+      section: "Academic Support",
+      items: [
+        { label: "IoT & Robotics Training", href: "#training" },
+        { label: "Student Counselling", href: "#counselling" },
+      ],
+    },
+
+    {
+      section: "",
+      items: [
+        { label: "View Full Services", href: "#services" },
+      ],
+    },
+  ],
+},
+
   // { href: "#iot", label: "IoT 4.0" },
   // { href: "#training", label: "Training" },
   { href: "#portfolio", label: "Portfolio" },
@@ -27,8 +55,8 @@ export const NAV_LINKS = [
 ];
 
 export const HERO_STATS = [
-  { num: 30, suffix: "+", label: "Projects Done" },
-  { num: 20,  suffix: "+", label: "Happy Clients" },
+  { num: 5, suffix: "+", label: "Projects Done" },
+  { num: 4,  suffix: "+", label: "Happy Clients" },
   { num: 2,   suffix: "+", label: "Years Active" },
   { num: 1,  suffix: "+", label: "Industries" },
 ];

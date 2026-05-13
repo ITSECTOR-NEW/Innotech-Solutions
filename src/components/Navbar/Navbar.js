@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import { NAV_LINKS, COMPANY } from "../../data/siteData";
 
 export default function Navbar({ theme, toggleTheme }) {
-  const [scrolled,    setScrolled]    = useState(false);
-  const [mobileOpen,  setMobileOpen]  = useState(false);
-  const [activeHref,  setActiveHref]  = useState("#home");
+  const [scrolled, setScrolled] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [activeHref, setActiveHref] = useState("#home");
 
   useEffect(() => {
     const onScroll = () => {
@@ -37,7 +37,7 @@ export default function Navbar({ theme, toggleTheme }) {
           ${theme === "light" && scrolled ? "!bg-blue-50/90" : ""}
         `}
       >
-        <div className="max-w-6xl mx-auto px-6 flex items-center justify-between gap-6">
+        <div className="max-w-7xl mx-auto px-6 flex items-center justify-between gap-6">
 
           {/* Logo */}
           <button onClick={() => scrollTo("#home")} className="flex items-center gap-3">
@@ -51,8 +51,8 @@ export default function Navbar({ theme, toggleTheme }) {
           </button>
 
           {/* Desktop Links */}
-          <ul className="hidden md:flex items-center gap-1 list-none">
-            {NAV_LINKS.map((link) => (
+          <ul className="hidden md:flex items-center gap-5 list-none ml-auto">
+            {/* {NAV_LINKS.map((link) => (
               <li key={link.href}>
                 <button
                   onClick={() => scrollTo(link.href)}
@@ -65,6 +65,65 @@ export default function Navbar({ theme, toggleTheme }) {
                   {link.label}
                 </button>
               </li>
+            ))} */}
+
+            {/* New code with Drop Down link */}
+            {NAV_LINKS.map((item) => (
+              <div key={item.label} className="relative group">
+
+                {/* Normal Link */}
+                {!item.dropdown ? (
+                  <a
+                    href={item.href}
+                    className="text-sm text-white hover:text-cyan-400 transition"
+                  >
+                    {item.label}
+                  </a>
+                ) : (
+                  <>
+                    {/* Dropdown Button */}
+                    <button className="flex items-center gap-2 text-sm text-white hover:text-cyan-400 transition">
+                      {item.label}
+
+                      {/* Dropdown Symbol */}
+                      <span className="inline-block text-sm font-bold text-cyan-400 scale-x-150 group-hover:translate-y-[1px] transition-all duration-300">v</span>
+                    </button>
+
+                    {/* Dropdown Menu */}
+                    <div className="absolute top-full left-0 mt-3 w-72 rounded-2xl bg-[#0f172a]/95 border border-white/10 backdrop-blur-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 shadow-2xl p-4 z-50">
+
+                      {item.dropdown.map((section) => (
+                        <div key={section.section} className="mb-5 last:mb-0">
+
+                          {/* Section Heading */}
+                          {section.section && (
+                            <h4 className="px-3 mb-3 text-[11px] uppercase tracking-[0.18em] text-amber-300 font-bold font-display hover:bg-yellow-400/10">
+                              {section.section}
+                            </h4>
+                          )}
+
+                          {/* Section Links */}
+                          <div className="space-y-1">
+                            {section.items.map((sub) => (
+                              <a
+                                key={sub.label}
+                                href={sub.href}
+                                className={`flex items-center justify-between px-3 py-2.5 rounded-xl text-sm transition ${sub.label === "View Full Services"
+                                    ? "text-amber-300 font-bold font-display hover:bg-yellow-400/10"
+                                    : "text-slate-300 hover:bg-white/5 hover:text-cyan-400"
+                                  }`}
+                              >
+                                {sub.label}
+                              </a>
+                            ))}
+                          </div>
+
+                        </div>
+                      ))}
+                    </div>
+                  </>
+                )}
+              </div>
             ))}
           </ul>
 
