@@ -17,8 +17,8 @@ export const COMPANY = {
 };
 
 export const NAV_LINKS = [
-  { href: "#home", label: "Home" },
-  { href: "#about", label: "About" },
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About" },
   {
   label: "Services",
   dropdown: [
@@ -84,18 +84,12 @@ export const SERVICES = [
     gradient: "from-orange-400 to-red-500",
   },
   {
-    icon: "fas fa-bullhorn",
-    title: "Digital Marketing",
-    desc: "Full-funnel digital marketing — SEO, social media, paid ads, and content marketing that drives real measurable growth.",
-    tags: ["SEO", "Google Ads", "Social Media"],
-    gradient: "from-green-400 to-blue-500",
-  },
-  {
     icon: "fas fa-network-wired",
     title: "Industrial IoT Solutions",
     desc: "Smart factory solutions with real-time monitoring, PLC/SCADA integration, sensor networks, and predictive maintenance.",
     tags: ["SCADA", "PLC", "Sensors", "MQTT"],
     gradient: "from-cyan-400 to-green-500",
+    detailPath: "/industrial-iot",
   },
   // {
   //   icon: "fas fa-robot",

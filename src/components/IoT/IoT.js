@@ -61,6 +61,16 @@ export default function IoT() {
   const heroRef = useScrollReveal();
   const gridRef = useScrollReveal();
 
+  const requestDemo = () => {
+    const contact = document.querySelector("#contact");
+    if (contact) {
+      contact.scrollIntoView({ behavior: "smooth" });
+      return;
+    }
+
+    window.location.href = "/#contact";
+  };
+
   return (
     <section id="iot" className="py-24 bg-dark-900">
       <div className="max-w-6xl mx-auto px-6">
@@ -94,7 +104,7 @@ export default function IoT() {
               control over your operations. Reduce downtime by up to 40% with predictive maintenance and smart monitoring.
             </p>
             <button
-              onClick={() => document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })}
+              onClick={requestDemo}
               className="flex items-center gap-2 px-7 py-3.5 rounded-xl bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-display font-semibold shadow-lg shadow-cyan-500/30 hover:-translate-y-0.5 transition-all"
             >
               Request Demo <i className="fas fa-arrow-right text-xs"></i>

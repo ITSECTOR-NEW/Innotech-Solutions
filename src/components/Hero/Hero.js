@@ -36,11 +36,11 @@ export default function Hero() {
         />
       </div>
 
-      <div className="max-w-6xl mx-auto px-6 relative z-10 w-full">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <div className="max-w-5xl mx-auto px-6 relative z-10 w-full">
+        <div className="flex justify-center">
 
-          {/* ── LEFT: Text ── */}
-          <div>
+          {/* ── Hero Content ── */}
+          <div className="text-center">
             {/* Badge */}
             {/* <div className="animate-fadeUp inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-400/10 border border-cyan-400/25 text-cyan-400 text-xs font-semibold mb-6">
               <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 blink"></span>
@@ -56,14 +56,14 @@ export default function Hero() {
             </h1>
 
             {/* Subtitle */}
-            <p className="animate-fadeUp-2 text-slate-400 text-lg leading-relaxed mb-9 max-w-lg">
-              From cutting-edge web development and mobile apps to industrial IoT, robotics
-              training, and AI integration — {COMPANY.name} powers digital transformation
-              for industries, startups, and schools.
+            <p className="animate-fadeUp-2 text-slate-400 text-lg leading-relaxed mb-9 max-w-2xl mx-auto">
+              {COMPANY.name} helps businesses, startups, and institutions turn bold ideas into
+              polished digital experiences with clear strategy, thoughtful design, and reliable
+              technology.
             </p>
 
             {/* Buttons */}
-            <div className="animate-fadeUp-3 flex flex-wrap gap-3 mb-12">
+            <div className="animate-fadeUp-3 flex flex-wrap justify-center gap-3 mb-12">
               <button
                 onClick={() => scrollTo("#services")}
                 className="flex items-center gap-2 px-7 py-3.5 rounded-xl bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-display font-semibold shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50 hover:-translate-y-0.5 transition-all"
@@ -79,41 +79,10 @@ export default function Hero() {
             </div>
 
             {/* Stats */}
-            <div className="animate-fadeUp-4 flex flex-wrap gap-8">
+            <div className="animate-fadeUp-4 flex flex-wrap justify-center gap-8">
               {HERO_STATS.map((s) => (
                 <StatBox key={s.label} {...s} />
               ))}
-            </div>
-          </div>
-
-          {/* ── RIGHT: Cards grid ── */}
-          <div className="hidden lg:grid grid-cols-2 gap-3.5">
-            {[
-              { icon: "fas fa-globe",        bg: "from-cyan-400 to-blue-500",    title: "Web Development",  sub: "Modern React & Next.js web applications" },
-              { icon: "fas fa-mobile-alt",   bg: "from-purple-500 to-pink-500",  title: "Mobile Apps",      sub: "Native & cross-platform solutions" },
-              { icon: "fas fa-network-wired",bg: "from-orange-400 to-red-500",   title: "Industrial IoT",   sub: "Smart factory & sensor monitoring Applications" },
-              { icon: "fas fa-robot",        bg: "from-green-400 to-blue-500",   title: "Robotics & AI Training",    sub: "Training and Counselling session on AI & Robotics at Educational Institutes" },
-            ].map((card) => (
-              <div
-                key={card.title}
-                className="p-5 rounded-2xl bg-white/5 border border-white/10 hover:border-cyan-400/40 hover:-translate-y-1.5 transition-all tilt-card"
-              >
-                <div className={`w-11 h-11 rounded-xl bg-gradient-to-br ${card.bg} grid place-items-center text-white text-lg mb-3`}>
-                  <i className={card.icon}></i>
-                </div>
-                <h4 className="font-display font-bold text-sm text-white mb-1">{card.title}</h4>
-                <p className="text-xs text-slate-400">{card.sub}</p>
-              </div>
-            ))}
-            {/* Wide card */}
-            <div className="col-span-2 p-6 rounded-2xl bg-gradient-to-r from-cyan-400/10 to-purple-600/10 border border-cyan-400/30 flex items-center gap-4">
-              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-cyan-400 to-purple-600 grid place-items-center text-white text-2xl flex-shrink-0">
-                <i className="fas fa-graduation-cap"></i>
-              </div>
-              <div>
-                <h4 className="font-display font-bold text-white mb-1">School & College Training</h4>
-                <p className="text-xs text-slate-400">Robotics, IoT & AI workshops — empowering the next generation of innovators</p>
-              </div>
             </div>
           </div>
 

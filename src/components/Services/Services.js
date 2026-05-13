@@ -2,8 +2,10 @@ import React from "react";
 import { SERVICES } from "../../data/siteData";
 import { useScrollReveal } from "../../hooks/useScrollReveal";
 
-function ServiceCard({ icon, title, desc, tags, gradient, delay }) {
+function ServiceCard({ icon, title, desc, tags, gradient, detailPath, delay }) {
   const ref = useScrollReveal();
+  const hasDetail = Boolean(detailPath);
+
   return (
     <div
       ref={ref}
@@ -21,7 +23,17 @@ function ServiceCard({ icon, title, desc, tags, gradient, delay }) {
       </div>
 
       <h3 className="relative font-display font-bold text-base text-white mb-2.5">{title}</h3>
-      <p className="relative text-sm text-slate-400 leading-relaxed mb-4">{desc}</p>
+      <p className="relative text-sm text-slate-400 leading-relaxed mb-4">
+        {hasDetail ? `${desc.slice(0, 92)}... ` : desc}
+        {hasDetail && (
+          <a
+            href={detailPath}
+            className="inline-flex items-center gap-1.5 ml-1 px-2.5 py-1 rounded-full bg-cyan-400/10 border border-cyan-400/25 font-display text-[11px] font-bold uppercase tracking-wide text-cyan-300 hover:bg-cyan-400/15 hover:border-cyan-300/50 hover:text-white transition-all"
+          >
+            Read More <i className="fas fa-arrow-right text-[10px]"></i>
+          </a>
+        )}
+      </p>
 
       {/* Tags */}
       <div className="relative flex flex-wrap gap-1.5">
@@ -47,7 +59,7 @@ export default function Services() {
   const titleRef = useScrollReveal();
   return (
     <section id="services" className="py-24 bg-dark-900">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-6">
 
         {/* Header */}
         <div ref={titleRef} className="text-center mb-12">
