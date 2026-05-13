@@ -6,7 +6,7 @@ import Marquee      from "./components/Marquee/Marquee";
 // import About        from "./components/About/About";
 import Services     from "./components/Services/Services";
 import WhyUs        from "./components/WhyUs/WhyUs";
-import IoT          from "./components/IoT/IoT";
+// import IoT          from "./components/IoT/IoT";
 import Training     from "./components/Training/Training";
 import TechStack    from "./components/TechStack/TechStack";
 import Portfolio    from "./components/Portfolio/Portfolio";
@@ -53,7 +53,7 @@ export default function App() {
                 {/* <About /> */}
                 <Services />
                 <WhyUs />
-                <IoT />
+                {/* <IoT /> */}
                 <Training />
                 <TechStack />
                 <Portfolio />
