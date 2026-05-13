@@ -49,7 +49,7 @@ export default function About() {
             {/* Section tag */}
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-400/8 border border-cyan-400/20 text-cyan-400 text-xs font-semibold uppercase tracking-widest mb-5">
               <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 blink"></span>
-              About Innotix Solution
+              About Innotech Solutions
             </div>
 
             <h2 className="font-display font-extrabold mb-4" style={{ fontSize: "clamp(1.8rem,3.5vw,2.6rem)", lineHeight: 1.15 }}>
@@ -57,7 +57,7 @@ export default function About() {
             </h2>
 
             <p className="text-slate-400 mb-3 leading-relaxed">
-              Innotix Solution is a full-stack technology company dedicated to digital transformation.
+              Innotech Solutions is a full-stack technology company dedicated to digital transformation.
               We combine deep engineering expertise with innovative design to deliver solutions that
               matter — from industrial automation floors to school classrooms.
             </p>
