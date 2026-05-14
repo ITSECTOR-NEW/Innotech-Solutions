@@ -1,8 +1,8 @@
 import React from "react";
 import { COMPANY } from "../data/siteData";
 
-const pageHeroImage = "https://www.innovixtech.in/images/slider-3.jpg";
-const aboutImage = "https://www.innovixtech.in/images/slider-1.jpg";
+const pageHeroImage = "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1600&auto=format&fit=crop";
+const aboutImage = "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1600&auto=format&fit=crop";
 
 const ABOUT_POINTS = [
   "Delivering innovative digital and automation solutions tailored to modern business needs.",

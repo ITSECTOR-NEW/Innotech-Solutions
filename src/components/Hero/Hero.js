@@ -1,24 +1,30 @@
 import React, { useEffect, useState } from "react";
 import { COMPANY } from "../../data/siteData";
 
+// Transform Your Business with Seamless SaaS and Cloud Solutions.",
+
 const heroSlides = [
   {
-    image: "https://www.innovixtech.in/images/slider-1.jpg",
-    title: "Innotech Solution",
-    desc: "Transform your business with modern website and app development solutions designed to enhance your digital presence, improve customer engagement, and accelerate business growth.",
+    image:
+      "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    title: "Transform Your Business with Seamless Web & App Solutions.",
+    desc: "Transform your business with modern website and app development solutions designed to enhance your digital presence and accelerate growth.",
   },
+
   {
-    image: "https://www.innovixtech.in/images/slider-2.jpg",
+    image:
+      "https://images.unsplash.com/photo-1565008447742-97f6f38c985c?q=80&w=1600&auto=format&fit=crop",
     title: "Smart Automation & Technology Solutions",
-    desc: "Experience efficient and reliable automation solutions that simplify operations, improve productivity, and support smarter business and industrial management.",
+    desc: "Delivering innovative automation and digital solutions that improve productivity, efficiency, and industrial operations.",
   },
+
   {
-    image: "https://www.innovixtech.in/images/slider-3.jpg",
+    image:
+      "https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg?auto=compress&cs=tinysrgb&w=1600",
     title: "Student Training & Career Development",
-    desc: "Empowering students with practical training, mentorship, and industry-focused learning programs to build strong technical skills and successful careers.",
+    desc: "Providing practical training, mentorship, and industry-focused learning programs for future-ready careers.",
   },
 ];
-
 export default function Hero() {
   const [activeSlide, setActiveSlide] = useState(0);
   const scrollTo = (href) => document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });

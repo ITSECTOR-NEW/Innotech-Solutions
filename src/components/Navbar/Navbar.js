@@ -72,14 +72,50 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between gap-6">
 
           {/* Logo */}
-          <button onClick={() => navigateTo("/")} className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-400 to-purple-600 grid place-items-center text-white text-lg flex-shrink-0">
-              <i className="fas fa-microchip"></i>
+          {/* Logo */}
+          <button
+            onClick={() => navigateTo("/")}
+            className="flex items-center gap-3"
+          >
+            {/* Logo Icon */}
+            <div
+    //           className="relative w-11 h-11 rounded-xl overflow-hidden
+    // bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600
+    // flex items-center justify-center shadow-lg shadow-cyan-500/20"
+            >
+              {/* Inner Dark Box */}
+              <div
+      //           className="w-8 h-8 rounded-lg bg-[#020617]
+      // flex items-center justify-center border border-white/10"
+              >
+                {/* <span
+                  className="font-black text-sm bg-gradient-to-r
+        from-cyan-300 to-blue-400 bg-clip-text text-transparent"
+                >
+                  IT
+                </span> */}
+              </div>
+
+              {/* Small Glow Dot */}
+              {/* <span
+                className="absolute top-1 right-1 w-2 h-2
+      rounded-full bg-cyan-300 animate-pulse"
+              ></span> */}
             </div>
-            <span className="font-display font-extrabold text-xl text-white">
-              {COMPANY.name.split(" ")[0]}
-              <span className="text-cyan-400"> {COMPANY.name.split(" ")[1]}</span>
-            </span>
+
+            {/* Text */}
+            <div className="flex flex-col leading-tight">
+              <span className="font-display font-extrabold text-xl text-white">
+                INNOTECH
+              </span>
+
+              <span
+                className="text-[10px] uppercase tracking-[0.3em]
+      text-slate-400 font-semibold"
+              >
+                SOLUTIONS
+              </span>
+            </div>
           </button>
 
           {/* Desktop Links */}
@@ -141,8 +177,8 @@ export default function Navbar() {
                                 key={sub.label}
                                 href={getNavHref(sub.href)}
                                 className={`flex items-center justify-between px-3 py-2.5 rounded-xl text-sm transition ${sub.label === "View Full Services"
-                                    ? "text-amber-300 font-bold font-display hover:bg-yellow-400/10"
-                                    : "text-slate-300 hover:bg-white/5 hover:text-cyan-400"
+                                  ? "text-amber-300 font-bold font-display hover:bg-yellow-400/10"
+                                  : "text-slate-300 hover:bg-white/5 hover:text-cyan-400"
                                   }`}
                               >
                                 {sub.label}
