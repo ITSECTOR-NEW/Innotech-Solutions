@@ -1,7 +1,48 @@
 import React from "react";
-import { IOT_FEATURES } from "../../data/siteData";
+import { UI_Web_Design_Description } from "../../data/siteData";
 
-export default function IoT() {
+const DESIGN_TOOLS = [
+  { name: "Figma", icon: "fab fa-figma" },
+  { name: "Adobe XD", icon: "fas fa-pen-nib" },
+  { name: "Photoshop", icon: "fas fa-image" },
+  { name: "WordPress", icon: "fab fa-wordpress" },
+  { name: "Elementor", icon: "fas fa-layer-group" },
+  { name: "Canva", icon: "fas fa-palette" },
+  { name: "Webflow", icon: "fas fa-globe" },
+  { name: "Framer", icon: "fas fa-vector-square" },
+];
+
+const DESIGN_TYPES = [
+  {
+    title: "Website UI Design",
+    desc: "Modern and responsive website interfaces focused on branding, usability, and customer engagement.",
+    image:
+      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop",
+  },
+
+  {
+    title: "Mobile App UI/UX",
+    desc: "Creative mobile application designs with smooth navigation and user-friendly experiences.",
+    image:
+      "https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=1200&auto=format&fit=crop",
+  },
+
+  {
+    title: "Dashboard Design",
+    desc: "Professional admin dashboards and management panels with clean layouts and modern UI systems.",
+    image:
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop",
+  },
+
+  {
+    title: "Brand Identity Design",
+    desc: "Creative branding solutions including typography, color systems, layouts, and visual identity.",
+    image:
+      "https://images.unsplash.com/photo-1522542550221-31fd19575a2d?q=80&w=1200&auto=format&fit=crop",
+  },
+];
+
+export default function UiDesign() {
 
   const requestDemo = () => {
     const contact = document.querySelector("#contact");
@@ -31,7 +72,7 @@ export default function IoT() {
           bg-cover bg-center"
           style={{
             backgroundImage:
-              "url(https://images.unsplash.com/photo-1567789884554-0b844b597180?q=80&w=1600&auto=format&fit=crop)",
+              "url(https://images.unsplash.com/photo-1558655146-9f40138edfeb?q=80&w=1600&auto=format&fit=crop)",
           }}
         />
 
@@ -54,7 +95,7 @@ export default function IoT() {
             >
               <span className="h-2 w-2 rounded-full bg-cyan-400"></span>
 
-              Industrial AI Solutions
+              UI/UX & Web Designing
             </div>
 
             <h1
@@ -63,9 +104,9 @@ export default function IoT() {
               leading-tight text-white
               sm:text-6xl"
             >
-              Smart Industrial
+              Creative Digital
               <span className="text-cyan-400">
-                {" "}Automation
+                {" "}Experiences
               </span>
             </h1>
 
@@ -74,9 +115,9 @@ export default function IoT() {
               text-lg leading-9
               text-slate-300"
             >
-              Advanced Industrial AI and IoT solutions
-              for smart factories, predictive maintenance,
-              analytics dashboards, and connected manufacturing systems.
+              We create visually engaging and user-friendly
+              digital experiences that combine creativity,
+              usability, branding, and modern design principles.
             </p>
 
             {/* Button */}
@@ -89,13 +130,13 @@ export default function IoT() {
               tracking-wide text-white
               transition-all hover:bg-[#10c8d7]"
             >
-              Request Demo
+              Start Your Project
             </button>
           </div>
         </div>
       </section>
 
-      {/* Intro */}
+      {/* Main Intro */}
       <section className="py-24">
 
         <div
@@ -112,9 +153,9 @@ export default function IoT() {
               font-bold leading-tight
               text-slate-900"
             >
-              Transforming Industries With
+              Designing Interfaces That
               <span className="text-[#0fb7c5]">
-                {" "}AI & IoT
+                {" "}Users Love
               </span>
             </h2>
 
@@ -124,30 +165,29 @@ export default function IoT() {
               className="mt-7 text-base
               leading-8 text-slate-600"
             >
-              Our Industrial AI solutions help businesses
-              optimize manufacturing operations, reduce downtime,
-              and improve production efficiency using real-time
-              analytics and automation technologies.
+              Our UI/UX and web designing services focus on creating
+              modern digital experiences that improve usability,
+              customer interaction, and visual branding.
             </p>
 
             <p
               className="mt-5 text-base
               leading-8 text-slate-600"
             >
-              From analytics dashboards and predictive maintenance
-              to connected manufacturing systems and smart monitoring,
-              we provide complete digital transformation solutions
-              for modern industries.
+              From websites and mobile applications
+              to dashboards and custom digital interfaces,
+              we create designs that are visually appealing,
+              user-friendly, and performance-focused.
             </p>
 
             {/* Features */}
             <div className="mt-8 space-y-4">
 
               {[
-                "Real-Time Analytics",
-                "AI-Based Automation",
-                "IoT Monitoring Systems",
-                "Connected Manufacturing",
+                "Modern UI/UX Design",
+                "Responsive Layouts",
+                "Creative Branding",
+                "Interactive User Experience",
               ].map((item) => (
                 <div
                   key={item}
@@ -176,8 +216,8 @@ export default function IoT() {
             shadow-sm"
           >
             <img
-              src="https://images.unsplash.com/photo-1581092921461-eab10380b8e0?q=80&w=1600&auto=format&fit=crop"
-              alt="Industrial AI"
+              src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1600&auto=format&fit=crop"
+              alt="UI UX"
               className="h-full min-h-[420px]
               w-full object-cover"
             />
@@ -185,76 +225,127 @@ export default function IoT() {
         </div>
       </section>
 
-      {/* Industrial Services */}
+      
+
+      {/* Services */}
+      {/* Design Types */}
+<section className="bg-white py-20">
+
+  <div className="mx-auto max-w-6xl px-6">
+
+    {/* Heading */}
+    <div className="mx-auto mb-12 max-w-3xl text-center">
+
+      <h2
+        className="font-display text-4xl
+        font-bold text-slate-900"
+      >
+        Types Of UI/UX Design Services
+      </h2>
+
+      <div className="mx-auto mt-4 h-1 w-16 bg-[#0fb7c5]" />
+
+      <p
+        className="mt-5 text-base
+        leading-8 text-slate-600"
+      >
+        We design modern digital experiences tailored
+        for businesses, startups, and creative brands.
+      </p>
+    </div>
+
+    {/* Grid */}
+    <div className="grid gap-6 md:grid-cols-2">
+
+      {UI_Web_Design_Description.map((item) => (
+        <div
+          key={item.title}
+          className="overflow-hidden border
+          border-slate-200 bg-slate-50
+          shadow-sm"
+        >
+          {/* Image */}
+          <img
+            src={item.image}
+            alt={item.title}
+            className="h-[260px]
+            w-full object-cover"
+          />
+
+          {/* Content */}
+          <div className="p-7">
+
+            <h3
+              className="font-display text-2xl
+              font-bold text-slate-900"
+            >
+              {item.title}
+            </h3>
+
+            <p
+              className="mt-4 text-sm
+              leading-7 text-slate-600"
+            >
+              {item.desc}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+      {/* Tech Stack */}
       <section className="bg-white py-20">
 
         <div className="mx-auto max-w-6xl px-6">
 
-          {/* Heading */}
-          <div className="mx-auto mb-12 max-w-3xl text-center">
+          <div className="mb-12 text-center">
 
             <h2
               className="font-display text-4xl
               font-bold text-slate-900"
             >
-              Industrial AI Services
+              Design Tools & Technologies
             </h2>
 
             <div className="mx-auto mt-4 h-1 w-16 bg-[#0fb7c5]" />
 
             <p
-              className="mt-5 text-base
-              leading-8 text-slate-600"
+              className="mx-auto mt-5 max-w-3xl
+              text-base leading-8 text-slate-600"
             >
-              Smart industrial solutions designed for
-              manufacturing automation, monitoring,
-              and intelligent decision-making.
+              We use modern design and development tools
+              to create visually attractive and professional
+              digital experiences.
             </p>
           </div>
 
-          {/* Grid */}
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {/* Tools Grid */}
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
 
-            {IOT_FEATURES.map((item) => (
+            {DESIGN_TOOLS.map((tool) => (
               <div
-                key={item.title}
-                className="overflow-hidden border
-                border-slate-200 bg-slate-50
-                shadow-sm"
+                key={tool.name}
+                className="border border-slate-200
+                bg-slate-50 p-8 text-center
+                transition-all hover:-translate-y-1
+                hover:border-cyan-300"
               >
-                {/* Image */}
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="h-[220px]
-                  w-full object-cover"
-                />
-
-                {/* Content */}
-                <div className="p-6">
-
-                  <div
-                    className="mb-4 grid h-12 w-12
-                    place-items-center
-                    bg-[#0fb7c5] text-lg text-white"
-                  >
-                    <i className={item.icon}></i>
-                  </div>
-
-                  <h3
-                    className="font-display text-xl
-                    font-bold text-slate-900"
-                  >
-                    {item.title}
-                  </h3>
-
-                  <p
-                    className="mt-3 text-sm
-                    leading-7 text-slate-600"
-                  >
-                    {item.desc}
-                  </p>
+                <div
+                  className="mx-auto grid h-16 w-16
+                  place-items-center
+                  bg-[#0fb7c5] text-2xl text-white"
+                >
+                  <i className={tool.icon}></i>
                 </div>
+
+                <h3
+                  className="mt-5 font-display
+                  text-xl font-bold
+                  text-slate-900"
+                >
+                  {tool.name}
+                </h3>
               </div>
             ))}
           </div>
@@ -280,7 +371,7 @@ export default function IoT() {
             >
               Why Choose Our
               <span className="text-[#0fb7c5]">
-                {" "}Industrial Solutions?
+                {" "}Design Solutions?
               </span>
             </h2>
 
@@ -290,20 +381,20 @@ export default function IoT() {
               className="mt-7 text-base
               leading-8 text-slate-600"
             >
-              We provide advanced Industrial AI and IoT
-              systems designed to improve productivity,
-              reduce downtime, and support digital transformation.
+              We focus on delivering visually engaging
+              and user-friendly digital experiences that
+              combine creativity, branding, and modern UI/UX principles.
             </p>
 
             <div className="mt-8 space-y-5">
 
               {[
-                "Smart Factory Automation",
-                "AI-Based Monitoring",
-                "Real-Time Data Insights",
-                "Predictive Maintenance Systems",
-                "Connected Manufacturing",
-                "Custom Industrial Dashboards",
+                "Modern & Responsive Design",
+                "Creative User Experience",
+                "Professional Branding Solutions",
+                "Clean & Interactive Interfaces",
+                "Performance Focused Design",
+                "User-Centered Design Approach",
               ].map((item) => (
                 <div
                   key={item}
@@ -348,8 +439,8 @@ export default function IoT() {
             shadow-sm"
           >
             <img
-              src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1600&auto=format&fit=crop"
-              alt="Industrial AI"
+              src="https://images.unsplash.com/photo-1586717799252-bd134ad00e26?q=80&w=1600&auto=format&fit=crop"
+              alt="Creative Design"
               className="h-full min-h-[420px]
               w-full object-cover"
             />

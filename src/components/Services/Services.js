@@ -2,83 +2,176 @@ import React from "react";
 import { SERVICES } from "../../data/siteData";
 import { useScrollReveal } from "../../hooks/useScrollReveal";
 
-function ServiceCard({ icon, title, desc, tags, gradient, detailPath, delay }) {
+const serviceImages = [
+  "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1526379095098-d400fd0bf935?q=80&w=1200&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=1200&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1200&auto=format&fit=crop",
+];
+
+function ServiceCard({
+  title,
+  detailPath,
+  delay,
+  image,
+}) {
   const ref = useScrollReveal();
-  const hasDetail = Boolean(detailPath);
 
   return (
-    <div
+    <a
       ref={ref}
-      className="group relative p-7 rounded-2xl bg-white/[0.03] border border-white/10
-        hover:border-white/20 hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-black/40
-        transition-all duration-300 cursor-default overflow-hidden tilt-card"
+      href={detailPath || "#"}
+      className="group relative overflow-hidden
+      rounded-[26px] border border-white/10
+      transition-all duration-300
+      hover:-translate-y-1
+      hover:border-cyan-400/20"
       style={{ transitionDelay: `${delay}ms` }}
     >
-      {/* Hover gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-cyan-400/5 to-purple-600/5 opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl pointer-events-none" />
+      {/* Background Image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center
+        transition-transform duration-700
+        group-hover:scale-110"
+        style={{
+          backgroundImage: `url(${image})`,
+        }}
+      ></div>
 
-      {/* Icon */}
-      <div className={`relative w-13 h-13 w-12 h-12 rounded-xl bg-gradient-to-br ${gradient} grid place-items-center text-white text-xl mb-5`}>
-        <i className={icon}></i>
+      {/* Lighter Overlay */}
+      <div className="absolute inset-0 bg-[#0f172a]/55"></div>
+
+      {/* Gradient */}
+      <div
+        className="absolute inset-0
+        bg-gradient-to-t
+        from-[#0f172a]
+        via-[#0f172a]/30
+        to-transparent"
+      ></div>
+
+      {/* Hover Glow */}
+      <div
+        className="absolute inset-0 opacity-0
+        transition-opacity duration-300
+        group-hover:opacity-100"
+      >
+        <div
+          className="absolute inset-0
+          bg-gradient-to-br
+          from-cyan-400/10
+          to-transparent"
+        ></div>
       </div>
 
-      <h3 className="relative font-display font-bold text-base text-white mb-2.5">{title}</h3>
-      <p className="relative text-sm text-slate-400 leading-relaxed mb-4">
-        {hasDetail ? `${desc.slice(0, 92)}... ` : desc}
-        {hasDetail && (
-          <a
-            href={detailPath}
-            className="inline-flex items-center gap-1.5 ml-1 px-2.5 py-1 rounded-full bg-cyan-400/10 border border-cyan-400/25 font-display text-[11px] font-bold uppercase tracking-wide text-cyan-300 hover:bg-cyan-400/15 hover:border-cyan-300/50 hover:text-white transition-all"
+      {/* Content */}
+      <div
+        className="relative flex h-[260px]
+        items-end p-7"
+      >
+        <div>
+          {/* Line */}
+          <div
+            className="mb-4 h-[3px] w-12
+            rounded-full bg-cyan-400
+            transition-all duration-300
+            group-hover:w-20"
+          ></div>
+
+          {/* Title */}
+          <h3
+            className="font-display text-[22px]
+            font-bold leading-tight text-white"
           >
-            Read More <i className="fas fa-arrow-right text-[10px]"></i>
-          </a>
-        )}
-      </p>
+            {title}
+          </h3>
+        </div>
 
-      {/* Tags */}
-      <div className="relative flex flex-wrap gap-1.5">
-        {tags.map((t) => (
-          <span
-            key={t}
-            className="text-[11px] px-2.5 py-1 rounded-full bg-white/5 border border-white/10 text-slate-400 group-hover:border-white/20 group-hover:text-slate-300 transition-all"
-          >
-            {t}
-          </span>
-        ))}
+        {/* Arrow */}
+        <div
+          className="absolute right-6 top-6
+          flex h-10 w-10 items-center
+          justify-center rounded-2xl
+          border border-white/15
+          bg-white/10 text-white
+          opacity-0 backdrop-blur-md
+          transition-all duration-300
+          group-hover:opacity-100"
+        >
+          <i className="fas fa-arrow-up-right-from-square text-sm"></i>
+        </div>
       </div>
-
-      {/* Arrow */}
-      <div className="absolute bottom-5 right-5 w-8 h-8 rounded-lg bg-white/5 border border-white/10 grid place-items-center text-slate-400 opacity-0 group-hover:opacity-100 group-hover:text-cyan-400 group-hover:border-cyan-400/40 transition-all">
-        <i className="fas fa-arrow-right text-xs"></i>
-      </div>
-    </div>
+    </a>
   );
 }
 
 export default function Services() {
   const titleRef = useScrollReveal();
+
   return (
-    <section id="services" className="py-24 bg-dark-900">
-      <div className="max-w-7xl mx-auto px-6">
+    <section
+      id="services"
+      className="relative overflow-hidden bg-[#07111f] py-24"
+    >
+      {/* Background Glow */}
+      <div
+        className="absolute left-0 top-0
+        h-[380px] w-[380px]
+        rounded-full bg-cyan-500/10
+        blur-[120px]"
+      />
+
+      <div
+        className="absolute bottom-0 right-0
+        h-[280px] w-[280px]
+        rounded-full bg-blue-500/10
+        blur-[120px]"
+      />
+
+      <div className="relative mx-auto max-w-7xl px-6">
 
         {/* Header */}
-        <div ref={titleRef} className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-400/8 border border-cyan-400/20 text-cyan-400 text-xs font-semibold uppercase tracking-widest mb-5">
-            <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 blink"></span>
-            What We Build
+        <div
+          ref={titleRef}
+          className="mx-auto mb-14 max-w-3xl text-center"
+        >
+          <div
+            className="inline-flex items-center gap-2
+            rounded-full border border-cyan-400/20
+            bg-cyan-400/10 px-5 py-2
+            text-xs font-bold uppercase
+            tracking-[0.18em] text-cyan-300"
+          >
+            <span
+              className="h-2 w-2 rounded-full
+              bg-cyan-400 blink"
+            ></span>
+
+            Product & Services
           </div>
-          <h2 className="font-display font-extrabold mb-4 text-white" style={{ fontSize: "clamp(2rem,4vw,3rem)" }}>
-            Our <span className="gradient-text">Services</span>
+
+          <h2
+            className="mt-5 font-display
+            text-white font-black leading-tight"
+            style={{
+              fontSize: "clamp(2rem, 4vw, 3.5rem)",
+            }}
+          >
+            Our <span className="gradient-text">Solutions</span>
           </h2>
-          <p className="text-slate-400 max-w-xl mx-auto">
-            End-to-end technology services designed to accelerate your business growth and operational efficiency.
-          </p>
         </div>
 
         {/* Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {SERVICES.map((s, i) => (
-            <ServiceCard key={s.title} {...s} delay={i * 60} />
+            <ServiceCard
+              key={s.title}
+              {...s}
+              image={serviceImages[i % serviceImages.length]}
+              delay={i * 70}
+            />
           ))}
         </div>
       </div>

@@ -7,16 +7,23 @@ import Marquee      from "./components/Marquee/Marquee";
 import Services     from "./components/Services/Services";
 import WhyUs        from "./components/WhyUs/WhyUs";
 // import IoT          from "./components/IoT/IoT";
-import Training     from "./components/Training/Training";
+// import Training     from "./components/Training/Training";
 import TechStack    from "./components/TechStack/TechStack";
 import Portfolio    from "./components/Portfolio/Portfolio";
 import Testimonials from "./components/Testimonials/Testimonials";
 import Industries   from "./components/Industries/Industries";
 import CTA          from "./components/CTA/CTA";
+// import WebDevelopment from "./components/WebDevelopment/WebDevelopment";
+import MobileApp    from "./components/MobileApp/MobileApp";
+import UiDesign     from "./components/UiDesign/UiDesign";
 import Contact      from "./components/Contact/Contact";
 import Footer       from "./components/Footer/Footer";
 import AboutPage    from "./pages/AboutPage";
 import IndustrialIoTPage from "./pages/IndustrialIoTPage";
+import StudentTrainingPage from "./pages/StudentTrainingPage";
+import WebDevelopmentPage from "./pages/WebDevelopmentPage";
+import MobileAppDevelopmentPage from "./pages/MobileAppDevelopmentPage";
+import UIWebDesigningPage from "./pages/UI&WebDesigningPage";
 
 export default function App() {
   const [theme, setTheme] = useState("dark");
@@ -54,18 +61,25 @@ export default function App() {
                 <Services />
                 <WhyUs />
                 {/* <IoT /> */}
-                <Training />
+                {/* <Training /> */}
                 <TechStack />
                 <Portfolio />
                 <Testimonials />
                 <Industries />
                 {/* <CTA /> */}
+                {/* <WebDevelopment /> */}
+                {/* <UiDesign  /> */}
+                {/* <MobileApp /> */}
                 <Contact />
               </main>
             )}
           />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/industrial-iot" element={<IndustrialIoTPage />} />
+          <Route path="student-training" element={<StudentTrainingPage />} />
+          <Route path = "/web-development" element = {<WebDevelopmentPage />} />
+          <Route path = "/mobile-app" element = {<MobileAppDevelopmentPage />} />
+           <Route path = "/UI-Web_Design" element = {<UIWebDesigningPage />} />
         </Routes>
 
         <Footer />

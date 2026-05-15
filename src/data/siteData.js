@@ -27,7 +27,7 @@ export const NAV_LINKS = [
       items: [
         { label: "Web Development", href: "#web" },
         { label: "App Development", href: "#app" },
-        { label: "AI Solutions", href: "#ai" },
+        { label: "Industrial AI Solutions", href: "#ai" },
       ],
     },
 
@@ -68,6 +68,7 @@ export const SERVICES = [
     desc: "High-performance websites and web apps built with modern frameworks. From landing pages to complex enterprise portals.",
     tags: ["React.js", "Next.js", "Node.js", "TypeScript"],
     gradient: "from-cyan-400 to-blue-500",
+    detailPath: "/web-development",
   },
   {
     icon: "fas fa-mobile-screen",
@@ -75,6 +76,7 @@ export const SERVICES = [
     desc: "Native and cross-platform mobile apps for iOS and Android with beautiful UX and powerful backend integration.",
     tags: ["React Native", "Flutter", "Firebase"],
     gradient: "from-purple-500 to-pink-500",
+    detailPath: "/mobile-app",
   },
   {
     icon: "fas fa-pen-ruler",
@@ -82,10 +84,11 @@ export const SERVICES = [
     desc: "Stunning, user-centric interfaces that convert. We craft digital experiences that delight users and drive business outcomes.",
     tags: ["Figma", "Prototyping", "Branding"],
     gradient: "from-orange-400 to-red-500",
+    detailPath: "/UI-Web_Design",
   },
   {
     icon: "fas fa-network-wired",
-    title: "Industrial IoT Solutions",
+    title: "Industrial AI Solutions",
     desc: "Smart factory solutions with real-time monitoring, PLC/SCADA integration, sensor networks, and predictive maintenance.",
     tags: ["SCADA", "PLC", "Sensors", "MQTT"],
     gradient: "from-cyan-400 to-green-500",
@@ -100,7 +103,7 @@ export const SERVICES = [
   // },
   {
     icon: "fas fa-brain",
-    title: "AI Integration Services",
+    title: "Digital Marketing",
     desc: "Embed powerful AI into your existing systems. Chatbots, predictive analytics, NLP, and process intelligence.",
     tags: ["OpenAI", "NLP", "Analytics"],
     gradient: "from-pink-500 to-purple-600",
@@ -111,6 +114,7 @@ export const SERVICES = [
     desc: "Hands-on STEM programs for schools and colleges in Robotics, IoT, AI, and Automation. Career counselling included.",
     tags: ["Robotics", "AI/IoT", "STEM", "Workshops"],
     gradient: "from-orange-400 to-green-500",
+    detailPath: "/student-training",
   },
   // {
   //   icon: "fas fa-chart-line",
@@ -137,21 +141,282 @@ export const WHY_STATS = [
 ];
 
 export const IOT_FEATURES = [
-  { icon: "fas fa-industry",       title: "Smart Factory Solutions",  desc: "End-to-end factory automation with interconnected machines and AI-driven workflows.", gradient: "from-cyan-400 to-blue-500" },
-  { icon: "fas fa-chart-bar",      title: "Real-Time Monitoring",     desc: "Live dashboards for machine status, production rates, energy usage, and KPIs.",           gradient: "from-green-400 to-cyan-400" },
-  { icon: "fas fa-server",         title: "PLC / SCADA Integration",  desc: "Seamless integration with existing PLC systems and SCADA architectures.",                  gradient: "from-purple-500 to-pink-500" },
-  { icon: "fas fa-wrench",         title: "Predictive Maintenance",   desc: "AI-powered anomaly detection to prevent breakdowns before they happen.",                   gradient: "from-orange-400 to-red-500" },
-  { icon: "fas fa-tools",          title: "Tool Management Systems",  desc: "RFID-based smart tool tracking to optimize inventory and reduce losses.",                  gradient: "from-blue-500 to-purple-500" },
-  { icon: "fas fa-microchip",      title: "Sensor-Based Monitoring",  desc: "Temperature, pressure, vibration, and flow sensors integrated into unified platforms.",    gradient: "from-green-400 to-blue-500" },
+  {
+    icon: "fas fa-chart-line",
+    title: "Analytics Dashboards",
+    desc: "Real-time industrial analytics dashboards for production monitoring, KPI tracking, and operational insights.",
+    image:
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop",
+  },
+
+  {
+    icon: "fas fa-robot",
+    title: "AI-Based Automation",
+    desc: "Smart AI-driven automation systems designed to improve manufacturing efficiency and reduce manual operations.",
+    image:
+      "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=1200&auto=format&fit=crop",
+  },
+
+  {
+    icon: "fas fa-microchip",
+    title: "IoT Monitoring Systems",
+    desc: "Industrial IoT solutions with live sensor monitoring, machine connectivity, and real-time operational tracking.",
+    image:
+      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop",
+  },
+
+  {
+    icon: "fas fa-screwdriver-wrench",
+    title: "Predictive Maintenance",
+    desc: "AI-powered maintenance systems for fault prediction, downtime reduction, and machine health monitoring.",
+    image:
+      "https://images.unsplash.com/photo-1581092921461-eab10380b8e0?q=80&w=1200&auto=format&fit=crop",
+  },
+
+  {
+    icon: "fas fa-boxes-stacked",
+    title: "Smart Tool Management",
+    desc: "Digital tool tracking and management systems with live monitoring, usage tracking, and inventory optimization.",
+    image:
+      "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=1200&auto=format&fit=crop",
+  },
+
+  {
+    icon: "fas fa-network-wired",
+    title: "Connected Manufacturing",
+    desc: "Integrated digital manufacturing solutions connecting machines, systems, and industrial operations seamlessly.",
+    image:
+      "https://images.unsplash.com/photo-1565008447742-97f6f38c985c?q=80&w=1200&auto=format&fit=crop",
+  },
+];
+
+export const Web_Development_Description = [
+  {
+    icon: "fas fa-building",
+    title: "Business Websites",
+    desc: "Professional business and corporate websites designed to improve branding, customer engagement, and digital presence.",
+    image:
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop",
+  },
+
+  {
+    icon: "fas fa-cart-shopping",
+    title: "E-Commerce Websites",
+    desc: "Modern online store solutions with product management, payment gateway integration, and responsive shopping experiences.",
+    image:
+      "https://images.unsplash.com/photo-1556740749-887f6717d7e4?q=80&w=1200&auto=format&fit=crop",
+  },
+
+  {
+    icon: "fas fa-graduation-cap",
+    title: "Educational Portals",
+    desc: "Interactive educational websites and learning management platforms for schools, institutes, and training centers.",
+    image:
+      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop",
+  },
+
+  {
+    icon: "fas fa-plane-departure",
+    title: "Travel Websites",
+    desc: "Travel and booking platforms with destination management, online reservations, and customer-friendly interfaces.",
+    image:
+      "https://images.unsplash.com/photo-1502920917128-1aa500764ce7?q=80&w=1200&auto=format&fit=crop",
+  },
+
+  {
+    icon: "fas fa-briefcase",
+    title: "Job Portal Systems",
+    desc: "Advanced recruitment and hiring platforms with job listings, applicant tracking, and management systems.",
+    image:
+      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1200&auto=format&fit=crop",
+  },
+
+  {
+    icon: "fas fa-newspaper",
+    title: "News & Media Websites",
+    desc: "Dynamic news portals and media platforms with content publishing, category management, and modern layouts.",
+    image:
+      "https://images.unsplash.com/photo-1495020689067-958852a7765e?q=80&w=1200&auto=format&fit=crop",
+  },
+];
+
+export const App_Dev_Description = [
+  {
+    icon: "fas fa-mobile-screen-button",
+    title: "Business Applications",
+    desc: "Custom business applications designed to streamline operations, improve productivity, and enhance workflow management.",
+    image:
+      "https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=1200&auto=format&fit=crop",
+  },
+
+  {
+    icon: "fas fa-cart-shopping",
+    title: "E-Commerce Apps",
+    desc: "Modern e-commerce mobile applications with secure payment integration, product management, and smooth user experiences.",
+    image:
+      "https://images.unsplash.com/photo-1607082350899-7e105aa886ae?q=80&w=1200&auto=format&fit=crop",
+  },
+
+  {
+    icon: "fas fa-graduation-cap",
+    title: "Educational Applications",
+    desc: "Interactive learning and training applications for schools, institutes, coaching centers, and online education platforms.",
+    image:
+      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop",
+  },
+
+  {
+    icon: "fas fa-hospital",
+    title: "Healthcare Applications",
+    desc: "Healthcare and appointment management applications focused on patient engagement, booking, and digital records.",
+    image:
+      "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=1200&auto=format&fit=crop",
+  },
+
+  {
+    icon: "fas fa-truck-fast",
+    title: "Delivery & Booking Apps",
+    desc: "On-demand delivery and booking applications with real-time tracking, notifications, and order management systems.",
+    image:
+      "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1200&auto=format&fit=crop",
+  },
+
+  {
+    icon: "fas fa-comments",
+    title: "Social & Chat Applications",
+    desc: "Modern social networking and chat applications with real-time communication and engaging user interfaces.",
+    image:
+      "https://images.unsplash.com/photo-1611605698335-8b1569810432?q=80&w=1200&auto=format&fit=crop",
+  },
+];
+export const UI_Web_Design_Description = [
+  {
+    title: "Website UI Design",
+    desc: "Modern and responsive website interfaces focused on branding, usability, and customer engagement.",
+    image:
+      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop",
+  },
+
+  {
+    title: "Mobile App UI/UX",
+    desc: "Creative mobile application designs with smooth navigation and user-friendly experiences.",
+    image:
+      "https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=1200&auto=format&fit=crop",
+  },
+
+  {
+    title: "Dashboard Design",
+    desc: "Professional admin dashboards and management panels with clean layouts and modern UI systems.",
+    image:
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop",
+  },
+
+  {
+    title: "Brand Identity Design",
+    desc: "Creative branding solutions including typography, color systems, layouts, and visual identity.",
+    image:
+      "https://images.unsplash.com/photo-1522542550221-31fd19575a2d?q=80&w=1200&auto=format&fit=crop",
+  },
+];
+
+export const DIGITAL_MARKETING_SERVICES = [
+  {
+    icon: "fas fa-magnifying-glass-chart",
+    title: "Search Engine Optimization",
+    desc: "Improve website visibility and Google rankings with professional SEO strategies and performance optimization.",
+    image:
+      "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?q=80&w=1200&auto=format&fit=crop",
+  },
+
+  {
+    icon: "fas fa-bullhorn",
+    title: "Social Media Marketing",
+    desc: "Creative social media campaigns for Instagram, Facebook, LinkedIn, and other platforms to grow your brand presence.",
+    image:
+      "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1200&auto=format&fit=crop",
+  },
+
+  {
+    icon: "fas fa-chart-line",
+    title: "Performance Marketing",
+    desc: "Data-driven marketing campaigns focused on lead generation, customer engagement, and business growth.",
+    image:
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop",
+  },
+
+  {
+    icon: "fas fa-envelope-open-text",
+    title: "Email Marketing",
+    desc: "Professional email marketing campaigns designed to improve customer communication and conversion rates.",
+    image:
+      "https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1200&auto=format&fit=crop",
+  },
+
+  {
+    icon: "fas fa-pen-nib",
+    title: "Content Marketing",
+    desc: "High-quality content creation for blogs, websites, social media, and branding to increase audience engagement.",
+    image:
+      "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1200&auto=format&fit=crop",
+  },
+
+  {
+    icon: "fas fa-ad",
+    title: "Google & Meta Ads",
+    desc: "Targeted advertising campaigns using Google Ads and Meta Ads to increase reach, traffic, and conversions.",
+    image:
+      "https://images.unsplash.com/photo-1557838923-2985c318be48?q=80&w=1200&auto=format&fit=crop",
+  },
 ];
 
 export const TRAINING_PROGRAMS = [
-  { icon: "fas fa-robot",         title: "Robotics Workshops",         desc: "Hands-on robot building using Arduino, Raspberry Pi, and LEGO Mindstorms.",             badge: "Grades 6–12 | College",    gradient: "from-orange-400 to-red-500" },
-  { icon: "fas fa-brain",         title: "AI & Machine Learning",      desc: "Intro to AI, machine learning concepts, and real-world app development with Python.",    badge: "College | Advanced Track", gradient: "from-cyan-400 to-blue-500" },
-  { icon: "fas fa-network-wired", title: "IoT & Embedded Systems",     desc: "Build connected devices using ESP32, Arduino, and cloud IoT platforms.",                badge: "Grades 9–12 | College",    gradient: "from-green-400 to-cyan-400" },
-  { icon: "fas fa-industry",      title: "Automation Basics",          desc: "Fundamentals of industrial automation and PLC programming basics.",                      badge: "Polytechnic | Engineering",gradient: "from-purple-500 to-blue-500" },
-  { icon: "fas fa-compass",       title: "Career Counselling",         desc: "Expert guidance on technology career paths and emerging industry opportunities.",        badge: "All Grades",               gradient: "from-pink-500 to-purple-600" },
-  { icon: "fas fa-flask",         title: "Innovation Lab Setup",       desc: "We help schools set up STEM labs with equipment, curriculum, and mentorship.",           badge: "Institution-Level",        gradient: "from-orange-400 to-green-500" },
+  {
+    icon: "fas fa-code",
+    title: "Web Development Training",
+    desc: "Hands-on training in modern website development using React.js, HTML, CSS, JavaScript, and responsive design.",
+    image:
+      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop",
+  },
+
+  {
+    icon: "fas fa-mobile-screen",
+    title: "Application Development",
+    desc: "Learn mobile and application development with real-world projects using Flutter, React Native, and Firebase.",
+    image:
+      "https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=1200&auto=format&fit=crop",
+  },
+
+  {
+    icon: "fas fa-robot",
+    title: "AI & Robotics Training",
+    desc: "Practical AI and robotics training with automation concepts, smart systems, and industrial applications.",
+    image:
+      "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=1200&auto=format&fit=crop",
+  },
+
+  {
+    icon: "fas fa-microchip",
+    title: "IoT & Embedded Systems",
+    desc: "Build IoT and embedded projects using Arduino, ESP32, Raspberry Pi, and real-time monitoring systems.",
+    image:
+      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop",
+  },
+
+  {
+    icon: "fas fa-industry",
+    title: "Industrial Automation",
+    desc: "Industrial automation training covering PLC, HMI, SCADA, sensors, and smart manufacturing systems.",
+    image:
+      "https://images.unsplash.com/photo-1567789884554-0b844b597180?q=80&w=1200&auto=format&fit=crop",
+  },
+
+  {
+    icon: "fas fa-user-graduate",
+    title: "Internship & Mentorship",
+    desc: "Industry-focused internship and mentorship programs designed to improve practical skills and career growth.",
+    image:
+      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop",
+  },
 ];
 
 export const TRAINING_TOOLS = ["🤖 Arduino","🍓 Raspberry Pi","🐍 Python","🧠 TensorFlow","📡 ESP32","⚡ PLC","☁️ Cloud IoT","🦾 ROS","📊 Jupyter"];
