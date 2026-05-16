@@ -19,30 +19,70 @@ export const COMPANY = {
 export const NAV_LINKS = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
-  {
+{
   label: "Services",
+
   dropdown: [
     {
       section: "IT Services",
+
       items: [
-        { label: "Web Development", href: "#web" },
-        { label: "App Development", href: "#app" },
-        { label: "Industrial AI Solutions", href: "#ai" },
+        {
+          label: "Web Development",
+          href: "/services/web-development",
+        },
+
+        {
+          label: "Application Development",
+          href: "/services/application-development",
+        },
+
+        {
+          label: "UI/UX & Web Designing",
+          href: "/services/ui-ux-web-designing",
+        },
+
+        {
+          label: "Industrial AI Solutions",
+          href: "/services/industrial-ai-solutions",
+        },
+
+        {
+          label: "Digital Marketing",
+          href: "/services/digital-marketing",
+        },
       ],
     },
 
     {
       section: "Academic Support",
+
       items: [
-        { label: "IoT & Robotics Training", href: "#training" },
-        { label: "Student Counselling", href: "#counselling" },
+        {
+          label: "Student Training Programs",
+          href: "/services/student-training-programs",
+        },
+
+        // {
+        //   label: "IoT & Robotics Training",
+        //   href: "/services/iot-robotics-training",
+        // },
+
+        // {
+        //   label: "Student Counselling",
+        //   href: "/services/student-counselling",
+        // },
       ],
     },
 
     {
       section: "",
+
       items: [
-        { label: "View Full Services", href: "#services" },
+        {
+          label: "View Full Services",
+          href: "/#services",
+        },
       ],
     },
   ],
@@ -68,7 +108,7 @@ export const SERVICES = [
     desc: "High-performance websites and web apps built with modern frameworks. From landing pages to complex enterprise portals.",
     tags: ["React.js", "Next.js", "Node.js", "TypeScript"],
     gradient: "from-cyan-400 to-blue-500",
-    detailPath: "/web-development",
+    detailPath: "/services/web-development",
   },
   {
     icon: "fas fa-mobile-screen",
@@ -76,7 +116,7 @@ export const SERVICES = [
     desc: "Native and cross-platform mobile apps for iOS and Android with beautiful UX and powerful backend integration.",
     tags: ["React Native", "Flutter", "Firebase"],
     gradient: "from-purple-500 to-pink-500",
-    detailPath: "/mobile-app",
+    detailPath: "/services/mobile-app",
   },
   {
     icon: "fas fa-pen-ruler",
@@ -84,7 +124,7 @@ export const SERVICES = [
     desc: "Stunning, user-centric interfaces that convert. We craft digital experiences that delight users and drive business outcomes.",
     tags: ["Figma", "Prototyping", "Branding"],
     gradient: "from-orange-400 to-red-500",
-    detailPath: "/UI-Web_Design",
+    detailPath: "/services/UI-Web_Design",
   },
   {
     icon: "fas fa-network-wired",
@@ -92,7 +132,7 @@ export const SERVICES = [
     desc: "Smart factory solutions with real-time monitoring, PLC/SCADA integration, sensor networks, and predictive maintenance.",
     tags: ["SCADA", "PLC", "Sensors", "MQTT"],
     gradient: "from-cyan-400 to-green-500",
-    detailPath: "/industrial-iot",
+    detailPath: "/services/industrial-iot",
   },
   // {
   //   icon: "fas fa-robot",
@@ -107,6 +147,7 @@ export const SERVICES = [
     desc: "Embed powerful AI into your existing systems. Chatbots, predictive analytics, NLP, and process intelligence.",
     tags: ["OpenAI", "NLP", "Analytics"],
     gradient: "from-pink-500 to-purple-600",
+    detailPath: "/services/digital-marketing",
   },
   {
     icon: "fas fa-graduation-cap",
@@ -114,7 +155,7 @@ export const SERVICES = [
     desc: "Hands-on STEM programs for schools and colleges in Robotics, IoT, AI, and Automation. Career counselling included.",
     tags: ["Robotics", "AI/IoT", "STEM", "Workshops"],
     gradient: "from-orange-400 to-green-500",
-    detailPath: "/student-training",
+    detailPath: "/services/student-training",
   },
   // {
   //   icon: "fas fa-chart-line",

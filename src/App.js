@@ -1,29 +1,32 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Navbar       from "./components/Navbar/Navbar";
-import Hero         from "./components/Hero/Hero";
-import Marquee      from "./components/Marquee/Marquee";
+import Navbar from "./components/Navbar/Navbar";
+import Hero from "./components/Hero/Hero";
+import Marquee from "./components/Marquee/Marquee";
 // import About        from "./components/About/About";
-import Services     from "./components/Services/Services";
-import WhyUs        from "./components/WhyUs/WhyUs";
+import Services from "./components/Services/Services";
+import WhyUs from "./components/WhyUs/WhyUs";
 // import IoT          from "./components/IoT/IoT";
 // import Training     from "./components/Training/Training";
-import TechStack    from "./components/TechStack/TechStack";
-import Portfolio    from "./components/Portfolio/Portfolio";
+// import TechStack    from "./components/TechStack/TechStack";
+import Portfolio from "./components/Portfolio/Portfolio";
 import Testimonials from "./components/Testimonials/Testimonials";
-import Industries   from "./components/Industries/Industries";
-import CTA          from "./components/CTA/CTA";
+import Industries from "./components/Industries/Industries";
+import CTA from "./components/CTA/CTA";
 // import WebDevelopment from "./components/WebDevelopment/WebDevelopment";
-import MobileApp    from "./components/MobileApp/MobileApp";
-import UiDesign     from "./components/UiDesign/UiDesign";
-import Contact      from "./components/Contact/Contact";
-import Footer       from "./components/Footer/Footer";
-import AboutPage    from "./pages/AboutPage";
+import MobileApp from "./components/MobileApp/MobileApp";
+import UiDesign from "./components/UiDesign/UiDesign";
+import DigitalMarketing from "./components/DigitalMarketing/DigitalMarketing";
+import Contact from "./components/Contact/Contact";
+import Footer from "./components/Footer/Footer";
+import AboutPage from "./pages/AboutPage";
 import IndustrialIoTPage from "./pages/IndustrialIoTPage";
 import StudentTrainingPage from "./pages/StudentTrainingPage";
 import WebDevelopmentPage from "./pages/WebDevelopmentPage";
 import MobileAppDevelopmentPage from "./pages/MobileAppDevelopmentPage";
 import UIWebDesigningPage from "./pages/UI&WebDesigningPage";
+import DigitalMarketPage from "./pages/DigitalMarketPage";
+
 
 export default function App() {
   const [theme, setTheme] = useState("dark");
@@ -62,7 +65,7 @@ export default function App() {
                 <WhyUs />
                 {/* <IoT /> */}
                 {/* <Training /> */}
-                <TechStack />
+                {/* <TechStack /> */}
                 <Portfolio />
                 <Testimonials />
                 <Industries />
@@ -70,16 +73,18 @@ export default function App() {
                 {/* <WebDevelopment /> */}
                 {/* <UiDesign  /> */}
                 {/* <MobileApp /> */}
+                {/* <DigitalMarketing /> */}
                 <Contact />
               </main>
             )}
           />
           <Route path="/about" element={<AboutPage />} />
-          <Route path="/industrial-iot" element={<IndustrialIoTPage />} />
-          <Route path="student-training" element={<StudentTrainingPage />} />
-          <Route path = "/web-development" element = {<WebDevelopmentPage />} />
-          <Route path = "/mobile-app" element = {<MobileAppDevelopmentPage />} />
-           <Route path = "/UI-Web_Design" element = {<UIWebDesigningPage />} />
+          <Route path="/services/industrial-iot" element={<IndustrialIoTPage />} />
+          <Route path="/services/student-training" element={<StudentTrainingPage />} />
+          <Route path="/services/web-development" element={<WebDevelopmentPage />} />
+          <Route path="/services/mobile-app" element={<MobileAppDevelopmentPage />} />
+          <Route path="/services/UI-Web_Design" element={<UIWebDesigningPage />} />
+          <Route path="/services/digital-marketing" element={<DigitalMarketPage />} />
         </Routes>
 
         <Footer />
