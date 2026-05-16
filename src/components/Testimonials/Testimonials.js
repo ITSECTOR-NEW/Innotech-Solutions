@@ -1,57 +1,192 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { TESTIMONIALS } from "../../data/siteData";
-import { useScrollReveal } from "../../hooks/useScrollReveal";
 
 export default function Testimonials() {
-  const titleRef = useScrollReveal();
-  const gridRef  = useScrollReveal();
+
+  const [active, setActive] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActive((prev) =>
+        prev === TESTIMONIALS.length - 1 ? 0 : prev + 1
+      );
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
-    <section id="testimonials" className="py-24 bg-dark-900">
-      <div className="max-w-6xl mx-auto px-6">
+    <section
+      id="testimonials"
+      className="relative overflow-hidden
+      bg-[#f8fafc] py-24"
+    >
 
-        <div ref={titleRef} className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-400/8 border border-cyan-400/20 text-cyan-400 text-xs font-semibold uppercase tracking-widest mb-5">
-            <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 blink"></span>
-            Client Stories
-          </div>
-          <h2 className="font-display font-extrabold text-white mb-4" style={{ fontSize: "clamp(2rem,4vw,3rem)" }}>
-            What Our <span className="gradient-text">Clients Say</span>
+      {/* Background Shape */}
+      <div
+        className="absolute left-0 top-0
+        h-full w-[280px]
+        opacity-10"
+        style={{
+          background:
+            "radial-gradient(circle at left, #8b5cf6 1px, transparent 1px)",
+          backgroundSize: "14px 14px",
+        }}
+      />
+
+      <div
+        className="mx-auto grid max-w-7xl
+        gap-16 px-6
+        lg:grid-cols-[0.8fr_1.2fr]"
+      >
+
+        {/* Left Content */}
+        <div className="flex flex-col justify-center">
+
+          <span
+            className="text-sm font-semibold
+            uppercase tracking-[0.18em]
+            text-pink-500"
+          >
+            Clients Testimonial
+          </span>
+
+          <h2
+            className="mt-5 font-display
+            text-4xl font-bold
+            leading-tight text-slate-900
+            sm:text-5xl"
+          >
+            What Clients Say
+            <br />
+            About Us
           </h2>
-          <p className="text-slate-400 max-w-xl mx-auto">
-            Real feedback from industry leaders, schools, and startups who trusted Innotix Solution.
+
+          <p
+            className="mt-7 max-w-md
+            text-lg leading-9
+            text-slate-500"
+          >
+            Real feedback from startups,
+            industries, and educational
+            organizations who trusted our
+            digital and technology solutions.
           </p>
         </div>
 
-        <div ref={gridRef} className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-          {TESTIMONIALS.map((t) => (
-            <div
-              key={t.name}
-              className="relative p-7 rounded-2xl bg-white/[0.03] border border-white/10
-                hover:border-white/20 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-black/40
-                transition-all"
-            >
-              {/* Quote mark */}
-              <span className="absolute top-4 right-6 text-5xl text-cyan-400/10 font-serif leading-none select-none">"</span>
+        {/* Right Slider */}
+        <div className="relative overflow-hidden">
 
-              {/* Stars */}
-              <div className="flex gap-1 text-orange-400 text-sm mb-4">
-                {Array(t.stars).fill(0).map((_, i) => <span key={i}>★</span>)}
-              </div>
+          {/* Slides */}
+          <div
+            className="flex transition-all
+            duration-700 ease-in-out"
+            style={{
+              transform: `translateX(-${active * 100}%)`,
+            }}
+          >
 
-              <p className="text-sm text-slate-400 italic leading-relaxed mb-5">"{t.text}"</p>
+            {TESTIMONIALS.map((item, index) => (
+              <div
+                key={index}
+                className="min-w-full"
+              >
 
-              <div className="flex items-center gap-3">
-                <div className={`w-11 h-11 rounded-full bg-gradient-to-br ${t.grad} grid place-items-center font-display font-extrabold text-white text-sm flex-shrink-0`}>
-                  {t.initials}
+                <div
+                  className="rounded-[32px]
+                  bg-white p-10
+                  shadow-sm"
+                >
+
+                  {/* Quote */}
+                  <div
+                    className="mb-6 text-6xl
+                    leading-none text-pink-100"
+                  >
+                    "
+                  </div>
+
+                  {/* Description */}
+                  <p
+                    className="text-lg
+                    leading-10 text-slate-500"
+                  >
+                    {item.text}
+                  </p>
+
+                  {/* Bottom */}
+                  <div
+                    className="mt-10 flex
+                    items-center gap-5"
+                  >
+
+                    {/* Image */}
+                    <div
+                      className={`grid h-20 w-20
+                      place-items-center rounded-full
+                      bg-gradient-to-br ${item.grad}
+                      text-2xl font-bold text-white`}
+                    >
+                      {item.initials}
+                    </div>
+
+                    {/* Info */}
+                    <div>
+
+                      <h3
+                        className="font-display
+                        text-2xl font-bold
+                        text-slate-900"
+                      >
+                        {item.name}
+                      </h3>
+
+                      <p
+                        className="mt-1 text-base
+                        text-slate-500"
+                      >
+                        {item.role}
+                      </p>
+
+                      {/* Stars */}
+                      <div
+                        className="mt-3 flex
+                        gap-1 text-yellow-400"
+                      >
+                        {Array(item.stars)
+                          .fill(0)
+                          .map((_, i) => (
+                            <span key={i}>★</span>
+                          ))}
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div>
-                  <div className="font-display font-bold text-white text-sm">{t.name}</div>
-                  <div className="text-xs text-slate-400">{t.role}</div>
-                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+
+          {/* Dots */}
+          <div
+            className="mt-8 flex
+            items-center justify-center
+            gap-3"
+          >
+
+            {TESTIMONIALS.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setActive(index)}
+                className={`h-3 w-3 rounded-full
+                transition-all duration-300
+                ${
+                  active === index
+                    ? "w-8 bg-pink-500"
+                    : "bg-pink-200"
+                }`}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>

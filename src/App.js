@@ -11,8 +11,10 @@ import WhyUs from "./components/WhyUs/WhyUs";
 // import TechStack    from "./components/TechStack/TechStack";
 import Portfolio from "./components/Portfolio/Portfolio";
 import Testimonials from "./components/Testimonials/Testimonials";
-import Industries from "./components/Industries/Industries";
+// import Industries from "./components/Industries/Industries";
 import CTA from "./components/CTA/CTA";
+import BusinessNeeds from "./components/BusinessNeeds/BusinessNeeds";
+// import ClientsSection from "./components/ClientsSection/ClientsSection";
 // import WebDevelopment from "./components/WebDevelopment/WebDevelopment";
 import MobileApp from "./components/MobileApp/MobileApp";
 import UiDesign from "./components/UiDesign/UiDesign";
@@ -63,27 +65,29 @@ export default function App() {
                 {/* <About /> */}
                 <Services />
                 <WhyUs />
+                <BusinessNeeds />
+                {/* <ClientsSection /> */}
                 {/* <IoT /> */}
                 {/* <Training /> */}
                 {/* <TechStack /> */}
                 <Portfolio />
-                <Testimonials />
-                <Industries />
+                {/* <Industries /> */}
                 {/* <CTA /> */}
                 {/* <WebDevelopment /> */}
                 {/* <UiDesign  /> */}
                 {/* <MobileApp /> */}
                 {/* <DigitalMarketing /> */}
+                <Testimonials />
                 <Contact />
               </main>
             )}
           />
           <Route path="/about" element={<AboutPage />} />
-          <Route path="/services/industrial-iot" element={<IndustrialIoTPage />} />
-          <Route path="/services/student-training" element={<StudentTrainingPage />} />
+          <Route path="/services/industrial-ai-solutions" element={<IndustrialIoTPage />} />
+          <Route path="/services/student-training-programs" element={<StudentTrainingPage />} />
           <Route path="/services/web-development" element={<WebDevelopmentPage />} />
-          <Route path="/services/mobile-app" element={<MobileAppDevelopmentPage />} />
-          <Route path="/services/UI-Web_Design" element={<UIWebDesigningPage />} />
+          <Route path="/services/application-development" element={<MobileAppDevelopmentPage />} />
+          <Route path="/services/ui-ux-web-designing" element={<UIWebDesigningPage />} />
           <Route path="/services/digital-marketing" element={<DigitalMarketPage />} />
         </Routes>
 

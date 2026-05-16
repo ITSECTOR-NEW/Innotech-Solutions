@@ -116,7 +116,7 @@ export const SERVICES = [
     desc: "Native and cross-platform mobile apps for iOS and Android with beautiful UX and powerful backend integration.",
     tags: ["React Native", "Flutter", "Firebase"],
     gradient: "from-purple-500 to-pink-500",
-    detailPath: "/services/mobile-app",
+    detailPath: "/services/application-development",
   },
   {
     icon: "fas fa-pen-ruler",
@@ -124,7 +124,7 @@ export const SERVICES = [
     desc: "Stunning, user-centric interfaces that convert. We craft digital experiences that delight users and drive business outcomes.",
     tags: ["Figma", "Prototyping", "Branding"],
     gradient: "from-orange-400 to-red-500",
-    detailPath: "/services/UI-Web_Design",
+    detailPath: "/services/ui-ux-web-designing",
   },
   {
     icon: "fas fa-network-wired",
@@ -132,7 +132,7 @@ export const SERVICES = [
     desc: "Smart factory solutions with real-time monitoring, PLC/SCADA integration, sensor networks, and predictive maintenance.",
     tags: ["SCADA", "PLC", "Sensors", "MQTT"],
     gradient: "from-cyan-400 to-green-500",
-    detailPath: "/services/industrial-iot",
+    detailPath: "/services/industrial-ai-solutions",
   },
   // {
   //   icon: "fas fa-robot",
@@ -155,7 +155,7 @@ export const SERVICES = [
     desc: "Hands-on STEM programs for schools and colleges in Robotics, IoT, AI, and Automation. Career counselling included.",
     tags: ["Robotics", "AI/IoT", "STEM", "Workshops"],
     gradient: "from-orange-400 to-green-500",
-    detailPath: "/services/student-training",
+    detailPath: "/services/student-training-programs",
   },
   // {
   //   icon: "fas fa-chart-line",
@@ -166,20 +166,83 @@ export const SERVICES = [
   // },
 ];
 
-export const WHY_POINTS = [
-  { num: "01", title: "Full-Stack Expertise", desc: "From frontend to backend, IoT hardware to AI models — we handle the entire technology stack under one roof." },
-  { num: "02", title: "Industry Domain Knowledge", desc: "Deep understanding of manufacturing, education, healthcare, and logistics ensures solutions that truly fit your operations." },
-  { num: "03", title: "Agile Delivery", desc: "Sprint-based development with continuous delivery means you see progress fast and can adapt as your business evolves." },
-  { num: "04", title: "Post-Deployment Support", desc: "Our commitment doesn't end at launch. We provide ongoing maintenance, updates, and 24/7 technical support." },
-  { num: "05", title: "Education & Empowerment", desc: "We train your teams and student communities, creating sustainable technology capability for the long term." },
+export const WHY_CHOOSE_US = [
+  {
+    icon: "fas fa-laptop-code",
+    title: "Extensive Experience",
+    desc: "Successfully delivered modern websites, applications, and digital solutions for businesses and startups.",
+  },
+
+  {
+    icon: "fas fa-hand-holding-dollar",
+    title: "Cost Effective Solutions",
+    desc: "Professional digital services at affordable pricing without compromising quality and performance.",
+  },
+
+  {
+    icon: "fas fa-globe",
+    title: "Global Client Support",
+    desc: "Providing reliable solutions and long-term support to clients across multiple industries.",
+  },
 ];
 
-export const WHY_STATS = [
-  { icon: "fas fa-project-diagram", num: 40, label: "Projects Delivered" },
-  { icon: "fas fa-smile",           num: 20,  label: "Satisfied Clients" },
-  { icon: "fas fa-award",           num: 2,  label: "Industry Awards" },
-  { icon: "fas fa-graduation-cap",  num: 100,label: "Students Trained" },
-];
+// export const WHY_POINTS = [
+//   {
+//     num: "01",
+//     title: "Full-Stack Expertise",
+//     desc: "From frontend development to industrial automation and AI solutions — we handle complete digital transformation services.",
+//   },
+
+//   {
+//     num: "02",
+//     title: "Industry-Level Solutions",
+//     desc: "We build practical and scalable solutions for businesses, startups, industries, and educational organizations.",
+//   },
+
+//   {
+//     num: "03",
+//     title: "Creative & Modern Design",
+//     desc: "Professional UI/UX design and responsive development focused on performance, branding, and user experience.",
+//   },
+
+//   {
+//     num: "04",
+//     title: "Long-Term Support",
+//     desc: "We provide maintenance, updates, technical guidance, and continuous support after project deployment.",
+//   },
+
+//   {
+//     num: "05",
+//     title: "Training & Innovation",
+//     desc: "Industry-oriented training programs and innovative project development for students and professionals.",
+//   },
+// ];
+
+// export const WHY_STATS = [
+//   {
+//     icon: "fas fa-project-diagram",
+//     num: 40,
+//     label: "Projects Delivered",
+//   },
+
+//   {
+//     icon: "fas fa-smile",
+//     num: 20,
+//     label: "Satisfied Clients",
+//   },
+
+//   {
+//     icon: "fas fa-award",
+//     num: 2,
+//     label: "Industry Awards",
+//   },
+
+//   {
+//     icon: "fas fa-graduation-cap",
+//     num: 100,
+//     label: "Students Trained",
+//   },
+// ];
 
 export const IOT_FEATURES = [
   {
@@ -459,6 +522,70 @@ export const TRAINING_PROGRAMS = [
       "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop",
   },
 ];
+// export const CLIENTS = [
+//   {
+//     name: "Organic Fertilizer",
+//     image:
+//       "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
+//   },
+
+//   {
+//     name: "Finance Corporation",
+//     image:
+//       "https://upload.wikimedia.org/wikipedia/commons/4/4f/Iconic_image_of_India_Gate.jpg",
+//   },
+
+//   {
+//     name: "University",
+//     image:
+//       "https://upload.wikimedia.org/wikipedia/commons/1/18/Five-pointed_star.svg",
+//   },
+
+//   {
+//     name: "Relocation Service",
+//     image:
+//       "https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg",
+//   },
+
+//   {
+//     name: "Education Institute",
+//     image:
+//       "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg",
+//   },
+// ];
+
+export const BUSINESS_STATS = [
+  {
+    number: "10+",
+    label: "Happy Clients",
+    border: "border-pink-300",
+  },
+
+  {
+    number: "20+",
+    label: "Projects Complete",
+    border: "border-yellow-300",
+  },
+
+  {
+    number: "24/7",
+    label: "Support",
+    border: "border-cyan-300",
+  },
+
+  {
+    number: "2Y",
+    label: "Experience",
+    border: "border-red-300",
+  },
+];
+
+export const BUSINESS_POINTS = [
+  "Professional website and branding solutions.",
+  "SEO optimization and Google ranking support Provided.",
+  "UI/UX and modern digital experiences.",
+  "Reliable support and scalable business solutions Provided.",
+];
 
 export const TRAINING_TOOLS = ["🤖 Arduino","🍓 Raspberry Pi","🐍 Python","🧠 TensorFlow","📡 ESP32","⚡ PLC","☁️ Cloud IoT","🦾 ROS","📊 Jupyter"];
 
@@ -469,20 +596,20 @@ export const TRAINING_STATS = [
   { num: 95,   label: "% Satisfaction" },
 ];
 
-export const TECH_STACK = [
-  { emoji: "⚛️", name: "React.js" },
-  { emoji: "▲",  name: "Next.js" },
-  { emoji: "🎨", name: "Tailwind CSS" },
-  { emoji: "🟦", name: "TypeScript" },
-  { emoji: "🟢", name: "Node.js" },
-  { emoji: "🔥", name: "Firebase" },
-  { emoji: "🐘", name: "PostgreSQL" },
-  { emoji: "🍃", name: "MongoDB" },
-  { emoji: "🐍", name: "Python" },
-  { emoji: "🤖", name: "Arduino" },
-  { emoji: "🍓", name: "Raspberry Pi" },
-  { emoji: "☁️", name: "AWS / Azure" },
-];
+// export const TECH_STACK = [
+//   { emoji: "⚛️", name: "React.js" },
+//   { emoji: "▲",  name: "Next.js" },
+//   { emoji: "🎨", name: "Tailwind CSS" },
+//   { emoji: "🟦", name: "TypeScript" },
+//   { emoji: "🟢", name: "Node.js" },
+//   { emoji: "🔥", name: "Firebase" },
+//   { emoji: "🐘", name: "PostgreSQL" },
+//   { emoji: "🍃", name: "MongoDB" },
+//   { emoji: "🐍", name: "Python" },
+//   { emoji: "🤖", name: "Arduino" },
+//   { emoji: "🍓", name: "Raspberry Pi" },
+//   { emoji: "☁️", name: "AWS / Azure" },
+// ];
 
 export const PORTFOLIO_ITEMS = [
   { cat: "iot",      emoji: "🏭", title: "Smart Factory Monitoring System",    desc: "Real-time production monitoring with PLC integration, OEE tracking, and predictive maintenance alerts.", catLabel: "Industrial IoT",      bg: "from-cyan-500/10 to-green-500/10" },
@@ -502,16 +629,16 @@ export const TESTIMONIALS = [
   { stars: 5, text: "Innotix set up our complete STEM innovation lab. The quality and ongoing support has made us a model institution in the state.", name: "Dr. Dinesh Tiwari", role: "HOD CS, NIT Bhopal",                  initials: "DT", grad: "from-purple-500 to-blue-500" },
 ];
 
-export const INDUSTRIES = [
-  { emoji: "🏭", title: "Manufacturing",  desc: "Smart factory automation, quality control, and production optimization" },
-  { emoji: "🎓", title: "Education",      desc: "STEM labs, digital classrooms, and EdTech platform development" },
-  { emoji: "🏥", title: "Healthcare",     desc: "Medical IoT, patient management systems, and diagnostic automation" },
-  { emoji: "🚚", title: "Logistics",      desc: "Fleet tracking, warehouse automation, and supply chain visibility" },
-  { emoji: "⚡", title: "Energy",         desc: "Smart grid monitoring, renewable energy management systems" },
-  { emoji: "🏗️", title: "Construction",  desc: "Site monitoring IoT, project management apps, and safety systems" },
-  { emoji: "🏪", title: "Retail",         desc: "E-commerce platforms, inventory IoT, and customer analytics" },
-  { emoji: "🚀", title: "Startups",       desc: "MVP development, technical co-founding, and scale-up support" },
-];
+// export const INDUSTRIES = [
+//   { emoji: "🏭", title: "Manufacturing",  desc: "Smart factory automation, quality control, and production optimization" },
+//   { emoji: "🎓", title: "Education",      desc: "STEM labs, digital classrooms, and EdTech platform development" },
+//   { emoji: "🏥", title: "Healthcare",     desc: "Medical IoT, patient management systems, and diagnostic automation" },
+//   { emoji: "🚚", title: "Logistics",      desc: "Fleet tracking, warehouse automation, and supply chain visibility" },
+//   { emoji: "⚡", title: "Energy",         desc: "Smart grid monitoring, renewable energy management systems" },
+//   { emoji: "🏗️", title: "Construction",  desc: "Site monitoring IoT, project management apps, and safety systems" },
+//   { emoji: "🏪", title: "Retail",         desc: "E-commerce platforms, inventory IoT, and customer analytics" },
+//   { emoji: "🚀", title: "Startups",       desc: "MVP development, technical co-founding, and scale-up support" },
+// ];
 
 export const FOOTER_LINKS = {
   Services: ["Web Development","Mobile Apps","UI/UX Design","Digital Marketing","AI Integration"],

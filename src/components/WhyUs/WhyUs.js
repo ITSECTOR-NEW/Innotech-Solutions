@@ -1,68 +1,167 @@
 import React from "react";
-import { WHY_POINTS, WHY_STATS } from "../../data/siteData";
-import { useScrollReveal, useCounter } from "../../hooks/useScrollReveal";
+import { WHY_CHOOSE_US } from "../../data/siteData";
 
-function StatCard({ icon, num, label }) {
-  const numRef = useCounter(num);
-  const ref    = useScrollReveal();
+export default function WhyChoose() {
+
+  const requestDemo = () => {
+    const contact = document.querySelector("#contact");
+
+    if (contact) {
+      contact.scrollIntoView({
+        behavior: "smooth",
+      });
+
+      return;
+    }
+
+    window.location.href = "/#contact";
+  };
+
   return (
-    <div ref={ref} className="p-7 rounded-2xl bg-white/[0.03] border border-white/10 text-center hover:border-cyan-400/40 hover:-translate-y-1 transition-all">
-      <i className={`${icon} text-2xl text-cyan-400 mb-3 block`}></i>
-      <div className="font-display font-extrabold text-4xl gradient-text mb-1">
-        <span ref={numRef}>0</span>+
-      </div>
-      <div className="text-sm text-slate-400">{label}</div>
-    </div>
-  );
-}
+    <section className="bg-[#f8fafc] py-20">
 
-export default function WhyUs() {
-  const leftRef  = useScrollReveal();
-  const rightRef = useScrollReveal();
-  return (
-    <section id="why" className="py-24 bg-dark-800">
-      <div className="max-w-6xl mx-auto px-6">
+      <div
+        className="mx-auto grid max-w-7xl
+        gap-14 px-6
+        lg:grid-cols-2"
+      >
 
-        {/* Header */}
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-400/8 border border-cyan-400/20 text-cyan-400 text-xs font-semibold uppercase tracking-widest mb-5">
-            <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 blink"></span>
-            Why Innotix
-          </div>
-          <h2 className="font-display font-extrabold text-white mb-4" style={{ fontSize: "clamp(2rem,4vw,3rem)" }}>
-            Why <span className="gradient-text">Choose Us?</span>
+        {/* Left Side */}
+        <div>
+
+          <span
+            className="text-xs font-semibold
+            uppercase tracking-[0.2em]
+            text-pink-500"
+          >
+            Why Choose Us
+          </span>
+
+          <h2
+            className="mt-4 font-display
+            text-3xl font-bold
+            leading-tight text-slate-900
+            sm:text-4xl"
+          >
+            Best
+            <span className="text-pink-500">
+              {" "}Website Development
+            </span>
+            <br />
+            Company in India
           </h2>
-          <p className="text-slate-400 max-w-xl mx-auto">
-            We combine technical excellence with strategic thinking to deliver solutions that create lasting impact.
+
+          <p
+            className="mt-5 text-base
+            leading-8 text-slate-500"
+          >
+            We always stay with our clients and respect
+            their business goals. Our team delivers
+            modern digital solutions with fast support,
+            creative ideas, and scalable technologies.
           </p>
-        </div>
 
-        <div className="grid lg:grid-cols-2 gap-14 items-center">
+          {/* Features */}
+          <div className="mt-10 space-y-6">
 
-          {/* Points */}
-          <div ref={leftRef} className="flex flex-col gap-4">
-            {WHY_POINTS.map((p) => (
+            {WHY_CHOOSE_US.map((item) => (
               <div
-                key={p.num}
-                className="flex gap-5 p-5 rounded-2xl bg-white/[0.03] border border-white/10
-                  hover:border-cyan-400/40 hover:translate-x-1.5 transition-all"
+                key={item.title}
+                className="flex gap-4"
               >
-                <span className="font-display font-extrabold text-3xl text-cyan-400/30 leading-none w-10 flex-shrink-0">
-                  {p.num}
-                </span>
+                {/* Icon */}
+                <div
+                  className="grid h-14 w-14
+                  flex-shrink-0 place-items-center
+                  rounded-2xl bg-white
+                  shadow-sm"
+                >
+                  <i
+                    className={`${item.icon}
+                    text-xl text-slate-800`}
+                  ></i>
+                </div>
+
+                {/* Content */}
                 <div>
-                  <h4 className="font-display font-bold text-white mb-1">{p.title}</h4>
-                  <p className="text-sm text-slate-400">{p.desc}</p>
+
+                  <h3
+                    className="font-display
+                    text-xl font-bold
+                    text-slate-900"
+                  >
+                    {item.title}
+                  </h3>
+
+                  <p
+                    className="mt-1 text-sm
+                    leading-7 text-slate-500"
+                  >
+                    {item.desc}
+                  </p>
                 </div>
               </div>
             ))}
           </div>
+        </div>
 
-          {/* Stats */}
-          <div ref={rightRef} className="grid grid-cols-2 gap-4">
-            {WHY_STATS.map((s) => (
-              <StatCard key={s.label} {...s} />
-            ))}
+        {/* Right Side */}
+        <div className="flex flex-col justify-between">
+
+          {/* Top Image */}
+          <div
+            className="overflow-hidden
+            rounded-[24px]
+            bg-white p-8 shadow-sm"
+          >
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png"
+              alt="Website Design"
+              className="mx-auto w-full
+              max-w-[420px]"
+            />
+          </div>
+
+          {/* Bottom Content */}
+          <div className="mt-10 text-center">
+
+            <h2
+              className="font-display
+              text-3xl font-bold
+              leading-tight text-slate-900
+              sm:text-4xl"
+            >
+              Working to build
+              <br />
+              a better
+              <span className="text-pink-500">
+                {" "}web design
+              </span>
+            </h2>
+
+            <p
+              className="mx-auto mt-5
+              max-w-lg text-base
+              leading-8 text-slate-500"
+            >
+              We are committed to customer success from
+              start to finish. Our innovative and creative
+              solutions help businesses stand out online.
+            </p>
+
+            <button
+              onClick={requestDemo}
+              className="mt-8 inline-flex
+              items-center gap-2 rounded-full
+              bg-gradient-to-r
+              from-orange-400 to-pink-500
+              px-7 py-3 text-base
+              font-semibold text-white
+              transition-all hover:scale-105"
+            >
+              Start A Project
+              <i className="fas fa-arrow-right text-xs"></i>
+            </button>
           </div>
         </div>
       </div>
