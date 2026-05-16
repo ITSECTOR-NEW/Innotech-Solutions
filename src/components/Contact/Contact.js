@@ -1,148 +1,440 @@
 import React, { useState } from "react";
 import { COMPANY } from "../../data/siteData";
-import { useScrollReveal } from "../../hooks/useScrollReveal";
 
-const INFO = [
-  { icon: "fas fa-map-marker-alt", grad: "from-cyan-400 to-blue-500",    label: "Our Office",        val: COMPANY.address },
-  { icon: "fas fa-envelope",       grad: "from-green-400 to-blue-500",   label: "Email Us",          val: COMPANY.email },
-  { icon: "fas fa-phone",          grad: "from-purple-500 to-pink-500",  label: "Call / WhatsApp",   val: COMPANY.phone },
-  { icon: "fas fa-clock",          grad: "from-orange-400 to-red-500",   label: "Working Hours",     val: COMPANY.hours },
+const CONTACT_INFO = [
+  {
+    image:
+      "https://cdn-icons-png.flaticon.com/512/597/597177.png",
+    title: "Call Us",
+    value: COMPANY.phone,
+  },
+
+  {
+    image:
+      "https://cdn-icons-png.flaticon.com/512/561/561127.png",
+    title: "Email Address",
+    value: COMPANY.email,
+  },
+
+  {
+    image:
+      "https://cdn-icons-png.flaticon.com/512/684/684908.png",
+    title: "Office Address",
+    value: COMPANY.address,
+  },
 ];
 
 export default function Contact() {
-  const leftRef  = useScrollReveal();
-  const rightRef = useScrollReveal();
 
-  const [form, setForm]       = useState({ name:"", email:"", phone:"", company:"", service:"", message:"" });
   const [submitted, setSubmitted] = useState(false);
 
-  const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    service: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setForm({
+      ...form,
+      [e.target.name]: e.target.value,
+    });
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
     if (!form.name || !form.email || !form.message) {
-      alert("Please fill in all required fields.");
+      alert("Please fill all required fields.");
       return;
     }
-    // 👉 Connect EmailJS or Formspree here
-    // emailjs.sendForm('SERVICE_ID','TEMPLATE_ID', e.target, 'PUBLIC_KEY')
+
     setSubmitted(true);
   };
 
   return (
-    <section id="contact" className="py-24 bg-dark-800">
-      <div className="max-w-6xl mx-auto px-6">
+    <section
+      id="contact"
+      className="relative overflow-hidden
+      bg-[#eef5ff] py-16"
+    >
 
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-400/8 border border-cyan-400/20 text-cyan-400 text-xs font-semibold uppercase tracking-widest mb-5">
-            <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 blink"></span>
-            Get In Touch
+      {/* Background Glow */}
+      <div
+        className="absolute left-0 top-0
+        h-[250px] w-[250px]
+        rounded-full bg-cyan-300/20
+        blur-[100px]"
+      />
+
+      <div
+        className="absolute bottom-0 right-0
+        h-[220px] w-[220px]
+        rounded-full bg-blue-300/20
+        blur-[100px]"
+      />
+
+      <div className="relative mx-auto max-w-7xl px-6">
+
+        {/* Heading */}
+        <div className="mx-auto mb-10 max-w-2xl text-center">
+
+          <div
+            className="inline-flex items-center
+            gap-2 rounded-full
+            border border-blue-200
+            bg-gradient-to-r
+            from-blue-500 to-cyan-500
+            px-5 py-2 text-[11px]
+            font-semibold uppercase
+            tracking-[0.16em] text-white
+            shadow-md"
+          >
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/3059/3059518.png"
+              alt="Contact"
+              className="h-3.5 w-3.5"
+            />
+
+            Contact Us
           </div>
-          <h2 className="font-display font-extrabold text-white mb-4" style={{ fontSize: "clamp(2rem,4vw,3rem)" }}>
-            Let's <span className="gradient-text">Connect</span>
+
+          <h2
+            className="mt-4 font-display
+            text-3xl font-black
+            leading-tight text-slate-900
+            sm:text-4xl"
+          >
+            Let's Build Something
+            <span className="gradient-text">
+              {" "}Amazing
+            </span>
           </h2>
-          <p className="text-slate-400 max-w-xl mx-auto">
-            Have a project in mind? We'd love to hear from you. We respond within 24 hours.
+
+          <p
+            className="mx-auto mt-4
+            max-w-xl text-sm
+            leading-7 text-slate-500"
+          >
+            Connect with our team for modern
+            digital solutions and business growth.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-[1fr_1.5fr] gap-14">
+        {/* Main Layout */}
+        <div
+          className="grid items-start gap-6
+          lg:grid-cols-[0.85fr_1.15fr]"
+        >
 
-          {/* Left: Info */}
-          <div ref={leftRef} className="flex flex-col gap-4">
-            {INFO.map((i) => (
-              <div key={i.label} className="flex items-center gap-4 p-5 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-cyan-400/40 transition-all">
-                <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${i.grad} grid place-items-center text-white text-lg flex-shrink-0`}>
-                  <i className={i.icon}></i>
-                </div>
-                <div>
-                  <div className="text-xs text-slate-400 mb-0.5">{i.label}</div>
-                  <div className="font-display font-semibold text-white text-sm">{i.val}</div>
-                </div>
+          {/* Left Side */}
+          <div className="space-y-4">
+
+            <div
+              className="rounded-[28px]
+              bg-white p-6 shadow-sm"
+            >
+
+              <h3
+                className="font-display
+                text-2xl font-bold
+                text-slate-900"
+              >
+                Get In Touch
+              </h3>
+
+              <p
+                className="mt-3 text-sm
+                leading-7 text-slate-500"
+              >
+                We help startups, industries,
+                and businesses build modern
+                digital solutions.
+              </p>
+
+              {/* Contact Info */}
+              <div className="mt-7 space-y-4">
+
+                {CONTACT_INFO.map((item) => (
+                  <div
+                    key={item.title}
+                    className="flex gap-4"
+                  >
+
+                    <div
+                      className="flex h-12 w-12
+                      flex-shrink-0 items-center
+                      justify-center rounded-xl
+                      border border-slate-200
+                      bg-slate-50"
+                    >
+                      <img
+                        src={item.image}
+                        alt={item.title}
+                        className="h-5 w-5 object-contain opacity-80"
+                      />
+                    </div>
+
+                    <div>
+
+                      <p
+                        className="text-[11px]
+                        uppercase tracking-[0.16em]
+                        text-slate-400"
+                      >
+                        {item.title}
+                      </p>
+
+                      <h4
+                        className="mt-1 text-sm
+                        font-semibold leading-6
+                        text-slate-900"
+                      >
+                        {item.value}
+                      </h4>
+                    </div>
+                  </div>
+                ))}
               </div>
-            ))}
 
-            {/* Socials */}
-            <div className="p-5 rounded-2xl glass2 mt-1">
-              <h4 className="font-display font-bold text-white text-sm mb-4">Follow Us</h4>
-              <div className="flex gap-3">
+              {/* Social Icons */}
+              <div className="mt-8 flex flex-wrap gap-3">
+
                 {[
-                  { icon: "fab fa-linkedin-in", href: COMPANY.socials.linkedin },
-                  { icon: "fab fa-twitter",     href: COMPANY.socials.twitter },
-                  { icon: "fab fa-instagram",   href: COMPANY.socials.instagram },
-                  { icon: "fab fa-youtube",     href: COMPANY.socials.youtube },
-                  { icon: "fab fa-github",      href: COMPANY.socials.github },
-                  { icon: "fab fa-whatsapp",    href: `https://wa.me/${COMPANY.whatsapp}` },
-                ].map((s) => (
+                  {
+                    image:
+                      "https://cdn-icons-png.flaticon.com/512/174/174857.png",
+                    href: COMPANY.socials.linkedin,
+                  },
+
+                  {
+                    image:
+                      "https://cdn-icons-png.flaticon.com/512/2111/2111463.png",
+                    href: COMPANY.socials.instagram,
+                  },
+
+                  {
+                    image:
+                      "https://cdn-icons-png.flaticon.com/512/733/733553.png",
+                    href: COMPANY.socials.github,
+                  },
+
+                  {
+                    image:
+                      "https://cdn-icons-png.flaticon.com/512/1384/1384060.png",
+                    href: COMPANY.socials.youtube,
+                  },
+
+                  {
+                    image:
+                      "https://cdn-icons-png.flaticon.com/512/3670/3670051.png",
+                    href: `https://wa.me/${COMPANY.whatsapp}`,
+                  },
+                ].map((s, index) => (
                   <a
-                    key={s.icon}
+                    key={index}
                     href={s.href}
                     target="_blank"
                     rel="noreferrer"
-                    className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 grid place-items-center text-slate-400 hover:text-cyan-400 hover:border-cyan-400/50 hover:-translate-y-1 transition-all"
+                    className="flex h-11 w-11
+                    items-center justify-center
+                    rounded-xl border
+                    border-slate-200 bg-white
+                    transition-all duration-300
+                    hover:-translate-y-1
+                    hover:border-cyan-300
+                    hover:shadow-md"
                   >
-                    <i className={s.icon}></i>
+                    <img
+                      src={s.image}
+                      alt="social"
+                      className="h-5 w-5 object-contain"
+                    />
                   </a>
                 ))}
               </div>
             </div>
           </div>
 
-          {/* Right: Form */}
-          <div ref={rightRef} className="p-8 rounded-2xl bg-white/[0.03] border border-white/10">
-            <h3 className="font-display font-extrabold text-white text-lg mb-6">Send Us a Message</h3>
+          {/* Right Form */}
+          <div
+            className="rounded-[28px]
+            bg-white p-6 shadow-sm"
+          >
+
+            <h3
+              className="font-display
+              text-2xl font-bold
+              text-slate-900"
+            >
+              Send Message
+            </h3>
+
+            <p
+              className="mt-2 text-sm
+              leading-7 text-slate-500"
+            >
+              Fill the form and our team
+              will contact you shortly.
+            </p>
 
             {submitted ? (
-              <div className="text-center py-12">
-                <i className="fas fa-check-circle text-green-400 text-5xl block mb-4"></i>
-                <h4 className="font-display font-bold text-white text-lg mb-2">Message Sent!</h4>
-                <p className="text-slate-400 text-sm">Thank you! We'll get back to you within 24 hours.</p>
+              <div className="py-12 text-center">
+
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/845/845646.png"
+                  alt="Success"
+                  className="mx-auto h-16 w-16"
+                />
+
+                <h3
+                  className="mt-4 font-display
+                  text-xl font-bold
+                  text-slate-900"
+                >
+                  Message Sent Successfully!
+                </h3>
+
+                <p
+                  className="mt-2 text-sm
+                  text-slate-500"
+                >
+                  Thank you for contacting us.
+                </p>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <InputField label="Full Name *"     name="name"    type="text"  placeholder="Rajesh Kumar"        value={form.name}    onChange={handleChange} />
-                  <InputField label="Email Address *" name="email"   type="email" placeholder="hello@company.com"   value={form.email}   onChange={handleChange} />
-                </div>
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <InputField label="Phone Number"    name="phone"   type="tel"   placeholder="+91 98765 43210"     value={form.phone}   onChange={handleChange} />
-                  <InputField label="Company Name"    name="company" type="text"  placeholder="Your Company"        value={form.company} onChange={handleChange} />
+              <form
+                onSubmit={handleSubmit}
+                className="mt-7 space-y-4"
+              >
+
+                {/* Row */}
+                <div className="grid gap-4 sm:grid-cols-2">
+
+                  <InputField
+                    label="Full Name *"
+                    name="name"
+                    type="text"
+                    placeholder="Rajesh Kumar"
+                    value={form.name}
+                    onChange={handleChange}
+                  />
+
+                  <InputField
+                    label="Email Address *"
+                    name="email"
+                    type="email"
+                    placeholder="hello@company.com"
+                    value={form.email}
+                    onChange={handleChange}
+                  />
                 </div>
 
-                {/* Service select */}
-                <div>
-                  <label className="block text-xs font-medium text-slate-400 mb-1.5">Service Interested In</label>
-                  <select
-                    name="service"
-                    value={form.service}
+                {/* Row */}
+                <div className="grid gap-4 sm:grid-cols-2">
+
+                  <InputField
+                    label="Phone Number"
+                    name="phone"
+                    type="tel"
+                    placeholder="+91 98765 43210"
+                    value={form.phone}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-xl bg-dark-900 border border-white/10 text-slate-300 text-sm outline-none focus:border-cyan-400/60 focus:ring-2 focus:ring-cyan-400/10 transition-all"
-                  >
-                    <option value="">Select a service...</option>
-                    {["Web Development","Mobile App Development","UI/UX Design","Digital Marketing","Industrial IoT Solutions","Robotics & AI Automation","AI Integration","School/College Training","Smart Tool Management","Other"].map(s => (
-                      <option key={s} value={s} className="bg-dark-900">{s}</option>
-                    ))}
-                  </select>
+                  />
+
+                  <div>
+
+                    <label
+                      className="mb-2 block
+                      text-[11px] uppercase
+                      tracking-[0.15em]
+                      text-slate-400"
+                    >
+                      Service
+                    </label>
+
+                    <select
+                      name="service"
+                      value={form.service}
+                      onChange={handleChange}
+                      className="w-full rounded-2xl
+                      border border-slate-200
+                      bg-slate-50
+                      px-4 py-3 text-sm
+                      text-slate-700 outline-none"
+                    >
+                      <option value="">
+                        Select Service
+                      </option>
+
+                      {[
+                        "Web Development",
+                        "Application Development",
+                        "UI/UX Design",
+                        "Industrial AI Solutions",
+                        "Digital Marketing",
+                      ].map((s) => (
+                        <option
+                          key={s}
+                          value={s}
+                        >
+                          {s}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
                 </div>
 
                 {/* Message */}
                 <div>
-                  <label className="block text-xs font-medium text-slate-400 mb-1.5">Your Message *</label>
+
+                  <label
+                    className="mb-2 block
+                    text-[11px] uppercase
+                    tracking-[0.15em]
+                    text-slate-400"
+                  >
+                    Your Message *
+                  </label>
+
                   <textarea
                     name="message"
+                    rows={4}
                     value={form.message}
                     onChange={handleChange}
-                    rows={4}
-                    placeholder="Tell us about your project, requirements, or questions..."
-                    className="w-full px-4 py-3 rounded-xl bg-dark-900 border border-white/10 text-slate-300 text-sm outline-none focus:border-cyan-400/60 focus:ring-2 focus:ring-cyan-400/10 transition-all resize-y"
+                    placeholder="Tell us about your project..."
+                    className="w-full rounded-2xl
+                    border border-slate-200
+                    bg-slate-50
+                    px-4 py-3 text-sm
+                    text-slate-700 outline-none
+                    resize-none"
                   />
                 </div>
 
+                {/* Button */}
                 <button
                   type="submit"
-                  className="w-full flex items-center justify-center gap-2 py-4 rounded-xl bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-display font-bold shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/50 hover:-translate-y-0.5 transition-all"
+                  className="flex w-full
+                  items-center justify-center
+                  gap-3 rounded-2xl
+                  bg-gradient-to-r
+                  from-cyan-400 to-blue-500
+                  py-3.5 font-display
+                  text-sm font-bold
+                  text-white shadow-md
+                  transition-all duration-300
+                  hover:-translate-y-1"
                 >
-                  <i className="fas fa-paper-plane"></i> Send Message
+                  <img
+                    src="https://cdn-icons-png.flaticon.com/512/3682/3682321.png"
+                    alt="Send"
+                    className="h-4 w-4"
+                  />
+
+                  Send Message
                 </button>
               </form>
             )}
@@ -153,18 +445,39 @@ export default function Contact() {
   );
 }
 
-// ── Reusable input
-function InputField({ label, name, type, placeholder, value, onChange }) {
+/* Input Component */
+function InputField({
+  label,
+  name,
+  type,
+  placeholder,
+  value,
+  onChange,
+}) {
+
   return (
     <div>
-      <label className="block text-xs font-medium text-slate-400 mb-1.5">{label}</label>
+
+      <label
+        className="mb-2 block
+        text-[11px] uppercase
+        tracking-[0.15em]
+        text-slate-400"
+      >
+        {label}
+      </label>
+
       <input
         type={type}
         name={name}
         value={value}
         onChange={onChange}
         placeholder={placeholder}
-        className="w-full px-4 py-3 rounded-xl bg-dark-900 border border-white/10 text-slate-300 text-sm outline-none focus:border-cyan-400/60 focus:ring-2 focus:ring-cyan-400/10 transition-all"
+        className="w-full rounded-2xl
+        border border-slate-200
+        bg-slate-50
+        px-4 py-3 text-sm
+        text-slate-700 outline-none"
       />
     </div>
   );

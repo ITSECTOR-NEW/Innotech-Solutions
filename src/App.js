@@ -64,8 +64,8 @@ export default function App() {
                 <Marquee />
                 {/* <About /> */}
                 <Services />
-                <WhyUs />
                 <BusinessNeeds />
+                <WhyUs />
                 {/* <ClientsSection /> */}
                 {/* <IoT /> */}
                 {/* <Training /> */}
