@@ -2,9 +2,12 @@ import React, { useState, useEffect } from "react";
 import { NAV_LINKS, COMPANY } from "../../data/siteData";
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
-  const [mobileOpen, setMobileOpen] = useState(false);
-  const [activeHref, setActiveHref] = useState("#home");
+ const [scrolled, setScrolled] = useState(false);
+const [mobileOpen, setMobileOpen] = useState(false);
+const [activeHref, setActiveHref] = useState("#home");
+
+/* ADD THIS : Update for service dropdown to look in mobile also*/
+const [openDropdown, setOpenDropdown] = useState(null);
 
   useEffect(() => {
     const onScroll = () => {
@@ -220,30 +223,149 @@ export default function Navbar() {
       </nav>
 
       {/* ── Mobile Menu ── */}
-      {mobileOpen && (
-        <div className="fixed inset-0 z-40 bg-dark-900 pt-32 px-6 overflow-y-auto md:hidden">
-          <ul className="list-none flex flex-col gap-1">
-            {NAV_LINKS.map((link) => (
-              <li key={link.href}>
+       {/* ── Mobile Menu ── */}
+{mobileOpen && (
+  <div
+    className="fixed inset-0 z-40
+    bg-[#07111f] pt-32 px-6
+    overflow-y-auto md:hidden"
+  >
+
+    <div className="space-y-2">
+
+      {NAV_LINKS.map((item, index) => {
+
+        const hasDropdown = item.dropdown;
+
+        return (
+          <div
+            key={index}
+            className="rounded-2xl
+            border border-white/5
+            bg-white/[0.03]
+            overflow-hidden"
+          >
+
+            {/* Main Button */}
+            {!hasDropdown ? (
+              <button
+                onClick={() => navigateTo(item.href)}
+                className="flex w-full
+                items-center justify-between
+                px-5 py-4 text-left
+                text-base font-semibold
+                text-white transition-all
+                hover:bg-white/5"
+              >
+                {item.label}
+              </button>
+            ) : (
+              <>
+                {/* Dropdown Button */}
                 <button
-                  onClick={() => navigateTo(link.href)}
-                  className="w-full text-left px-5 py-3.5 rounded-xl font-display font-semibold text-lg text-white hover:bg-white/10 hover:text-cyan-400 transition-all"
+                  onClick={() =>
+                    setOpenDropdown(
+                      openDropdown === item.label
+                        ? null
+                        : item.label
+                    )
+                  }
+                  className="flex w-full
+                  items-center justify-between
+                  px-5 py-4 text-left
+                  text-base font-semibold
+                  text-white transition-all
+                  hover:bg-white/5"
                 >
-                  {link.label}
+                  <span>{item.label}</span>
+
+                  <i
+                    className={`fas fa-chevron-down text-xs transition-all duration-300 ${
+                      openDropdown === item.label
+                        ? "rotate-180"
+                        : ""
+                    }`}
+                  ></i>
                 </button>
-              </li>
-            ))}
-          </ul>
-          <div className="mt-8">
-            <button
-              onClick={() => navigateTo("#contact")}
-              className="w-full flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-display font-bold shadow-lg"
-            >
-              Get a Free Quote <i className="fas fa-arrow-right"></i>
-            </button>
+
+                {/* Dropdown Content */}
+                {openDropdown === item.label && (
+                  <div
+                    className="border-t border-white/5
+                    bg-black/10 px-4 py-4"
+                  >
+
+                    {item.dropdown.map((section) => (
+                      <div
+                        key={section.section}
+                        className="mb-5 last:mb-0"
+                      >
+
+                        {/* Section Heading */}
+                        {section.section && (
+                          <h4
+                            className="mb-3 px-2
+                            text-[11px] font-bold
+                            uppercase tracking-[0.18em]
+                            text-cyan-300"
+                          >
+                            {section.section}
+                          </h4>
+                        )}
+
+                        {/* Links */}
+                        <div className="space-y-1">
+
+                          {section.items.map((sub) => (
+                            <button
+                              key={sub.label}
+                              onClick={() =>
+                                navigateTo(sub.href)
+                              }
+                              className={`block w-full rounded-xl
+                              px-3 py-3 text-left text-sm
+                              transition-all duration-300 ${
+                                sub.label ===
+                                "View Full Services"
+                                  ? "bg-cyan-400/10 text-cyan-300 font-semibold"
+                                  : "text-slate-300 hover:bg-white/5 hover:text-white"
+                              }`}
+                            >
+                              {sub.label}
+                            </button>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </>
+            )}
           </div>
-        </div>
-      )}
+        );
+      })}
+    </div>
+
+    {/* Bottom CTA */}
+    <div className="mt-8 pb-10">
+      <button
+        onClick={() => navigateTo("#contact")}
+        className="flex w-full
+        items-center justify-center
+        gap-2 rounded-2xl
+        bg-gradient-to-r
+        from-cyan-400 to-blue-500
+        px-6 py-4 text-white
+        font-bold shadow-xl
+        shadow-cyan-500/20"
+      >
+        Get a Free Quote
+
+        <i className="fas fa-arrow-right text-sm"></i>
+      </button>
+    </div>
+  </div>
+)}
     </>
   );
 }
