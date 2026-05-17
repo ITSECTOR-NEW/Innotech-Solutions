@@ -303,6 +303,29 @@ export const IOT_PAGE_IMAGES = {
     "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1600&auto=format&fit=crop",
 };
 
+export const IOT_WORK_SPEAK_SECTION = {
+  eyebrow: "We Will Let Our Work Speak First",
+  title: "From discovery to execution",
+  services: [
+    {
+      title: "IoT App Development",
+      desc: "We create web and mobile interfaces for connected devices so teams can monitor equipment, view live status, receive alerts, and control workflows from one clean application.",
+    },
+    {
+      title: "Device Integration",
+      desc: "We connect sensors, gateways, controllers, and industrial devices into a reliable data flow using practical protocols and APIs suited to your hardware environment.",
+    },
+    {
+      title: "Edge Computing Solutions",
+      desc: "We design edge-based processing for faster local decisions, reduced latency, and stable operations even when cloud connectivity is limited or intermittent.",
+    },
+    {
+      title: "IoT Analytics",
+      desc: "We turn sensor and machine data into useful insights through dashboards, trend analysis, alert rules, and predictive indicators that help teams monitor performance and act earlier.",
+    },
+  ],
+};
+
 export const IOT_APPROACH_STEPS = [
   {
     title: "Requirement Discovery",

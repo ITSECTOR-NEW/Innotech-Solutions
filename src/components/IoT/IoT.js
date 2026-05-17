@@ -1,7 +1,14 @@
-import React from "react";
-import { IOT_APPROACH_STEPS, IOT_FEATURES, IOT_PAGE_IMAGES } from "../../data/siteData";
+import React, { useState } from "react";
+import {
+  IOT_APPROACH_STEPS,
+  IOT_FEATURES,
+  IOT_PAGE_IMAGES,
+  IOT_WORK_SPEAK_SECTION,
+} from "../../data/siteData";
 
 export default function IoT() {
+  const [activeWorkItem, setActiveWorkItem] = useState(0);
+  const selectedWorkItem = IOT_WORK_SPEAK_SECTION.services[activeWorkItem];
 
   const requestDemo = () => {
     const contact = document.querySelector("#contact");
@@ -144,31 +151,83 @@ export default function IoT() {
         </div>
       </section>
 
+      {/* Work Speak */}
+      <section className="bg-white py-20">
+
+        <div className="mx-auto max-w-6xl px-6">
+
+          <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr]">
+            <div>
+              <p className="font-display text-xs font-bold uppercase tracking-[0.22em] text-[#0fb7c5]">
+                {IOT_WORK_SPEAK_SECTION.eyebrow}
+              </p>
+
+              <h2 className="mt-3 font-display text-3xl font-bold leading-tight text-slate-900 sm:text-4xl">
+                {IOT_WORK_SPEAK_SECTION.title}
+              </h2>
+
+              <div className="mt-4 h-1 w-16 bg-[#0fb7c5]" />
+
+              <div className="mt-8 space-y-3">
+                {IOT_WORK_SPEAK_SECTION.services.map((service, index) => (
+                  <button
+                    key={service.title}
+                    type="button"
+                    onClick={() => setActiveWorkItem(index)}
+                    className={`flex w-full items-center justify-between border px-5 py-4 text-left transition-all ${
+                      activeWorkItem === index
+                        ? "border-[#0fb7c5] bg-[#0fb7c5] text-white shadow-sm"
+                        : "border-slate-200 bg-slate-50 text-slate-900 hover:border-[#0fb7c5] hover:bg-white"
+                    }`}
+                  >
+                    <span className="font-display text-lg font-bold">
+                      {service.title}
+                    </span>
+                    <span className="text-xl leading-none">+</span>
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <div className="self-center border border-slate-200 bg-slate-50 p-7 shadow-sm">
+              <p className="font-display text-xs font-bold uppercase tracking-[0.22em] text-[#0fb7c5]">
+                Selected Capability
+              </p>
+
+              <h3 className="mt-3 font-display text-3xl font-bold text-slate-900">
+                {selectedWorkItem.title}
+              </h3>
+
+              <div className="mt-4 h-1 w-16 bg-[#0fb7c5]" />
+
+              <p className="mt-6 text-base leading-8 text-slate-600">
+                {selectedWorkItem.desc}
+              </p>
+
+              <button
+                onClick={requestDemo}
+                className="mt-8 inline-flex bg-[#0fb7c5] px-7 py-3 font-display text-sm font-bold uppercase tracking-normal text-white transition-all hover:bg-[#10c8d7]"
+              >
+                Let&apos;s Talk
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Industrial Services */}
       <section className="bg-white py-20">
 
         <div className="mx-auto max-w-6xl px-6">
 
-          {/* Heading */}
           <div className="mx-auto mb-12 max-w-3xl text-center">
-
-            <p className="font-display text-xs font-bold uppercase tracking-[0.22em] text-[#0fb7c5]">
-              We Let The Work Speak First
-            </p>
-
-            <h2
-              className="mt-3 font-display text-3xl
-              font-bold text-slate-900 sm:text-4xl"
-            >
+            <h2 className="font-display text-3xl font-bold text-slate-900 sm:text-4xl">
               Industrial AI Services
             </h2>
 
             <div className="mx-auto mt-4 h-1 w-16 bg-[#0fb7c5]" />
 
-            <p
-              className="mt-5 text-base
-              leading-8 text-slate-600"
-            >
+            <p className="mt-5 text-base leading-8 text-slate-600">
               Smart industrial solutions for connected devices, automation, data analytics, and intelligent decision-making.
             </p>
           </div>
