@@ -27,7 +27,7 @@ const CONTACT_INFO = [
 
 export default function Contact() {
 
-  const [submitted, setSubmitted] = useState(false);
+  // const [submitted, setSubmitted] = useState(false);
 
   const [form, setForm] = useState({
     name: "",
@@ -44,14 +44,14 @@ export default function Contact() {
     });
   };
 
- const handleSubmit = async (e) => {
+const handleSubmit = async (e) => {
   e.preventDefault();
 
   try {
 
     await emailjs.send(
-      "service_atq1h0q",
-      "template_6ai8l8a",
+      "YOUR_SERVICE_ID",
+      "YOUR_TEMPLATE_ID",
       {
         name: form.name,
         email: form.email,
@@ -59,14 +59,22 @@ export default function Contact() {
         service: form.service,
         message: form.message,
       },
-      "xHFPjI_ikav6tce8c"
+      "YOUR_PUBLIC_KEY"
     );
 
-    setSubmitted(true);
+    alert("Message Sent Successfully!");
+
+    setForm({
+      name: "",
+      email: "",
+      phone: "",
+      service: "",
+      message: "",
+    });
 
   } catch (error) {
     console.log(error);
-    alert("Failed to send");
+    alert("Failed to send message");
   }
 };
   return (
@@ -301,7 +309,7 @@ export default function Contact() {
               will contact you shortly.
             </p>
 
-            {submitted ? (
+            {/* {submitted ? (
               <div className="py-12 text-center">
 
                 <img
@@ -325,7 +333,7 @@ export default function Contact() {
                   Thank you for contacting us.
                 </p>
               </div>
-            ) : (
+            ) : ( */}
               <form
                 onSubmit={handleSubmit}
                 className="mt-5 space-y-3 sm:mt-7 sm:space-y-4"
@@ -458,7 +466,7 @@ export default function Contact() {
                   Send Message
                 </button>
               </form>
-            )}
+            
           </div>
         </div>
       </div>
