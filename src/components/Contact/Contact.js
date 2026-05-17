@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
 import { COMPANY } from "../../data/siteData";
 
 const CONTACT_INFO = [
@@ -43,17 +44,31 @@ export default function Contact() {
     });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+ const handleSubmit = async (e) => {
+  e.preventDefault();
 
-    if (!form.name || !form.email || !form.message) {
-      alert("Please fill all required fields.");
-      return;
-    }
+  try {
+
+    await emailjs.send(
+      "service_atq1h0q",
+      "template_6ai8l8a",
+      {
+        name: form.name,
+        email: form.email,
+        phone: form.phone,
+        service: form.service,
+        message: form.message,
+      },
+      "xHFPjI_ikav6tce8c"
+    );
 
     setSubmitted(true);
-  };
 
+  } catch (error) {
+    console.log(error);
+    alert("Failed to send");
+  }
+};
   return (
     <section
       id="contact"
