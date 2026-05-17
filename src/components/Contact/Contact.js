@@ -50,8 +50,8 @@ const handleSubmit = async (e) => {
   try {
 
     await emailjs.send(
-      "YOUR_SERVICE_ID",
-      "YOUR_TEMPLATE_ID",
+      "service_atq1h0q",
+      "template_6ai8l8a",
       {
         name: form.name,
         email: form.email,
@@ -59,7 +59,7 @@ const handleSubmit = async (e) => {
         service: form.service,
         message: form.message,
       },
-      "YOUR_PUBLIC_KEY"
+      "xHFPjI_ikav6tce8c"
     );
 
     alert("Message Sent Successfully!");
