@@ -28,8 +28,6 @@ import WebDevelopmentPage from "./pages/WebDevelopmentPage";
 import MobileAppDevelopmentPage from "./pages/MobileAppDevelopmentPage";
 import UIWebDesigningPage from "./pages/UI&WebDesigningPage";
 import DigitalMarketPage from "./pages/DigitalMarketPage";
-
-
 export default function App() {
   const [theme, setTheme] = useState("dark");
   const [showBTT, setShowBTT] = useState(false);

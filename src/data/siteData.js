@@ -94,12 +94,12 @@ export const NAV_LINKS = [
   { href: "#contact", label: "Contact" },
 ];
 
-export const HERO_STATS = [
-  { num: 5, suffix: "+", label: "Projects Done" },
-  { num: 4,  suffix: "+", label: "Happy Clients" },
-  { num: 2,   suffix: "+", label: "Years Active" },
-  { num: 1,  suffix: "+", label: "Industries" },
-];
+// export const HERO_STATS = [
+//   { num: 5, suffix: "+", label: "Projects Done" },
+//   { num: 4,  suffix: "+", label: "Happy Clients" },
+//   { num: 2,   suffix: "+", label: "Years Active" },
+//   { num: 1,  suffix: "+", label: "Industries" },
+// ];
 
 export const SERVICES = [
   {
@@ -556,13 +556,13 @@ export const TRAINING_PROGRAMS = [
 
 export const BUSINESS_STATS = [
   {
-    number: "10+",
+    number: "8+",
     label: "Happy Clients",
     border: "border-pink-300",
   },
 
   {
-    number: "20+",
+    number: "10+",
     label: "Projects Complete",
     border: "border-yellow-300",
   },

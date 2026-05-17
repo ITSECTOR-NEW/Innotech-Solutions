@@ -49,7 +49,7 @@ const [openDropdown, setOpenDropdown] = useState(null);
   return (
     <>
       {/* ── Top Contact Bar ── */}
-      <div className="fixed top-0 left-0 right-0 z-50 bg-[#c4161c] text-white">
+      {/* <div className="fixed top-0 left-0 right-0 z-50 bg-[#c4161c] text-white">
         <div className="mx-auto flex h-7 max-w-7xl items-center justify-center gap-4 px-6 text-[11px] font-medium sm:justify-end sm:pr-45 lg:pr-40">
           <a href={`tel:${COMPANY.phone}`} className="flex items-center gap-2 transition-colors hover:text-cyan-300">
             <i className="fas fa-phone text-[11px] text-white"></i>
@@ -61,11 +61,11 @@ const [openDropdown, setOpenDropdown] = useState(null);
             <span>{COMPANY.email}</span>
           </a>
         </div>
-      </div>
+      </div> */}
 
       {/* ── Desktop / Tablet Navbar ── */}
       <nav
-        className={`fixed top-7 left-0 right-0 z-50 border-b border-white/10 transition-all duration-300
+        className={`fixed top-0 left-0 right-0 z-50 border-b border-white/10 transition-all duration-300
           ${scrolled
             ? "bg-dark-900/90 backdrop-blur-xl py-3"
             : "py-4"

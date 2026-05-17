@@ -1,6 +1,7 @@
 import React from "react";
 import { COMPANY } from "../data/siteData";
 
+
 const pageHeroImage = "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1600&auto=format&fit=crop";
 const aboutImage = "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1600&auto=format&fit=crop";
 
@@ -39,12 +40,14 @@ const TEAM_MEMBERS = [
   {
     name: "Ayush Sharma",
     role: "Director",
+    image: "/team/ayush.png",
     desc: "Driven technology professional with a strong background in automation, IoT, robotics, and software development, dedicated to creating innovative and efficient solutions for modern businesses and industries. Passionate about combining technology, creativity, and problem-solving to develop impactful digital systems that enhance productivity, reliability, and growth.",
   },
   {
-    name: "Dr. Sulekha Tomar",
-    role: "Marketing Head",
-    desc: "Experienced marketing professional with an MBA background and currently pursuing a PhD, bringing extensive industry experience from working with multiple organizations across diverse sectors. Skilled in strategic marketing, business development, leadership, and brand growth, with a strong focus on driving innovation, building client relationships, and delivering impactful business solutions.",
+    name: "Khushi Sikarwar",
+    role: "Chief Technology Officer",
+    image: "/team/khushi.png",
+    desc: "Technical expert with strong experience in software solutions, digital transformation, and strategic technology management. Skilled in web technologies, system planning, business development, and innovative solution building, with experience working across multiple industries. Passionate about leading technology-driven projects, optimizing business operations, and delivering scalable digital solutions with a focus on innovation and growth.",
   },
 ];
 
@@ -138,7 +141,7 @@ export default function AboutPage() {
           <SectionTitle
             center
             title="What Guides Our Work"
-            // desc="Use these cards for your principles, process, strengths, or service commitments."
+          // desc="Use these cards for your principles, process, strengths, or service commitments."
           />
 
           <div className="grid gap-6 md:grid-cols-3">
@@ -160,14 +163,23 @@ export default function AboutPage() {
           <SectionTitle
             center
             title="People Behind The Company"
-            // desc="Add your team information here when your names, roles, and photos are ready."
+          // desc="Add your team information here when your names, roles, and photos are ready."
           />
 
           <div className="grid gap-6 md:grid-cols-2">
             {TEAM_MEMBERS.map((member, index) => (
               <div key={`${member.role}-${index}`} className="flex gap-5 border border-slate-200 bg-white p-6 shadow-sm">
-                <div className="grid h-20 w-20 flex-shrink-0 place-items-center bg-slate-100 text-3xl text-[#0fb7c5]">
-                  <i className="fas fa-user-tie"></i>
+                <div
+                  className="h-24 w-24
+                  overflow-hidden rounded-2xl
+                  border border-slate-200
+                  shadow-sm flex-shrink-0"
+                >
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="h-full w-full object-cover"
+                  />
                 </div>
                 <div>
                   <p className="font-display text-xs font-bold uppercase tracking-[0.18em] text-[#0fb7c5]">
