@@ -1,0 +1,14 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#020617"/>
+  <rect x="64" y="64" width="1072" height="502" rx="36" fill="#0F172A" stroke="#164E63" stroke-width="2"/>
+  <circle cx="1010" cy="126" r="86" fill="#22D3EE" fill-opacity="0.18"/>
+  <circle cx="176" cy="520" r="110" fill="#A855F7" fill-opacity="0.16"/>
+  <rect x="106" y="108" width="86" height="86" rx="20" fill="#020617" stroke="#22D3EE" stroke-width="4"/>
+  <path d="M132 132H145V170H132V132Z" fill="#22D3EE"/>
+  <path d="M156 132H168L182 154V132H195V170H183L169 148V170H156V132Z" fill="white"/>
+  <text x="106" y="284" fill="white" font-family="Arial, Helvetica, sans-serif" font-size="70" font-weight="800">Innotech Solutions</text>
+  <text x="106" y="354" fill="#22D3EE" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700">AI &amp; IT Services</text>
+  <text x="106" y="426" fill="#CBD5E1" font-family="Arial, Helvetica, sans-serif" font-size="30">Web Development • App Development • Automation • Training</text>
+  <rect x="106" y="476" width="272" height="58" rx="29" fill="#22D3EE"/>
+  <text x="136" y="514" fill="#020617" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700">innotech-solutions.in</text>
+</svg>
