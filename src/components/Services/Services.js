@@ -24,7 +24,7 @@ function ServiceCard({
       ref={ref}
       href={detailPath || "#"}
       className="group relative overflow-hidden
-      rounded-[26px] border border-slate-200
+      rounded-[20px] border border-slate-200
       transition-all duration-300
       hover:-translate-y-1
       hover:border-cyan-400/30
@@ -70,8 +70,10 @@ function ServiceCard({
 
       {/* Content */}
       <div
-        className="relative flex h-[260px]
-        items-end p-7"
+        className="relative flex h-[190px]
+        items-end p-5
+        sm:h-[220px] sm:p-6
+        lg:h-[260px] lg:p-7"
       >
         <div>
 
@@ -85,8 +87,9 @@ function ServiceCard({
 
           {/* Title */}
           <h3
-            className="font-display text-[22px]
-            font-bold leading-tight text-white"
+            className="font-display text-[19px]
+            font-bold leading-tight text-white
+            sm:text-[22px]"
           >
             {title}
           </h3>
@@ -94,7 +97,7 @@ function ServiceCard({
 
         {/* Arrow */}
         <div
-          className="absolute right-6 top-6
+          className="absolute right-5 top-5
           flex h-10 w-10 items-center
           justify-center rounded-2xl
           border border-white/20
@@ -117,7 +120,8 @@ export default function Services() {
     <section
       id="services"
       className="relative overflow-hidden
-      bg-[#edf4ff] py-24"
+      bg-[#edf4ff] py-16
+      sm:py-24"
     >
 
       {/* Background Glow */}
@@ -150,7 +154,7 @@ export default function Services() {
         {/* Header */}
         <div
           ref={titleRef}
-          className="mx-auto mb-14 max-w-3xl text-center"
+          className="mx-auto mb-10 max-w-3xl text-center sm:mb-14"
         >
 
           <div
@@ -185,8 +189,9 @@ export default function Services() {
 
           <p
             className="mx-auto mt-5
-            max-w-2xl text-lg
-            leading-8 text-slate-500"
+            max-w-2xl text-base
+            leading-7 text-slate-500
+            sm:text-lg sm:leading-8"
           >
             Innovative digital products and
             scalable technology services designed

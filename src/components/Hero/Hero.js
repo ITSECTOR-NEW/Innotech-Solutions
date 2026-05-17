@@ -56,7 +56,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/45 to-black/10" />
 
       <div className="relative z-10 flex min-h-screen items-center pt-24">
-        <div className="mx-auto w-full max-w-6xl px-6 sm:px-8 lg:px-10">
+        <div className="mx-auto w-full max-w-6xl px-4 sm:px-8 lg:px-10">
           <div className="max-w-[690px] -translate-y-6 text-left text-white sm:-translate-y-4">
             <h2 className="animate-fadeUp font-display text-xl font-semibold tracking-normal text-[#0fb7c5] sm:text-[26px]">
               {COMPANY.name}
@@ -74,16 +74,16 @@ export default function Hero() {
               {heroSlides[activeSlide].desc}
             </p>
 
-            <div className="animate-fadeUp-3 mt-8 flex flex-wrap gap-4">
+            <div className="animate-fadeUp-3 mt-7 flex flex-wrap gap-3 sm:mt-8 sm:gap-4">
               <button
                 onClick={() => scrollTo("#services")}
-                className="inline-flex items-center gap-2 bg-[#0fb7c5] px-6 py-3 font-display text-xs font-bold uppercase tracking-normal text-white shadow-lg shadow-cyan-950/30 transition-all hover:-translate-y-0.5 hover:bg-[#10c8d7]"
+                className="inline-flex items-center gap-2 bg-[#0fb7c5] px-5 py-3 font-display text-xs font-bold uppercase tracking-normal text-white shadow-lg shadow-cyan-950/30 transition-all hover:-translate-y-0.5 hover:bg-[#10c8d7] sm:px-6"
               >
                 Read More <i className="fas fa-arrow-right text-xs"></i>
               </button>
               <button
                 onClick={() => scrollTo("#contact")}
-                className="inline-flex items-center gap-2 border-2 border-white px-6 py-3 font-display text-xs font-bold uppercase tracking-normal text-white transition-all hover:-translate-y-0.5 hover:bg-white hover:text-slate-950"
+                className="inline-flex items-center gap-2 border-2 border-white px-5 py-3 font-display text-xs font-bold uppercase tracking-normal text-white transition-all hover:-translate-y-0.5 hover:bg-white hover:text-slate-950 sm:px-6"
               >
                 Contact Us
               </button>

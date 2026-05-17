@@ -19,7 +19,7 @@ export default function Testimonials() {
     <section
       id="testimonials"
       className="relative overflow-hidden
-      bg-[#f8fafc] py-24"
+      bg-[#f8fafc] py-14 sm:py-24"
     >
 
       {/* Background Shape */}
@@ -36,7 +36,7 @@ export default function Testimonials() {
 
       <div
         className="mx-auto grid max-w-7xl
-        gap-16 px-6
+        gap-8 px-4 sm:gap-16 sm:px-6
         lg:grid-cols-[0.8fr_1.2fr]"
       >
 
@@ -53,7 +53,7 @@ export default function Testimonials() {
 
           <h2
             className="mt-5 font-display
-            text-4xl font-bold
+            text-3xl font-bold
             leading-tight text-slate-900
             sm:text-5xl"
           >
@@ -63,8 +63,8 @@ export default function Testimonials() {
           </h2>
 
           <p
-            className="mt-7 max-w-md
-            text-lg leading-9
+            className="mt-4 max-w-md
+            text-sm leading-7
             text-slate-500"
           >
             Real feedback from startups,
@@ -93,14 +93,16 @@ export default function Testimonials() {
               >
 
                 <div
-                  className="rounded-[32px]
-                  bg-white p-10
+                  className="rounded-2xl
+                  bg-white p-5
+                  sm:rounded-[32px] sm:p-10
                   shadow-sm"
                 >
 
                   {/* Quote */}
                   <div
-                    className="mb-6 text-6xl
+                    className="mb-3 text-4xl
+                    sm:mb-6 sm:text-6xl
                     leading-none text-pink-100"
                   >
                     "
@@ -108,24 +110,27 @@ export default function Testimonials() {
 
                   {/* Description */}
                   <p
-                    className="text-lg
-                    leading-10 text-slate-500"
+                    className="text-sm
+                    leading-7 text-slate-500
+                    sm:text-lg sm:leading-10"
                   >
                     {item.text}
                   </p>
 
                   {/* Bottom */}
                   <div
-                    className="mt-10 flex
-                    items-center gap-5"
+                    className="mt-6 flex
+                    items-center gap-3
+                    sm:mt-10 sm:gap-5"
                   >
 
                     {/* Image */}
                     <div
-                      className={`grid h-20 w-20
+                      className={`grid h-14 w-14
                       place-items-center rounded-full
                       bg-gradient-to-br ${item.grad}
-                      text-2xl font-bold text-white`}
+                      text-lg font-bold text-white
+                      sm:h-20 sm:w-20 sm:text-2xl`}
                     >
                       {item.initials}
                     </div>
@@ -135,14 +140,16 @@ export default function Testimonials() {
 
                       <h3
                         className="font-display
-                        text-2xl font-bold
+                        text-lg font-bold
+                        sm:text-2xl
                         text-slate-900"
                       >
                         {item.name}
                       </h3>
 
                       <p
-                        className="mt-1 text-base
+                        className="mt-1 text-sm
+                        sm:text-base
                         text-slate-500"
                       >
                         {item.role}

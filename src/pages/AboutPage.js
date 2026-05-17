@@ -168,13 +168,14 @@ export default function AboutPage() {
 
           <div className="grid gap-6 md:grid-cols-2">
             {TEAM_MEMBERS.map((member, index) => (
-              <div key={`${member.role}-${index}`} className="flex gap-5 border border-slate-200 bg-white p-6 shadow-sm">
+              <div key={`${member.role}-${index}`} className="flex flex-col gap-5 border border-slate-200 bg-white p-5 shadow-sm sm:flex-row sm:p-6">
                 <div
-                  className="h-56 w-40
+                  className="mx-auto h-48 w-36
                   overflow-hidden rounded-2xl
                   border border-slate-200
                   bg-slate-50
-                  shadow-sm flex-shrink-0"
+                  shadow-sm flex-shrink-0
+                  sm:mx-0 sm:h-56 sm:w-40"
                 >
                   <img
                     src={member.image}
@@ -182,14 +183,14 @@ export default function AboutPage() {
                     className="h-full w-full object-contain object-center"
                   />
                 </div>
-                <div>
+                <div className="min-w-0">
                   <p className="font-display text-xs font-bold uppercase tracking-[0.18em] text-[#0fb7c5]">
                     {member.role}
                   </p>
-                  <h3 className="mt-2 font-display text-2xl font-bold text-slate-900">
+                  <h3 className="mt-2 font-display text-xl font-bold text-slate-900 sm:text-2xl">
                     {member.name}
                   </h3>
-                  <p className="mt-3 text-sm leading-7 text-slate-600">{member.desc}</p>
+                  <p className="mt-3 text-sm leading-6 text-slate-600 sm:leading-7">{member.desc}</p>
                 </div>
               </div>
             ))}

@@ -23,7 +23,7 @@ export default function BusinessNeeds() {
   return (
     <section
       className="relative overflow-hidden
-      bg-[#0f172a] py-20"
+      bg-[#0f172a] py-14 sm:py-20"
     >
 
       {/* Background Pattern */}
@@ -51,7 +51,7 @@ export default function BusinessNeeds() {
 
       <div
         className="relative mx-auto grid
-        max-w-7xl gap-12 px-6
+        max-w-7xl gap-8 px-4 sm:gap-12 sm:px-6
         lg:grid-cols-[1.2fr_0.8fr]"
       >
 
@@ -60,7 +60,7 @@ export default function BusinessNeeds() {
 
           <h2
             className="font-display
-            text-4xl font-bold
+            text-3xl font-bold
             leading-tight text-white
             sm:text-5xl"
           >
@@ -72,19 +72,20 @@ export default function BusinessNeeds() {
             growing businesses
           </h2>
 
-          <div className="mt-8">
+          <div className="mt-6 sm:mt-8">
 
             <h3
               className="font-display
-              text-2xl font-bold
+              text-xl font-bold
               text-white"
             >
               Start With A Clear Technology Roadmap
             </h3>
 
             <p
-              className="mt-4 text-base
-              leading-8 text-slate-400"
+              className="mt-3 text-sm
+              leading-7 text-slate-400
+              sm:mt-4 sm:text-base sm:leading-8"
             >
               We review your current workflow, customer journey,
               and digital presence to suggest the right mix of
@@ -93,7 +94,7 @@ export default function BusinessNeeds() {
           </div>
 
           {/* Points */}
-          <div className="mt-8 space-y-5">
+          <div className="mt-6 space-y-3 sm:mt-8 sm:space-y-5">
 
             {BUSINESS_POINTS.map((point) => (
               <div
@@ -102,17 +103,19 @@ export default function BusinessNeeds() {
               >
 
                 <div
-                  className="mt-1 grid h-7 w-7
+                  className="mt-1 grid h-6 w-6
                   flex-shrink-0 place-items-center
                   rounded-full bg-yellow-400
-                  text-xs text-slate-900"
+                  text-[10px] text-slate-900
+                  sm:h-7 sm:w-7 sm:text-xs"
                 >
                   <i className="fas fa-check"></i>
                 </div>
 
                 <p
                   className="text-base
-                  leading-8 text-slate-300"
+                    leading-6 text-slate-300
+                    sm:text-base sm:leading-8"
                 >
                   {point}
                 </p>
@@ -124,16 +127,16 @@ export default function BusinessNeeds() {
         {/* Right Small Boxes */}
         <div
           className="grid grid-cols-2
-          gap-5 self-center"
+          gap-3 self-center sm:gap-5"
         >
 
           {BUSINESS_STATS.map((item) => (
             <div
               key={item.label}
-              className={`rounded-[26px]
+              className={`rounded-2xl sm:rounded-[26px]
               border ${item.border}
               bg-white/[0.04]
-              p-7 text-center
+              p-4 text-center sm:p-7
               backdrop-blur-sm
               transition-all duration-300
               hover:-translate-y-1
@@ -142,14 +145,16 @@ export default function BusinessNeeds() {
 
               <h3
                 className="font-display
-                text-4xl font-bold
+                text-2xl font-bold
+                sm:text-4xl
                 text-white"
               >
                 {item.number}
               </h3>
 
               <p
-                className="mt-3 text-sm
+                className="mt-2 text-xs
+                sm:mt-3 sm:text-sm
                 text-slate-400"
               >
                 {item.label}
@@ -161,19 +166,21 @@ export default function BusinessNeeds() {
 
       {/* Bottom CTA */}
       <div
-        className="relative mx-auto mt-16
+        className="relative mx-4 mt-10
+        sm:mx-auto sm:mt-16
         flex max-w-5xl flex-col
         items-center justify-between
-        gap-6 rounded-[28px]
+        gap-4 rounded-2xl sm:gap-6 sm:rounded-[28px]
         border border-white/10
         bg-white/[0.04]
-        px-8 py-7 backdrop-blur-sm
+        px-5 py-5 backdrop-blur-sm
+        sm:px-8 sm:py-7
         md:flex-row"
       >
 
         <h3
           className="font-display
-          text-2xl font-bold
+          text-xl font-bold
           text-white sm:text-3xl"
         >
           Get Your
@@ -189,9 +196,10 @@ export default function BusinessNeeds() {
           gap-2 rounded-full
           bg-gradient-to-r
           from-pink-500 to-purple-500
-          px-8 py-4 text-base
+          px-6 py-3 text-sm
           font-semibold text-white
-          transition-all hover:scale-105"
+          transition-all hover:scale-105
+          sm:px-8 sm:py-4 sm:text-base"
         >
           Enquire Now
           <i className="fas fa-arrow-right text-sm"></i>

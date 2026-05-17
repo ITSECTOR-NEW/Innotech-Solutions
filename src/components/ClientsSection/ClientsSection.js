@@ -6,7 +6,7 @@ export default function ClientsSection() {
   return (
     <section
       className="relative overflow-hidden
-      bg-[#111827] py-16"
+      bg-[#111827] py-12 sm:py-16"
     >
 
       {/* Background Glow */}
@@ -22,7 +22,7 @@ export default function ClientsSection() {
         bg-purple-500/10 blur-3xl"
       />
 
-      <div className="relative mx-auto max-w-7xl px-6">
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
 
         {/* Heading */}
         <div className="text-center">
@@ -37,7 +37,7 @@ export default function ClientsSection() {
 
           <h2
             className="mt-3 font-display
-            text-3xl font-bold
+            text-2xl font-bold
             text-white sm:text-4xl"
           >
             Trusted by
@@ -57,7 +57,7 @@ export default function ClientsSection() {
         </div>
 
         {/* Slider */}
-        <div className="relative mt-14 overflow-hidden">
+        <div className="relative mt-9 overflow-hidden sm:mt-14">
 
           {/* Gradient Left */}
           <div
@@ -76,18 +76,18 @@ export default function ClientsSection() {
           />
 
           {/* Marquee */}
-          <div className="flex animate-marquee gap-6 w-max">
+          <div className="flex w-max animate-marquee gap-3 sm:gap-6">
 
             {[...CLIENTS, ...CLIENTS].map((client, index) => (
               <div
                 key={index}
                 className="group flex
-                min-w-[220px]
+                min-w-[150px] sm:min-w-[220px]
                 flex-col items-center
-                rounded-3xl border
+                rounded-2xl border sm:rounded-3xl
                 border-white/10
                 bg-white/[0.04]
-                p-6 backdrop-blur-sm
+                p-4 backdrop-blur-sm sm:p-6
                 transition-all duration-300
                 hover:border-cyan-400/30
                 hover:bg-white/[0.06]"
@@ -95,15 +95,15 @@ export default function ClientsSection() {
 
                 {/* Logo */}
                 <div
-                  className="flex h-24 w-full
+                  className="flex h-16 w-full
                   items-center justify-center
-                  overflow-hidden rounded-2xl
+                  overflow-hidden rounded-xl sm:h-24 sm:rounded-2xl
                   bg-white"
                 >
                   <img
                     src={client.image}
                     alt={client.name}
-                    className="max-h-14
+                    className="max-h-10 sm:max-h-14
                     w-auto object-contain
                     transition-all duration-300
                     group-hover:scale-105"
@@ -112,8 +112,9 @@ export default function ClientsSection() {
 
                 {/* Name */}
                 <h3
-                  className="mt-5 text-center
-                  font-display text-base
+                  className="mt-3 text-center
+                  font-display text-sm
+                  sm:mt-5 sm:text-base
                   font-semibold text-white"
                 >
                   {client.name}
@@ -125,19 +126,18 @@ export default function ClientsSection() {
 
         {/* Bottom Stats */}
         <div
-          className="mt-14 grid gap-5
-          md:grid-cols-3"
+          className="mt-9 grid grid-cols-3 gap-3 sm:mt-14 sm:gap-5"
         >
 
           <div
-            className="rounded-3xl
+            className="rounded-2xl sm:rounded-3xl
             border border-white/10
             bg-white/[0.04]
-            p-7 text-center"
+            p-4 text-center sm:p-7"
           >
             <h3
               className="font-display
-              text-4xl font-bold
+              text-2xl font-bold sm:text-4xl
               text-cyan-400"
             >
               10+
@@ -145,7 +145,7 @@ export default function ClientsSection() {
 
             <p
               className="mt-2 text-xs
-              uppercase tracking-[0.2em]
+              uppercase tracking-[0.1em] sm:tracking-[0.2em]
               text-slate-400"
             >
               Solutions Built
@@ -153,14 +153,14 @@ export default function ClientsSection() {
           </div>
 
           <div
-            className="rounded-3xl
+            className="rounded-2xl sm:rounded-3xl
             border border-white/10
             bg-white/[0.04]
-            p-7 text-center"
+            p-4 text-center sm:p-7"
           >
             <h3
               className="font-display
-              text-4xl font-bold
+              text-2xl font-bold sm:text-4xl
               text-cyan-400"
             >
               8+
@@ -168,7 +168,7 @@ export default function ClientsSection() {
 
             <p
               className="mt-2 text-xs
-              uppercase tracking-[0.2em]
+              uppercase tracking-[0.1em] sm:tracking-[0.2em]
               text-slate-400"
             >
               Client Relationships
@@ -176,14 +176,14 @@ export default function ClientsSection() {
           </div>
 
           <div
-            className="rounded-3xl
+            className="rounded-2xl sm:rounded-3xl
             border border-white/10
             bg-white/[0.04]
-            p-7 text-center"
+            p-4 text-center sm:p-7"
           >
             <h3
               className="font-display
-              text-4xl font-bold
+              text-2xl font-bold sm:text-4xl
               text-cyan-400"
             >
               4+
@@ -191,7 +191,7 @@ export default function ClientsSection() {
 
             <p
               className="mt-2 text-xs
-              uppercase tracking-[0.2em]
+              uppercase tracking-[0.1em] sm:tracking-[0.2em]
               text-slate-400"
             >
               Business Categories

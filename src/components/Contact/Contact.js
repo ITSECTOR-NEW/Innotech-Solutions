@@ -58,7 +58,7 @@ export default function Contact() {
     <section
       id="contact"
       className="relative overflow-hidden
-      bg-[#eef5ff] py-16"
+      bg-[#eef5ff] py-12 sm:py-16"
     >
 
       {/* Background Glow */}
@@ -76,10 +76,10 @@ export default function Contact() {
         blur-[100px]"
       />
 
-      <div className="relative mx-auto max-w-7xl px-6">
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
 
         {/* Heading */}
-        <div className="mx-auto mb-10 max-w-2xl text-center">
+        <div className="mx-auto mb-8 max-w-2xl text-center sm:mb-10">
 
           <div
             className="inline-flex items-center
@@ -103,7 +103,7 @@ export default function Contact() {
 
           <h2
             className="mt-4 font-display
-            text-3xl font-black
+            text-2xl font-black
             leading-tight text-slate-900
             sm:text-4xl"
           >
@@ -133,13 +133,15 @@ export default function Contact() {
           <div className="space-y-4">
 
             <div
-              className="rounded-[28px]
-              bg-white p-6 shadow-sm"
+            className="rounded-2xl
+              bg-white p-5 shadow-sm
+              sm:rounded-[28px] sm:p-6"
             >
 
               <h3
                 className="font-display
-                text-2xl font-bold
+                text-xl font-bold
+                sm:text-2xl
                 text-slate-900"
               >
                 Get In Touch
@@ -155,7 +157,7 @@ export default function Contact() {
               </p>
 
               {/* Contact Info */}
-              <div className="mt-7 space-y-4">
+              <div className="mt-5 space-y-3 sm:mt-7 sm:space-y-4">
 
                 {CONTACT_INFO.map((item) => (
                   <div
@@ -164,11 +166,12 @@ export default function Contact() {
                   >
 
                     <div
-                      className="flex h-12 w-12
+                      className="flex h-10 w-10
                       flex-shrink-0 items-center
                       justify-center rounded-xl
                       border border-slate-200
-                      bg-slate-50"
+                      bg-slate-50
+                      sm:h-12 sm:w-12"
                     >
                       <img
                         src={item.image}
@@ -200,7 +203,7 @@ export default function Contact() {
               </div>
 
               {/* Social Icons */}
-              <div className="mt-8 flex flex-wrap gap-3">
+              <div className="mt-6 flex flex-wrap gap-2.5 sm:mt-8 sm:gap-3">
 
                 {[
                   {
@@ -238,14 +241,15 @@ export default function Contact() {
                     href={s.href}
                     target="_blank"
                     rel="noreferrer"
-                    className="flex h-11 w-11
+                    className="flex h-10 w-10
                     items-center justify-center
                     rounded-xl border
                     border-slate-200 bg-white
                     transition-all duration-300
                     hover:-translate-y-1
                     hover:border-cyan-300
-                    hover:shadow-md"
+                    hover:shadow-md
+                    sm:h-11 sm:w-11"
                   >
                     <img
                       src={s.image}
@@ -260,13 +264,15 @@ export default function Contact() {
 
           {/* Right Form */}
           <div
-            className="rounded-[28px]
-            bg-white p-6 shadow-sm"
+            className="rounded-2xl
+            bg-white p-5 shadow-sm
+            sm:rounded-[28px] sm:p-6"
           >
 
             <h3
               className="font-display
-              text-2xl font-bold
+              text-xl font-bold
+              sm:text-2xl
               text-slate-900"
             >
               Send Message
@@ -307,7 +313,7 @@ export default function Contact() {
             ) : (
               <form
                 onSubmit={handleSubmit}
-                className="mt-7 space-y-4"
+                className="mt-5 space-y-3 sm:mt-7 sm:space-y-4"
               >
 
                 {/* Row */}
@@ -359,7 +365,7 @@ export default function Contact() {
                       name="service"
                       value={form.service}
                       onChange={handleChange}
-                      className="w-full rounded-2xl
+                      className="w-full rounded-xl sm:rounded-2xl
                       border border-slate-200
                       bg-slate-50
                       px-4 py-3 text-sm
@@ -405,7 +411,7 @@ export default function Contact() {
                     value={form.message}
                     onChange={handleChange}
                     placeholder="Tell us about your project..."
-                    className="w-full rounded-2xl
+                    className="w-full rounded-xl sm:rounded-2xl
                     border border-slate-200
                     bg-slate-50
                     px-4 py-3 text-sm
@@ -419,7 +425,7 @@ export default function Contact() {
                   type="submit"
                   className="flex w-full
                   items-center justify-center
-                  gap-3 rounded-2xl
+                  gap-3 rounded-xl sm:rounded-2xl
                   bg-gradient-to-r
                   from-cyan-400 to-blue-500
                   py-3.5 font-display
@@ -473,7 +479,7 @@ function InputField({
         value={value}
         onChange={onChange}
         placeholder={placeholder}
-        className="w-full rounded-2xl
+        className="w-full rounded-xl sm:rounded-2xl
         border border-slate-200
         bg-slate-50
         px-4 py-3 text-sm
