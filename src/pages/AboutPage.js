@@ -1,6 +1,6 @@
 import React from "react";
-import { COMPANY } from "../data/siteData";
-
+import ayushImage from "../assets/ team/ ayush.png";
+import khushiImage from "../assets/ team/ khushi.png";
 
 const pageHeroImage = "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1600&auto=format&fit=crop";
 const aboutImage = "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1600&auto=format&fit=crop";
@@ -40,13 +40,13 @@ const TEAM_MEMBERS = [
   {
     name: "Ayush Sharma",
     role: "Director",
-    image: "/team/ayush.png",
+    image: ayushImage,
     desc: "Driven technology professional with a strong background in automation, IoT, robotics, and software development, dedicated to creating innovative and efficient solutions for modern businesses and industries. Passionate about combining technology, creativity, and problem-solving to develop impactful digital systems that enhance productivity, reliability, and growth.",
   },
   {
     name: "Khushi Sikarwar",
     role: "Chief Technology Officer",
-    image: "/team/khushi.png",
+    image: khushiImage,
     desc: "Technical expert with strong experience in software solutions, digital transformation, and strategic technology management. Skilled in web technologies, system planning, business development, and innovative solution building, with experience working across multiple industries. Passionate about leading technology-driven projects, optimizing business operations, and delivering scalable digital solutions with a focus on innovation and growth.",
   },
 ];
@@ -170,15 +170,16 @@ export default function AboutPage() {
             {TEAM_MEMBERS.map((member, index) => (
               <div key={`${member.role}-${index}`} className="flex gap-5 border border-slate-200 bg-white p-6 shadow-sm">
                 <div
-                  className="h-24 w-24
+                  className="h-56 w-40
                   overflow-hidden rounded-2xl
                   border border-slate-200
+                  bg-slate-50
                   shadow-sm flex-shrink-0"
                 >
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="h-full w-full object-cover"
+                    className="h-full w-full object-contain object-center"
                   />
                 </div>
                 <div>

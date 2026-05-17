@@ -2,7 +2,7 @@
 export const COMPANY = {
   name: "Innotech Solutions",
   tagline: "Technology. Innovation. Transformation.",
-  email: "info@innotechsolutions.com",
+  email: "info@innotech-solutions.in",
   phone: "+91 7803956101",
   whatsapp: "7803956101",
   address: "Indore, Madhya Pradesh, India",
