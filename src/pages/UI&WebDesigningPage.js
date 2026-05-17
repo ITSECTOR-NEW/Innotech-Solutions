@@ -3,7 +3,7 @@ import UiDesign from "../components/UiDesign/UiDesign";
 
 export default function  UIWebDesigningPage(){
     return (
-        <main className="pt-12 bg-dark-900">
+        <main>
           < UiDesign/>
         </main>
       );
