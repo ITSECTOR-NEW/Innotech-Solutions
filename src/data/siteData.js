@@ -649,9 +649,9 @@ export const BUSINESS_POINTS = [
 export const TRAINING_TOOLS = ["🤖 Arduino","🍓 Raspberry Pi","🐍 Python","🧠 TensorFlow","📡 ESP32","⚡ PLC","☁️ Cloud IoT","🦾 ROS","📊 Jupyter"];
 
 export const TRAINING_STATS = [
-  { num: 2000, label: "Students Trained" },
-  { num: 45,   label: "Schools & Colleges" },
-  { num: 120,  label: "Workshops Done" },
+  { num: 100, label: "Students Trained" },
+  { num: 2,   label: "Schools & Colleges" },
+  { num: 12,  label: "Workshops Done" },
   { num: 95,   label: "% Satisfaction" },
 ];
 
@@ -680,12 +680,12 @@ export const PORTFOLIO_ITEMS = [
 ];
 
 export const TESTIMONIALS = [
-  { stars: 5, text: "Innotix Solution transformed our manufacturing plant. The IoT dashboard saved us from 3 major breakdowns in the first month. Exceptional expertise.", name: "Rajesh Kumar",     role: "GM Operations, AutoParts Industries", initials: "RK", grad: "from-cyan-400 to-blue-500" },
+  { stars: 5, text: "Innotech Solutions transformed our manufacturing plant. The IoT dashboard saved us from 3 major breakdowns in the first month. Exceptional expertise.", name: "Rajesh Kumar",     role: "GM Operations, AutoParts Industries", initials: "RK", grad: "from-cyan-400 to-blue-500" },
   { stars: 5, text: "The website they built tripled our organic traffic in 4 months. Clean code, beautiful design, and the digital marketing strategy was spot on!", name: "Priya Sharma",      role: "Founder, TechStart Solutions",        initials: "PS", grad: "from-purple-500 to-pink-500" },
   { stars: 5, text: "The robotics workshop at our school was outstanding. Students were completely engaged. We've seen a 60% increase in tech interest since.", name: "Anjali Mishra",     role: "Principal, DPS Bhopal",               initials: "AM", grad: "from-green-400 to-blue-500" },
   { stars: 5, text: "Their AI integration helped us automate 70% of data processing. What took 8 hours now runs in under 30 minutes. Game-changing results.", name: "Vikram Gupta",      role: "CTO, DataFlow Analytics",             initials: "VG", grad: "from-orange-400 to-red-500" },
   { stars: 5, text: "From concept to deployment in 6 weeks — fast, professional, and quality-focused. The mobile app has 4.8 stars on both stores.", name: "Neha Singh",        role: "CEO, FieldForce Pvt Ltd",             initials: "NS", grad: "from-cyan-400 to-green-400" },
-  { stars: 5, text: "Innotix set up our complete STEM innovation lab. The quality and ongoing support has made us a model institution in the state.", name: "Dr. Dinesh Tiwari", role: "HOD CS, NIT Bhopal",                  initials: "DT", grad: "from-purple-500 to-blue-500" },
+  { stars: 5, text: "Innotech set up our complete STEM innovation lab. The quality and ongoing support has made us a model institution in the state.", name: "Dr. Dinesh Tiwari", role: "HOD CS, NIT Bhopal",                  initials: "DT", grad: "from-purple-500 to-blue-500" },
 ];
 
 // export const INDUSTRIES = [
