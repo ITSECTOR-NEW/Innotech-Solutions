@@ -32,7 +32,7 @@ export default function ClientsSection() {
             uppercase tracking-[0.25em]
             text-cyan-400"
           >
-            Our Happy Customers
+            People We Build For
           </span>
 
           <h2
@@ -40,9 +40,9 @@ export default function ClientsSection() {
             text-3xl font-bold
             text-white sm:text-4xl"
           >
-            Some of our
+            Trusted by
             <span className="text-cyan-400">
-              {" "}Clients
+              {" "}Growing Teams
             </span>
           </h2>
 
@@ -51,8 +51,8 @@ export default function ClientsSection() {
             max-w-2xl text-sm
             leading-7 text-slate-400"
           >
-            Trusted by businesses, startups,
-            and educational institutions.
+            We work with founders, institutes, local businesses,
+            and industry teams that want practical digital solutions.
           </p>
         </div>
 
@@ -140,7 +140,7 @@ export default function ClientsSection() {
               text-4xl font-bold
               text-cyan-400"
             >
-              40+
+              10+
             </h3>
 
             <p
@@ -148,7 +148,7 @@ export default function ClientsSection() {
               uppercase tracking-[0.2em]
               text-slate-400"
             >
-              Projects Delivered
+              Solutions Built
             </p>
           </div>
 
@@ -163,7 +163,7 @@ export default function ClientsSection() {
               text-4xl font-bold
               text-cyan-400"
             >
-              20+
+              8+
             </h3>
 
             <p
@@ -171,7 +171,7 @@ export default function ClientsSection() {
               uppercase tracking-[0.2em]
               text-slate-400"
             >
-              Happy Clients
+              Client Relationships
             </p>
           </div>
 
@@ -186,7 +186,7 @@ export default function ClientsSection() {
               text-4xl font-bold
               text-cyan-400"
             >
-              100+
+              4+
             </h3>
 
             <p
@@ -194,7 +194,7 @@ export default function ClientsSection() {
               uppercase tracking-[0.2em]
               text-slate-400"
             >
-              Students Trained
+              Business Categories
             </p>
           </div>
         </div>

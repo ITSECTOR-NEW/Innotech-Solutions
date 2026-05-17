@@ -522,69 +522,69 @@ export const TRAINING_PROGRAMS = [
       "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop",
   },
 ];
-// export const CLIENTS = [
-//   {
-//     name: "Organic Fertilizer",
-//     image:
-//       "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
-//   },
+export const CLIENTS = [
+  {
+    name: "Local Business Teams",
+    image:
+      "https://cdn-icons-png.flaticon.com/512/3135/3135706.png",
+  },
 
-//   {
-//     name: "Finance Corporation",
-//     image:
-//       "https://upload.wikimedia.org/wikipedia/commons/4/4f/Iconic_image_of_India_Gate.jpg",
-//   },
+  {
+    name: "Education Institutes",
+    image:
+      "https://cdn-icons-png.flaticon.com/512/3976/3976625.png",
+  },
 
-//   {
-//     name: "University",
-//     image:
-//       "https://upload.wikimedia.org/wikipedia/commons/1/18/Five-pointed_star.svg",
-//   },
+  {
+    name: "Startup Founders",
+    image:
+      "https://cdn-icons-png.flaticon.com/512/3281/3281289.png",
+  },
 
-//   {
-//     name: "Relocation Service",
-//     image:
-//       "https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg",
-//   },
+  {
+    name: "Industrial Units",
+    image:
+      "https://cdn-icons-png.flaticon.com/512/3256/3256217.png",
+  },
 
-//   {
-//     name: "Education Institute",
-//     image:
-//       "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg",
-//   },
-// ];
+  {
+    name: "Service Providers",
+    image:
+      "https://cdn-icons-png.flaticon.com/512/3050/3050525.png",
+  },
+];
 
 export const BUSINESS_STATS = [
   {
     number: "8+",
-    label: "Happy Clients",
+    label: "Active Clients",
     border: "border-pink-300",
   },
 
   {
     number: "10+",
-    label: "Projects Complete",
+    label: "Live Solutions",
     border: "border-yellow-300",
   },
 
   {
-    number: "24/7",
-    label: "Support",
+    number: "4+",
+    label: "Business Domains",
     border: "border-cyan-300",
   },
 
   {
-    number: "2Y",
-    label: "Experience",
+    number: "2+",
+    label: "Years Building",
     border: "border-red-300",
   },
 ];
 
 export const BUSINESS_POINTS = [
-  "Professional website and branding solutions.",
-  "SEO optimization and Google ranking support Provided.",
-  "UI/UX and modern digital experiences.",
-  "Reliable support and scalable business solutions Provided.",
+  "Website, app, and automation ideas mapped to real business workflows.",
+  "Clear digital roadmap for leads, operations, reporting, and customer support.",
+  "Modern UI/UX improvements that make your services easier to understand.",
+  "Scalable technology guidance for startups, institutes, and local businesses.",
 ];
 
 export const TRAINING_TOOLS = ["🤖 Arduino","🍓 Raspberry Pi","🐍 Python","🧠 TensorFlow","📡 ESP32","⚡ PLC","☁️ Cloud IoT","🦾 ROS","📊 Jupyter"];

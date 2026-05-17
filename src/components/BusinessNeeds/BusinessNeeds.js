@@ -65,11 +65,11 @@ export default function BusinessNeeds() {
             sm:text-5xl"
           >
             <span className="text-pink-500">
-              Additional
+              Practical
             </span>
-            {" "}services for
+            {" "}digital support for
             <br />
-            your business needs
+            growing businesses
           </h2>
 
           <div className="mt-8">
@@ -79,16 +79,16 @@ export default function BusinessNeeds() {
               text-2xl font-bold
               text-white"
             >
-              Get Free Business Analysis
+              Start With A Clear Technology Roadmap
             </h3>
 
             <p
               className="mt-4 text-base
               leading-8 text-slate-400"
             >
-              We Provide modern digital solutions,
-              full stack website strategy, SEO optimization,
-              and branding ideas to grow your business online.
+              We review your current workflow, customer journey,
+              and digital presence to suggest the right mix of
+              website, app, automation, and marketing improvements.
             </p>
           </div>
 
@@ -176,11 +176,11 @@ export default function BusinessNeeds() {
           text-2xl font-bold
           text-white sm:text-3xl"
         >
-          Get Your Free
+          Get Your
           <span className="text-pink-500">
-            {" "}Business Audit
+            {" "}Digital Growth
           </span>
-          {" "}Report here
+          {" "}Discussion Started
         </h3>
 
         <button
