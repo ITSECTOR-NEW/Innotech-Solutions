@@ -321,7 +321,7 @@ export default function UiDesign() {
           </div>
 
           {/* Tools Grid */}
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="hidden gap-6 sm:grid sm:grid-cols-2 lg:grid-cols-4">
 
             {DESIGN_TOOLS.map((tool) => (
               <div
@@ -348,6 +348,38 @@ export default function UiDesign() {
                 </h3>
               </div>
             ))}
+          </div>
+
+          {/* Mobile Auto Scroll */}
+          <div className="-mx-6 overflow-hidden sm:hidden">
+            <div className="mobile-tools-marquee flex w-max gap-4 px-6">
+
+              {[...DESIGN_TOOLS, ...DESIGN_TOOLS].map((tool, index) => (
+                <div
+                  key={`${tool.name}-${index}`}
+                  className="w-[165px] flex-none border
+                  border-slate-200 bg-slate-50 p-5
+                  text-center"
+                  aria-hidden={index >= DESIGN_TOOLS.length}
+                >
+                  <div
+                    className="mx-auto grid h-14 w-14
+                    place-items-center
+                    bg-[#0fb7c5] text-xl text-white"
+                  >
+                    <i className={tool.icon}></i>
+                  </div>
+
+                  <h3
+                    className="mt-4 font-display
+                    text-base font-bold
+                    text-slate-900"
+                  >
+                    {tool.name}
+                  </h3>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
