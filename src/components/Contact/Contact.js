@@ -29,7 +29,7 @@ export default function Contact() {
 
   // const [submitted, setSubmitted] = useState(false);
 
-  const [form, setForm] = useState({
+  const [loading, setLoading] = useState(false); ({
     name: "",
     email: "",
     phone: "",
@@ -44,39 +44,43 @@ export default function Contact() {
     });
   };
 
-const handleSubmit = async (e) => {
-  e.preventDefault();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    try {
 
-  try {
+      await emailjs.send(
+        // EmailJs key
+        "service_atq1h0q",
+        // template key
+        "template_6ai8l8a",
+        {
+          name: form.name,
+          email: form.email,
+          phone: form.phone,
+          service: form.service,
+          message: form.message,
+        },
+        // public key
+        "xHFPjI_ikav6tce8c"
+      );
+      setLoading(false);
+      alert("Message Sent Successfully!");
 
-    await emailjs.send(
-      "service_atq1h0q",
-      "template_6ai8l8a",
-      {
-        name: form.name,
-        email: form.email,
-        phone: form.phone,
-        service: form.service,
-        message: form.message,
-      },
-      "xHFPjI_ikav6tce8c"
-    );
+      setForm({
+        name: "",
+        email: "",
+        phone: "",
+        service: "",
+        message: "",
+      });
 
-    alert("Message Sent Successfully!");
-
-    setForm({
-      name: "",
-      email: "",
-      phone: "",
-      service: "",
-      message: "",
-    });
-
-  } catch (error) {
-    console.log(error);
-    alert("Failed to send message");
-  }
-};
+    } catch (error) {
+      setLoading(false);
+      console.log(error);
+      alert("Failed to send message");
+    }
+  };
   return (
     <section
       id="contact"
@@ -156,7 +160,7 @@ const handleSubmit = async (e) => {
           <div className="space-y-4">
 
             <div
-            className="rounded-2xl
+              className="rounded-2xl
               bg-white p-5 shadow-sm
               sm:rounded-[28px] sm:p-6"
             >
@@ -334,139 +338,142 @@ const handleSubmit = async (e) => {
                 </p>
               </div>
             ) : ( */}
-              <form
-                onSubmit={handleSubmit}
-                className="mt-5 space-y-3 sm:mt-7 sm:space-y-4"
-              >
+            <form
+              onSubmit={handleSubmit}
+              className="mt-5 space-y-3 sm:mt-7 sm:space-y-4"
+            >
 
-                {/* Row */}
-                <div className="grid gap-4 sm:grid-cols-2">
+              {/* Row */}
+              <div className="grid gap-4 sm:grid-cols-2">
 
-                  <InputField
-                    label="Full Name *"
-                    name="name"
-                    type="text"
-                    placeholder="Rajesh Kumar"
-                    value={form.name}
-                    onChange={handleChange}
-                  />
+                <InputField
+                  label="Full Name *"
+                  name="name"
+                  type="text"
+                  placeholder="Rajesh Kumar"
+                  value={form.name}
+                  onChange={handleChange}
+                />
 
-                  <InputField
-                    label="Email Address *"
-                    name="email"
-                    type="email"
-                    placeholder="hello@company.com"
-                    value={form.email}
-                    onChange={handleChange}
-                  />
-                </div>
+                <InputField
+                  label="Email Address *"
+                  name="email"
+                  type="email"
+                  placeholder="hello@company.com"
+                  value={form.email}
+                  onChange={handleChange}
+                />
+              </div>
 
-                {/* Row */}
-                <div className="grid gap-4 sm:grid-cols-2">
+              {/* Row */}
+              <div className="grid gap-4 sm:grid-cols-2">
 
-                  <InputField
-                    label="Phone Number"
-                    name="phone"
-                    type="tel"
-                    placeholder="+91 98765 43210"
-                    value={form.phone}
-                    onChange={handleChange}
-                  />
+                <InputField
+                  label="Phone Number"
+                  name="phone"
+                  type="tel"
+                  placeholder="+91 98765 43210"
+                  value={form.phone}
+                  onChange={handleChange}
+                />
 
-                  <div>
-
-                    <label
-                      className="mb-2 block
-                      text-[11px] uppercase
-                      tracking-[0.15em]
-                      text-slate-400"
-                    >
-                      Service
-                    </label>
-
-                    <select
-                      name="service"
-                      value={form.service}
-                      onChange={handleChange}
-                      className="w-full rounded-xl sm:rounded-2xl
-                      border border-slate-200
-                      bg-slate-50
-                      px-4 py-3 text-sm
-                      text-slate-700 outline-none"
-                    >
-                      <option value="">
-                        Select Service
-                      </option>
-
-                      {[
-                        "Web Development",
-                        "Application Development",
-                        "UI/UX Design",
-                        "Industrial AI Solutions",
-                        "Digital Marketing",
-                      ].map((s) => (
-                        <option
-                          key={s}
-                          value={s}
-                        >
-                          {s}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-                </div>
-
-                {/* Message */}
                 <div>
 
                   <label
                     className="mb-2 block
+                      text-[11px] uppercase
+                      tracking-[0.15em]
+                      text-slate-400"
+                  >
+                    Service
+                  </label>
+
+                  <select
+                    name="service"
+                    value={form.service}
+                    onChange={handleChange}
+                    className="w-full rounded-xl sm:rounded-2xl
+                      border border-slate-200
+                      bg-slate-50
+                      px-4 py-3 text-sm
+                      text-slate-700 outline-none"
+                  >
+                    <option value="">
+                      Select Service
+                    </option>
+
+                    {[
+                      "Web Development",
+                      "Application Development",
+                      "UI/UX Design",
+                      "Industrial AI Solutions",
+                      "Digital Marketing",
+                    ].map((s) => (
+                      <option
+                        key={s}
+                        value={s}
+                      >
+                        {s}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+              </div>
+
+              {/* Message */}
+              <div>
+
+                <label
+                  className="mb-2 block
                     text-[11px] uppercase
                     tracking-[0.15em]
                     text-slate-400"
-                  >
-                    Your Message *
-                  </label>
+                >
+                  Your Message *
+                </label>
 
-                  <textarea
-                    name="message"
-                    rows={4}
-                    value={form.message}
-                    onChange={handleChange}
-                    placeholder="Tell us about your project..."
-                    className="w-full rounded-xl sm:rounded-2xl
+                <textarea
+                  name="message"
+                  rows={4}
+                  value={form.message}
+                  onChange={handleChange}
+                  placeholder="Tell us about your project..."
+                  className="w-full rounded-xl sm:rounded-2xl
                     border border-slate-200
                     bg-slate-50
                     px-4 py-3 text-sm
                     text-slate-700 outline-none
                     resize-none"
-                  />
-                </div>
+                />
+              </div>
 
-                {/* Button */}
-                <button
-                  type="submit"
-                  className="flex w-full
-                  items-center justify-center
-                  gap-3 rounded-xl sm:rounded-2xl
-                  bg-gradient-to-r
-                  from-cyan-400 to-blue-500
-                  py-3.5 font-display
-                  text-sm font-bold
-                  text-white shadow-md
-                  transition-all duration-300
-                  hover:-translate-y-1"
-                >
-                  <img
-                    src="https://cdn-icons-png.flaticon.com/512/3682/3682321.png"
-                    alt="Send"
-                    className="h-4 w-4"
-                  />
+              {/* Button */}
+              <button
+                type="submit"
+                disabled={loading}
+                className="flex w-full
+                items-center justify-center
+                gap-3 rounded-xl sm:rounded-2xl
+                bg-gradient-to-r
+                from-cyan-400 to-blue-500
+                py-3.5 font-display
+                text-sm font-bold
+                text-white shadow-md
+                transition-all duration-300
+                hover:-translate-y-1
+                disabled:opacity-70
+                "
+              >
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/3682/3682321.png"
+                  alt="Send"
+                  className="h-4 w-4"
+                />
 
-                  Send Message
-                </button>
-              </form>
-            
+                {loading ? "Sending..." : "Send Message"}
+              </button>
+            </form>
+
           </div>
         </div>
       </div>
