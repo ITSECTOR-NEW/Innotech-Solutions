@@ -294,6 +294,42 @@ export const IOT_FEATURES = [
   },
 ];
 
+export const IOT_PAGE_IMAGES = {
+  hero:
+    "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1600&auto=format&fit=crop",
+  intro:
+    "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1600&auto=format&fit=crop",
+  why:
+    "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1600&auto=format&fit=crop",
+};
+
+export const IOT_APPROACH_STEPS = [
+  {
+    title: "Requirement Discovery",
+    desc: "We understand your machines, workflows, data points, and automation goals before planning the right industrial solution.",
+  },
+  {
+    title: "Device & Sensor Planning",
+    desc: "We identify practical sensors, controllers, gateways, and connectivity options suited to your industrial environment.",
+  },
+  {
+    title: "Connectivity & Data Flow",
+    desc: "We connect devices using reliable communication patterns such as MQTT, Wi-Fi, Bluetooth, APIs, and cloud-ready pipelines.",
+  },
+  {
+    title: "Dashboard & Analytics",
+    desc: "We convert live industrial data into dashboards, alerts, reports, and insights that are easy for teams to act on.",
+  },
+  {
+    title: "Testing & Deployment",
+    desc: "We validate data accuracy, system reliability, security, and real-world performance before final deployment.",
+  },
+  {
+    title: "Support & Scale",
+    desc: "We help improve alerts, expand devices, refine dashboards, and scale the system as your operations grow.",
+  },
+];
+
 export const Web_Development_Description = [
   {
     icon: "fas fa-building",
