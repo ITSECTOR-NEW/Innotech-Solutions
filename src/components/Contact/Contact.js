@@ -29,13 +29,15 @@ export default function Contact() {
 
   // const [submitted, setSubmitted] = useState(false);
 
-  const [loading, setLoading] = useState(false); ({
-    name: "",
-    email: "",
-    phone: "",
-    service: "",
-    message: "",
-  });
+  const [loading, setLoading] = useState(false);
+
+const [form, setForm] = useState({
+  name: "",
+  email: "",
+  phone: "",
+  service: "",
+  message: "",
+});
 
   const handleChange = (e) => {
     setForm({
@@ -455,22 +457,21 @@ export default function Contact() {
                 items-center justify-center
                 gap-3 rounded-xl sm:rounded-2xl
                 bg-gradient-to-r
-                from-cyan-400 to-blue-500
+                from-black to-black
                 py-3.5 font-display
                 text-sm font-bold
                 text-white shadow-md
                 transition-all duration-300
                 hover:-translate-y-1
-                disabled:opacity-70
-                "
+                isabled:opacity-70"
               >
-                <img
+                {/* <img
                   src="https://cdn-icons-png.flaticon.com/512/3682/3682321.png"
                   alt="Send"
                   className="h-4 w-4"
-                />
+                /> */}
 
-                {loading ? "Sending..." : "Send Message"}
+                {loading ? "Submitting..." : "Submit"}
               </button>
             </form>
 
