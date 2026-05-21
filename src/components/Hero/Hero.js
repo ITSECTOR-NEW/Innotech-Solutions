@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { COMPANY } from "../../data/siteData";
+import { href } from "react-router-dom";
 
 // Transform Your Business with Seamless SaaS and Cloud Solutions.",
 
@@ -37,6 +38,7 @@ export default function Hero() {
     return () => window.clearInterval(timer);
   }, []);
 
+ 
   const goToSlide = (index) => setActiveSlide((index + heroSlides.length) % heroSlides.length);
 
   return (
@@ -69,6 +71,7 @@ export default function Hero() {
             >
               {heroSlides[activeSlide].title}
             </h1>
+            
 
             <p className="animate-fadeUp-2 mt-5 max-w-[640px] text-sm font-normal leading-7 text-white/90 sm:text-[16px]">
               {heroSlides[activeSlide].desc}
@@ -92,7 +95,9 @@ export default function Hero() {
         </div>
       </div>
 
-      <button
+
+      {/* Old left right button for slide change, not looking on phone */}
+      {/* <button
         type="button"
         onClick={() => goToSlide(activeSlide - 1)}
         className="absolute left-4 top-1/2 z-20 hidden h-12 w-12 -translate-y-1/2 place-items-center border border-white/40 bg-black/20 text-white backdrop-blur transition-all hover:bg-[#0fb7c5] md:grid"
@@ -107,7 +112,55 @@ export default function Hero() {
         aria-label="Next hero slide"
       >
         <i className="fas fa-chevron-right"></i>
-      </button>
+      </button> */}
+
+       {/* New left right button for slide change, looking on phonw also */}
+       {/* Left Arrow */}
+<button
+  type="button"
+  onClick={() => goToSlide(activeSlide - 1)}
+  className="absolute bottom-24 left-3 sm:left-5 sm:top-1/2 sm:bottom-auto z-30 flex h-10 w-10 sm:h-11 sm:w-11 sm:-translate-y-1/2 items-center justify-center rounded-full bg-black/50 text-white transition-colors duration-200 hover:bg-black/70"
+  aria-label="Previous slide"
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    strokeWidth={2}
+    stroke="currentColor"
+    className="h-5 w-5"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M15 19l-7-7 7-7"
+    />
+  </svg>
+</button>
+
+{/* Right Arrow */}
+<button
+  type="button"
+  onClick={() => goToSlide(activeSlide + 1)}
+  className="absolute bottom-24 right-3 sm:right-5 sm:top-1/2 sm:bottom-auto z-30 flex h-10 w-10 sm:h-11 sm:w-11 sm:-translate-y-1/2 items-center justify-center rounded-full bg-black/50 text-white transition-colors duration-200 hover:bg-black/70"
+  aria-label="Next slide"
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    strokeWidth={2}
+    stroke="currentColor"
+    className="h-5 w-5"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M9 5l7 7-7 7"
+    />
+  </svg>
+</button>
+     
 
       <div className="absolute bottom-8 left-1/2 z-20 flex -translate-x-1/2 gap-3">
         {heroSlides.map((slide, index) => (
