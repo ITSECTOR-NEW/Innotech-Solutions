@@ -8,7 +8,7 @@ export const COMPANY = {
   address: "Indore, Madhya Pradesh, India",
   hours: "Mon–Sat: 9 AM – 9 PM IST",
   socials: {
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/company/innotechsolutionsofficial/?viewAsMember=true",
     twitter: "#",
     instagram: "#",
     youtube: "#",
