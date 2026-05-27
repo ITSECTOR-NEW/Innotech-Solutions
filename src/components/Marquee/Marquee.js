@@ -1,8 +1,8 @@
 import React from "react";
 
 const ITEMS = [
-  "Web Development","Mobile App Development","Industrial IoT","Robotics Training",
-  "AI Integration","Digital Marketing","Student Training","UI/UX Design","Industry 4.0",
+  "Web Development","Mobile App Development","AI Services","Industrial IoT",
+  "AI & Coding Training","Business Automation","Machine Monitoring","Predictive Analytics","Smart Dashboards",
 ];
 
 export default function Marquee() {

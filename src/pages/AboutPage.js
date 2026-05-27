@@ -95,11 +95,11 @@ export default function AboutPage() {
           <div>
             <SectionTitle
               title="Who We Are?"
-              desc="At Innotech Solution, we deliver smart digital and automation solutions for businesses and industries. Our services include website development, IoT solutions, automation systems, and custom software designed to improve efficiency and growth. We focus on quality, innovation, and reliable support to help clients turn ideas into successful solutions."
+              desc="At Innotech Solution, we deliver AI-first digital solutions for businesses, schools, and industries. Our services include AI services, Industrial Internet of Things, AI and coding training, business automation, website development, and app development designed to improve efficiency and growth."
             />
 
             <p className="leading-8 text-slate-600">
-              Innotech Solution is a technology-driven company focused on creating modern digital and industrial solutions that simplify business operations and improve productivity. From professional websites and custom software to automation and smart IoT systems, we deliver solutions designed for real-world challenges. Our commitment to innovation, reliability, and long-term support helps businesses grow with confidence in the digital era.
+              Innotech Solution is a technology-driven company focused on creating modern AI, web, and application solutions that simplify business operations and improve productivity. From professional websites and custom apps to AI assistants, automation, analytics, and smart industrial systems, we deliver solutions designed for real-world challenges.
             </p>
 
             <div className="mt-7 space-y-4">

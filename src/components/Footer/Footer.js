@@ -5,8 +5,10 @@ const COMPANY_LINKS = [
   { label: "About Innotech", href: "/about" },
   { label: "Web Development", href: "/services/web-development" },
   { label: "Application Development", href: "/services/application-development" },
-  { label: "Industrial AI Solutions", href: "/services/industrial-ai-solutions" },
-  { label: "Student Training Programs", href: "/services/student-training-programs" },
+  { label: "AI Services", href: "/services/ai-services" },
+  { label: "Industrial Internet of Things", href: "/services/industrial-internet-of-things" },
+  { label: "AI & Coding Training for Schools", href: "/services/ai-coding-training-schools" },
+  { label: "Business Automation Solutions", href: "/services/business-automation-solutions" },
   { label: "Start a Project", href: "/#contact" },
 ];
 
@@ -97,7 +99,7 @@ export default function Footer() {
             </a>
 
             <p className="max-w-sm text-sm leading-7 text-slate-400">
-              {COMPANY.name} is on a mission to help small and medium businesses build a strong online presence through websites, applications, automation, and digital solutions.
+              {COMPANY.name} is on a mission to help small and medium businesses grow through AI services, websites, applications, Industrial IoT, training, automation, and practical digital systems.
             </p>
 
             <a

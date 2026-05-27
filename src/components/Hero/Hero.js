@@ -15,15 +15,15 @@ const heroSlides = [
   {
     image:
       "https://images.unsplash.com/photo-1565008447742-97f6f38c985c?q=80&w=1600&auto=format&fit=crop",
-    title: "Smart Automation & Technology Solutions",
-    desc: "Delivering innovative automation and digital solutions that improve productivity, efficiency, and industrial operations.",
+    title: "Industrial IoT & Smart Dashboards",
+    desc: "Connecting machines, sensors, gateways, alerts, and dashboards so industrial teams can monitor operations in real time.",
   },
 
   {
     image:
-      "https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    title: "Student Training & Career Development",
-    desc: "Providing practical training, mentorship, and industry-focused learning programs for future-ready careers.",
+      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1600&auto=format&fit=crop",
+    title: "AI, Coding Training & Business Automation",
+    desc: "Providing practical AI services, student technology training, and automation systems for modern organizations.",
   },
 ];
 export default function Hero() {

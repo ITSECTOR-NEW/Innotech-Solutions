@@ -16,18 +16,12 @@ import CTA from "./components/CTA/CTA";
 import BusinessNeeds from "./components/BusinessNeeds/BusinessNeeds";
 // import ClientsSection from "./components/ClientsSection/ClientsSection";
 // import WebDevelopment from "./components/WebDevelopment/WebDevelopment";
-import MobileApp from "./components/MobileApp/MobileApp";
-import UiDesign from "./components/UiDesign/UiDesign";
-import DigitalMarketing from "./components/DigitalMarketing/DigitalMarketing";
+import AIService from "./components/AIService/AIService";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 import AboutPage from "./pages/AboutPage";
-import IndustrialIoTPage from "./pages/IndustrialIoTPage";
-import StudentTrainingPage from "./pages/StudentTrainingPage";
 import WebDevelopmentPage from "./pages/WebDevelopmentPage";
 import MobileAppDevelopmentPage from "./pages/MobileAppDevelopmentPage";
-import UIWebDesigningPage from "./pages/UI&WebDesigningPage";
-import DigitalMarketPage from "./pages/DigitalMarketPage";
  
 export default function App() {
   const [theme, setTheme] = useState("dark");
@@ -82,12 +76,19 @@ export default function App() {
             )}
           />
           <Route path="/about" element={<AboutPage />} />
-          <Route path="/services/industrial-ai-solutions" element={<IndustrialIoTPage />} />
-          <Route path="/services/student-training-programs" element={<StudentTrainingPage />} />
           <Route path="/services/web-development" element={<WebDevelopmentPage />} />
           <Route path="/services/application-development" element={<MobileAppDevelopmentPage />} />
-          <Route path="/services/ui-ux-web-designing" element={<UIWebDesigningPage />} />
-          <Route path="/services/digital-marketing" element={<DigitalMarketPage />} />
+          <Route path="/services/ai-services" element={<AIService serviceKey="ai-services" />} />
+          <Route path="/services/industrial-internet-of-things" element={<AIService serviceKey="industrial-internet-of-things" />} />
+          <Route path="/services/ai-coding-training-schools" element={<AIService serviceKey="ai-coding-training-schools" />} />
+          <Route path="/services/business-automation-solutions" element={<AIService serviceKey="business-automation-solutions" />} />
+          <Route path="/services/ai-consulting-strategy" element={<AIService serviceKey="ai-services" />} />
+          <Route path="/services/industrial-ai-solutions" element={<AIService serviceKey="industrial-internet-of-things" />} />
+          <Route path="/services/ai-in-healthcare" element={<AIService serviceKey="ai-services" />} />
+          <Route path="/services/ai-automation-chatbots" element={<AIService serviceKey="industrial-internet-of-things" />} />
+          <Route path="/services/ui-ux-web-designing" element={<AIService serviceKey="business-automation-solutions" />} />
+          <Route path="/services/digital-marketing" element={<AIService serviceKey="industrial-internet-of-things" />} />
+          <Route path="/services/student-training-programs" element={<AIService serviceKey="ai-coding-training-schools" />} />
         </Routes>
 
         <Footer />

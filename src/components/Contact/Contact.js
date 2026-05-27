@@ -407,9 +407,10 @@ const [form, setForm] = useState({
                     {[
                       "Web Development",
                       "Application Development",
-                      "UI/UX Design",
-                      "Industrial AI Solutions",
-                      "Digital Marketing",
+                      "AI Services",
+                      "Industrial Internet of Things",
+                      "AI & Coding Training for Schools",
+                      "Business Automation Solutions",
                     ].map((s) => (
                       <option
                         key={s}
