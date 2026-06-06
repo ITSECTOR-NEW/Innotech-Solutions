@@ -2,112 +2,108 @@ import React from "react";
 import { SERVICES } from "../../data/siteData";
 import { useScrollReveal } from "../../hooks/useScrollReveal";
 
-const serviceImages = [
-  "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1526379095098-d400fd0bf935?q=80&w=1200&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=1200&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1200&auto=format&fit=crop",
+const serviceAccents = [
+  {
+    line: "from-cyan-400 to-blue-500",
+    icon: "border-cyan-100 bg-cyan-50 text-cyan-700",
+    hover: "hover:border-cyan-300",
+  },
+  {
+    line: "from-violet-500 to-sky-500",
+    icon: "border-violet-100 bg-violet-50 text-violet-700",
+    hover: "hover:border-violet-300",
+  },
+  {
+    line: "from-amber-400 to-rose-500",
+    icon: "border-amber-100 bg-amber-50 text-amber-700",
+    hover: "hover:border-amber-300",
+  },
+  {
+    line: "from-emerald-400 to-cyan-500",
+    icon: "border-emerald-100 bg-emerald-50 text-emerald-700",
+    hover: "hover:border-emerald-300",
+  },
+  {
+    line: "from-pink-500 to-violet-600",
+    icon: "border-pink-100 bg-pink-50 text-pink-700",
+    hover: "hover:border-pink-300",
+  },
+  {
+    line: "from-orange-400 to-cyan-500",
+    icon: "border-orange-100 bg-orange-50 text-orange-700",
+    hover: "hover:border-orange-300",
+  },
 ];
 
 function ServiceCard({
+  icon,
   title,
+  desc,
+  tags = [],
   detailPath,
-  delay,
-  image,
+  accent,
 }) {
-  const ref = useScrollReveal();
-
   return (
     <a
-      ref={ref}
       href={detailPath || "#"}
-      className="group relative overflow-hidden
-      rounded-[20px] border border-slate-200
-      transition-all duration-300
-      hover:-translate-y-1
-      hover:border-cyan-400/30
-      hover:shadow-xl hover:shadow-cyan-500/10"
-      style={{ transitionDelay: `${delay}ms` }}
+      className={`group flex h-full flex-col overflow-hidden
+      rounded-xl border border-blue-100
+      bg-gradient-to-br from-white via-sky-50/90 to-blue-50/80
+      shadow-[0_12px_30px_rgba(15,23,42,0.05)]
+      transition-colors duration-200 ${accent.hover}`}
     >
+      <div className={`h-1 bg-gradient-to-r ${accent.line}`} />
 
-      {/* Background Image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center
-        transition-transform duration-700
-        group-hover:scale-110"
-        style={{
-          backgroundImage: `url(${image})`,
-        }}
-      ></div>
-
-      {/* Light Overlay */}
-      <div className="absolute inset-0 bg-[#0f172a]/45"></div>
-
-      {/* Gradient */}
-      <div
-        className="absolute inset-0
-        bg-gradient-to-t
-        from-[#0f172a]/95
-        via-[#0f172a]/20
-        to-transparent"
-      ></div>
-
-      {/* Hover Glow */}
-      <div
-        className="absolute inset-0 opacity-0
-        transition-opacity duration-300
-        group-hover:opacity-100"
-      >
+      <div className="flex flex-1 flex-col p-4 sm:p-5">
         <div
-          className="absolute inset-0
-          bg-gradient-to-br
-          from-cyan-400/10
-          to-transparent"
-        ></div>
-      </div>
-
-      {/* Content */}
-      <div
-        className="relative flex h-[190px]
-        items-end p-5
-        sm:h-[220px] sm:p-6
-        lg:h-[260px] lg:p-7"
-      >
-        <div>
-
-          {/* Line */}
-          <div
-            className="mb-4 h-[3px] w-12
-            rounded-full bg-cyan-400
-            transition-all duration-300
-            group-hover:w-20"
-          ></div>
-
-          {/* Title */}
-          <h3
-            className="font-display text-[19px]
-            font-bold leading-tight text-white
-            sm:text-[22px]"
-          >
-            {title}
-          </h3>
-        </div>
-
-        {/* Arrow */}
-        <div
-          className="absolute right-5 top-5
-          flex h-10 w-10 items-center
-          justify-center rounded-2xl
-          border border-white/20
-          bg-white/10 text-white
-          opacity-0 backdrop-blur-md
-          transition-all duration-300
-          group-hover:opacity-100"
+          className={`mb-3 flex h-10 w-10 items-center
+          justify-center rounded-xl border ${accent.icon}`}
         >
-          <i className="fas fa-arrow-up-right-from-square text-sm"></i>
+          <i className={`${icon} text-lg`}></i>
         </div>
+
+        <h3
+          className="font-display text-lg font-bold
+          leading-tight text-slate-900"
+        >
+          {title}
+        </h3>
+
+        <p
+          className="mt-2 flex-1 text-[13px] leading-5
+          text-slate-600"
+          style={{
+            display: "-webkit-box",
+            WebkitLineClamp: 3,
+            WebkitBoxOrient: "vertical",
+            overflow: "hidden",
+          }}
+        >
+          {desc}
+        </p>
+
+        <div className="mt-3 flex flex-wrap gap-1.5">
+          {tags.slice(0, 3).map((tag) => (
+            <span
+              key={tag}
+              className="rounded-full border border-slate-200
+              bg-white/80 px-2.5 py-0.5 text-[11px] font-medium
+              text-slate-600"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+
+        <span
+          className={`mt-4 inline-flex w-fit items-center gap-2
+          rounded-full bg-gradient-to-r ${accent.line}
+          px-3.5 py-1.5 text-[13px] font-semibold text-white
+          shadow-sm shadow-blue-500/15`}
+        >
+          Learn More
+          <i className="fas fa-arrow-right text-xs"></i>
+        </span>
       </div>
     </a>
   );
@@ -120,21 +116,21 @@ export default function Services() {
     <section
       id="services"
       className="relative overflow-hidden
-      bg-[#edf4ff] py-16
-      sm:py-24"
+      bg-[#edf4ff] py-10
+      sm:py-14 lg:py-16"
     >
 
       {/* Background Glow */}
       <div
         className="absolute left-0 top-0
-        h-[380px] w-[380px]
+        h-[280px] w-[280px]
         rounded-full bg-cyan-300/30
         blur-[120px]"
       />
 
       <div
         className="absolute bottom-0 right-0
-        h-[280px] w-[280px]
+        h-[220px] w-[220px]
         rounded-full bg-blue-300/20
         blur-[120px]"
       />
@@ -149,12 +145,12 @@ export default function Services() {
         }}
       />
 
-      <div className="relative mx-auto max-w-7xl px-6">
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
 
         {/* Header */}
         <div
           ref={titleRef}
-          className="mx-auto mb-10 max-w-3xl text-center sm:mb-14"
+          className="mx-auto mb-7 max-w-3xl text-center sm:mb-9"
         >
 
           <div
@@ -162,9 +158,9 @@ export default function Services() {
   rounded-full border border-blue-200
   bg-gradient-to-r
   from-blue-500 to-cyan-500
-  px-5 py-2.5 text-[11px]
+  px-4 py-2 text-[10px]
   font-semibold uppercase
-  tracking-[0.18em] text-white
+  tracking-[0.16em] text-white
   shadow-lg shadow-cyan-500/20"
           >
             <img
@@ -177,21 +173,21 @@ export default function Services() {
           </div>
 
           <h2
-            className="mt-5 font-display
+            className="mt-3 font-display
             font-black leading-tight
             text-slate-900"
             style={{
-              fontSize: "clamp(2rem, 4vw, 3.5rem)",
+              fontSize: "clamp(1.75rem, 3vw, 2.8rem)",
             }}
           >
             Our <span className="gradient-text">Solutions</span>
           </h2>
 
           <p
-            className="mx-auto mt-5
-            max-w-2xl text-base
-            leading-7 text-slate-500
-            sm:text-lg sm:leading-8"
+            className="mx-auto mt-3
+            max-w-2xl text-sm
+            leading-6 text-slate-500
+            sm:text-base sm:leading-7"
           >
             Innovative digital products and
             scalable technology services designed
@@ -200,14 +196,13 @@ export default function Services() {
         </div>
 
         {/* Grid */}
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
 
           {SERVICES.map((s, i) => (
             <ServiceCard
               key={s.title}
               {...s}
-              image={serviceImages[i % serviceImages.length]}
-              delay={i * 70}
+              accent={serviceAccents[i % serviceAccents.length]}
             />
           ))}
         </div>
