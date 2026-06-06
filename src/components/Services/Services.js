@@ -4,9 +4,9 @@ import { useScrollReveal } from "../../hooks/useScrollReveal";
 
 const serviceAccents = [
   {
-    line: "from-cyan-400 to-blue-500",
-    icon: "border-cyan-100 bg-cyan-50 text-cyan-700",
-    hover: "hover:border-cyan-300",
+    line: "from-emerald-400 to-cyan-500",
+    icon: "border-emerald-100 bg-emerald-50 text-emerald-700",
+    hover: "hover:border-emerald-300",
   },
   {
     line: "from-violet-500 to-sky-500",
