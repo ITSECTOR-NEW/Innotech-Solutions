@@ -669,54 +669,91 @@ export const AI_SERVICE_PAGES = {
 };
 
 export const Web_Development_Description = [
-  {
-    icon: "fas fa-building",
-    title: "Business Websites",
-    desc: "Professional business and corporate websites designed to improve branding, customer engagement, and digital presence.",
-    image:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop",
-  },
+    {
+icon: "fas fa-building",
+title: "Corporate & Business Websites",
+desc: "Professional websites crafted to strengthen brand identity, build trust, and generate valuable business enquiries.",
+features: [
+"Professional Branding",
+"Lead Generation",
+"Mobile Responsive",
+"SEO Ready Structure"
+],
+timeline: "2–4 Weeks",
+price: "Starting From ₹20,000",
+},
 
-  {
-    icon: "fas fa-cart-shopping",
-    title: "E-Commerce Websites",
-    desc: "Modern online store solutions with product management, payment gateway integration, and responsive shopping experiences.",
-    image:
-      "https://images.unsplash.com/photo-1556740749-887f6717d7e4?q=80&w=1200&auto=format&fit=crop",
-  },
+{
+icon: "fas fa-shopping-cart",
+title: "E-Commerce Solutions",
+desc: "Online stores designed to deliver seamless shopping experiences and support sustainable sales growth.",
+features: [
+"Secure Payments",
+"Product Management",
+"Order Tracking",
+"Customer Dashboard"
+],
+timeline: "3–6 Weeks",
+price: "Starting From ₹35,000",
+},
 
-  {
-    icon: "fas fa-graduation-cap",
-    title: "Educational Portals",
-    desc: "Interactive educational websites and learning management platforms for schools, institutes, and training centers.",
-    image:
-      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop",
-  },
+{
+icon: "fas fa-graduation-cap",
+title: "Educational Platforms",
+desc: "Interactive learning portals that simplify course delivery and improve student engagement.",
+features: [
+"Course Management",
+"Student Dashboard",
+"Online Assessments",
+"Progress Tracking"
+],
+timeline: "3–5 Weeks",
+price: "Starting From ₹30,000",
+},
 
-  {
-    icon: "fas fa-plane-departure",
-    title: "Travel Websites",
-    desc: "Travel and booking platforms with destination management, online reservations, and customer-friendly interfaces.",
-    image:
-      "https://images.unsplash.com/photo-1502920917128-1aa500764ce7?q=80&w=1200&auto=format&fit=crop",
-  },
+{
+icon: "fas fa-plane-departure",
+title: "Travel & Booking Platforms",
+desc: "Modern travel websites with booking capabilities, destination listings, and streamlined user journeys.",
+features: [
+"Online Reservations",
+"Tour Listings",
+"Customer Enquiries",
+"Booking Management"
+],
+timeline: "3–6 Weeks",
+price: "Starting From ₹40,000",
+},
 
-  {
-    icon: "fas fa-briefcase",
-    title: "Job Portal Systems",
-    desc: "Advanced recruitment and hiring platforms with job listings, applicant tracking, and management systems.",
-    image:
-      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1200&auto=format&fit=crop",
-  },
+{
+icon: "fas fa-briefcase",
+title: "Recruitment & Job Portals",
+desc: "Smart hiring platforms connecting employers and candidates through efficient recruitment workflows.",
+features: [
+"Job Listings",
+"Application Tracking",
+"Employer Dashboard",
+"Candidate Management"
+],
+timeline: "4–6 Weeks",
+price: "Starting From ₹45,000",
+},
 
-  {
-    icon: "fas fa-newspaper",
-    title: "News & Media Websites",
-    desc: "Dynamic news portals and media platforms with content publishing, category management, and modern layouts.",
-    image:
-      "https://images.unsplash.com/photo-1495020689067-958852a7765e?q=80&w=1200&auto=format&fit=crop",
-  },
-];
+{
+icon: "fas fa-newspaper",
+title: "Media & Publishing Websites",
+desc: "Content-focused platforms built for publishing, audience engagement, and digital media growth.",
+features: [
+"Content Management",
+"Category Organization",
+"Audience Engagement",
+"Advertising Support"
+],
+timeline: "2–5 Weeks",
+price: "Starting From ₹25,000",
+},
+
+  ];
 
 export const App_Dev_Description = [
   {
@@ -1019,3 +1056,41 @@ export const FOOTER_LINKS = {
   Solutions: ["Business Automation","Machine Monitoring","Predictive Analytics","Smart Dashboards","Sensor Dashboards"],
   Company:  ["About Us","Portfolio","Testimonials","Industries","Contact Us"],
 };
+
+
+// Tech stack used for Website Development Page
+export const Web_Tech_Stack = [
+    {
+      category: "Frontend",
+      icon: "fas fa-laptop-code",
+      color: "from-violet-500/10 to-violet-500/5",
+      border: "border-violet-200",
+      iconColor: "text-violet-500",
+      tagBorder: "border-violet-200",
+      tagText: "text-violet-700",
+      tagBg: "bg-violet-50",
+      items: ["React", "Next.js", "Vue.js", "TypeScript"],
+    },
+    {
+      category: "Backend",
+      icon: "fas fa-server",
+      color: "from-sky-500/10 to-sky-500/5",
+      border: "border-sky-200",
+      iconColor: "text-sky-500",
+      tagBorder: "border-sky-200",
+      tagText: "text-sky-700",
+      tagBg: "bg-sky-50",
+      items: ["Node.js", "Python", "PHP", "Express"],
+    },
+    {
+      category: "Database & Cloud",
+      icon: "fas fa-cloud",
+      color: "from-emerald-500/10 to-emerald-500/5",
+      border: "border-emerald-200",
+      iconColor: "text-emerald-500",
+      tagBorder: "border-emerald-200",
+      tagText: "text-emerald-700",
+      tagBg: "bg-emerald-50",
+      items: ["MongoDB", "PostgreSQL", "AWS", "Vercel"],
+    },
+  ];

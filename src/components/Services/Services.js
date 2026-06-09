@@ -101,7 +101,7 @@ function ServiceCard({
           px-3.5 py-1.5 text-[13px] font-semibold text-white
           shadow-sm shadow-blue-500/15`}
         >
-          Learn More
+          Read More..
           <i className="fas fa-arrow-right text-xs"></i>
         </span>
       </div>
@@ -169,19 +169,20 @@ export default function Services() {
               className="h-4 w-4 object-contain"
             />
 
-            Product & Services
+            {/* Product & Services */}
+            What We Offer
           </div>
 
-          <h2
+          {/* <h2
             className="mt-3 font-display
             font-black leading-tight
             text-slate-900"
             style={{
-              fontSize: "clamp(1.75rem, 3vw, 2.8rem)",
+              fontSize: "clamp(1.75rem, 3vw, 2.5rem)",
             }}
           >
-            Our <span className="gradient-text">Solutions</span>
-          </h2>
+            Our <span className="gradient-text">Services</span>
+          </h2> */}
 
           <p
             className="mx-auto mt-3
