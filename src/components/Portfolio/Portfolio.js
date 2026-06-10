@@ -3,10 +3,12 @@ import { PORTFOLIO_ITEMS } from "../../data/siteData";
 import { useScrollReveal } from "../../hooks/useScrollReveal";
 
 const FILTERS = [
-  { key: "all",      label: "All Projects" },
-  { key: "iot",      label: "IoT & Automation" },
-  { key: "web",      label: "Web & Apps" },
-  { key: "robotics", label: "Robotics & AI" },
+  { key: "all", label: "All Projects" },
+  { key: "web", label: "Web Development" },
+  // { key: "app", label: "Applications" },
+  { key: "ai", label: "AI Solutions" },
+  { key: "iot", label: "Industrial IoT" },
+  // { key: "automation", label: "Automation" },
 ];
 
 export default function Portfolio() {
@@ -16,20 +18,27 @@ export default function Portfolio() {
   const visible = PORTFOLIO_ITEMS.filter((p) => active === "all" || p.cat === active);
 
   return (
-    <section id="portfolio" className="bg-dark-800 py-14 sm:py-24">
+    <section
+  id="portfolio"
+  className="
+  bg-dark-800
+  pt-8 pb-10
+  sm:pt-6 sm:pb-14
+  lg:pt-8 lg:pb-16"
+>
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
 
         {/* Header */}
         <div ref={titleRef} className="mb-8 text-center sm:mb-10">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-400/8 border border-cyan-400/20 text-cyan-400 text-xs font-semibold uppercase tracking-widest mb-5">
+          {/* <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-400/8 border border-cyan-400/20 text-cyan-400 text-xs font-semibold uppercase tracking-widest mb-5">
             <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 blink"></span>
             Our Work
-          </div>
-          <h2 className="font-display font-extrabold text-white mb-4" style={{ fontSize: "clamp(2rem,4vw,3rem)" }}>
-            Featured <span className="gradient-text">Projects</span>
+          </div> */}
+          <h2 className="font-display font-extrabold text-white mb-4" style={{ fontSize: "clamp(1rem,3vw,2rem)" }}>
+            Our <span className="gradient-text">Work</span>
           </h2>
           <p className="mx-auto max-w-xl text-sm leading-7 text-slate-400 sm:text-base">
-            A showcase of our best work — from industrial automation systems to modern web applications.
+            A collection of innovative solutions spanning web development, mobile applications, AI, Industrial IoT, and business automation.
           </p>
         </div>
 
@@ -69,7 +78,7 @@ export default function Portfolio() {
                     onClick={() => document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })}
                     className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-display font-bold text-sm"
                   >
-                    View Details
+                    Explore Solution
                   </button>
                 </div>
               </div>
