@@ -181,9 +181,10 @@ export default function Services() {
     <section
       id="services"
       className="relative overflow-hidden
-      bg-[#edf4ff] py-10
-      sm:py-14 lg:py-16"
-    >
+      bg-[#edf4ff] pt-4 pb-10
+      sm:pt-6 sm:pb-14
+      lg:pt-8 lg:pb-16"
+          >
 
       {/* Background Glow */}
       <div
@@ -218,7 +219,7 @@ export default function Services() {
           className="mx-auto mb-7 max-w-3xl text-center sm:mb-9"
         >
 
-          <div
+          {/* <div
             className="inline-flex items-center gap-2
             rounded-full border border-blue-200
             bg-gradient-to-r
@@ -234,11 +235,10 @@ export default function Services() {
               className="h-4 w-4 object-contain"
             />
 
-            {/* Product & Services */}
             What We Offer
-          </div>
+          </div> */}
 
-          {/* <h2
+          <h2
             className="mt-3 font-display
             font-black leading-tight
             text-slate-900"
@@ -247,7 +247,7 @@ export default function Services() {
             }}
           >
             Our <span className="gradient-text">Services</span>
-          </h2> */}
+          </h2>
 
           <p
             className="mx-auto mt-3

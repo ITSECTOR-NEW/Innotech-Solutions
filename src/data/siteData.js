@@ -138,21 +138,21 @@ export const SERVICES = [
 
 export const WHY_CHOOSE_US = [
   {
-    icon: "fas fa-laptop-code",
-    title: "Extensive Experience",
-    desc: "Successfully delivered modern websites, applications, and digital solutions for businesses and startups.",
+    icon: "fas fa-layer-group",
+    title: "End-To-End Technology Solutions",
+    desc: "From websites and mobile apps to AI, automation, and Industrial IoT — everything under one technology partner.",
   },
 
   {
-    icon: "fas fa-hand-holding-dollar",
-    title: "Cost Effective Solutions",
-    desc: "Professional digital services at affordable pricing without compromising quality and performance.",
+    icon: "fas fa-lightbulb",
+    title: "Business-Focused Innovation",
+    desc: "We build practical solutions that improve efficiency, customer experience, and business growth.",
   },
 
   {
-    icon: "fas fa-globe",
-    title: "Global Client Support",
-    desc: "Providing reliable solutions and long-term support to clients across multiple industries.",
+    icon: "fas fa-rocket",
+    title: "Scalable & Future-Ready",
+    desc: "Modern technologies and scalable architectures designed to support your long-term digital transformation.",
   },
 ];
 
@@ -978,10 +978,10 @@ export const BUSINESS_STATS = [
 ];
 
 export const BUSINESS_POINTS = [
-  "Website, app, and automation ideas mapped to real business workflows.",
-  "Clear digital roadmap for leads, operations, reporting, and customer support.",
-  "Modern UI/UX improvements that make your services easier to understand.",
-  "Scalable technology guidance for startups, institutes, and local businesses.",
+  "Custom websites and mobile applications built for growth",
+  "AI-powered solutions to automate tasks and improve decisions",
+  "Industrial IoT systems for real-time monitoring and visibility",
+  "Practical AI and coding programs for schools and colleges",
 ];
 
 export const TRAINING_TOOLS = ["🤖 Arduino","🍓 Raspberry Pi","🐍 Python","🧠 TensorFlow","📡 ESP32","⚡ PLC","☁️ Cloud IoT","🦾 ROS","📊 Jupyter"];

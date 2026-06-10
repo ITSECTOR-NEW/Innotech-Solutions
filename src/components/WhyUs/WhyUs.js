@@ -43,29 +43,28 @@ export default function WhyChoose() {
             Why Choose Us
           </span>
 
-          <h2
-            className="mt-4 font-display
-            text-2xl font-bold
-            leading-tight text-slate-900
-            sm:text-4xl"
-          >
-            Best
-            <span className="text-pink-500">
-              {" "}Website Development
-            </span>
-            <br />
-            Company in India
-          </h2>
+         <h2
+          className="mt-4 font-display
+          text-2xl font-bold
+          leading-tight text-slate-900
+          sm:text-4xl"
+        >
+          Technology Partner For
+          <br />
+          <span className="text-pink-500">
+            Digital Growth
+          </span>
+        </h2>
 
           <p
             className="mt-4 text-sm
             leading-7 text-slate-500
             sm:mt-5 sm:text-base sm:leading-8"
           >
-            We always stay with our clients and respect
-            their business goals. Our team delivers
-            modern digital solutions with fast support,
-            creative ideas, and scalable technologies.
+            We combine technology, innovation, and
+            practical business understanding to deliver
+            web, AI, automation, and Industrial IoT
+            solutions that create measurable impact.
           </p>
 
           {/* Features */}
@@ -121,8 +120,8 @@ export default function WhyChoose() {
           {/* Top Image */}
           <div className="overflow-hidden rounded-3xl bg-white p-6 shadow-sm ring-1 ring-slate-200/70 sm:p-8">
             <img
-              src="https://cdn-icons-png.flaticon.com/512/4380/4380892.png"
-              alt="Website Design"
+              src="https://cdn-icons-png.flaticon.com/512/2881/2881142.png"
+              alt="Technology Solutions"
               className="mx-auto w-full
               max-w-[360px]"
             />
@@ -137,11 +136,11 @@ export default function WhyChoose() {
               leading-tight text-slate-900
               sm:text-3xl"
             >
-              Working to build
+              Turning Ideas Into
               <br />
-              a better
+               
               <span className="text-pink-500">
-                {" "}web design
+                {" "}Digital Innovation
               </span>
             </h2>
 
@@ -166,7 +165,7 @@ export default function WhyChoose() {
               font-semibold text-white
               transition-all hover:scale-105"
             >
-              Start A Project
+              Get Free Consultation
               <i className="fas fa-arrow-right text-xs"></i>
             </button>
           </div>

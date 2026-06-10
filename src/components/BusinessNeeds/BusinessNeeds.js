@@ -65,11 +65,11 @@ export default function BusinessNeeds() {
             sm:text-5xl"
           >
             <span className="text-pink-500">
-              Practical
+              Smart
             </span>
-            {" "}digital support for
+            {" "}Technology Solutions for
             <br />
-            growing businesses
+            Growing Businesses
           </h2>
 
           <div className="mt-6 sm:mt-8">
@@ -79,7 +79,7 @@ export default function BusinessNeeds() {
               text-xl font-bold
               text-white"
             >
-              Start With A Clear Technology Roadmap
+              Technology Solutions Tailored To Your Goals
             </h3>
 
             <p
@@ -87,9 +87,7 @@ export default function BusinessNeeds() {
               leading-7 text-slate-400
               sm:mt-4 sm:text-base sm:leading-8"
             >
-              We review your current workflow, customer journey,
-              and digital presence to suggest the right mix of
-              website, app, automation, and marketing improvements.
+              From websites and mobile apps to AI, automation, and Industrial IoT, we build technology solutions that drive growth.
             </p>
           </div>
 
