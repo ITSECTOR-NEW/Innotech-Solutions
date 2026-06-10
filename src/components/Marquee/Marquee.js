@@ -1,7 +1,7 @@
 import React from "react";
 
 const ITEMS = [
-  "Web Development","Mobile App Development","AI Services","Industrial IoT",
+  "Web Development","Application Development","AI Services","Industrial IoT",
   "AI & Coding Training","Business Automation","Machine Monitoring","Predictive Analytics","Smart Dashboards",
 ];
 

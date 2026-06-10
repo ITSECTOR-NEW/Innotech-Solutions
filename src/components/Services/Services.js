@@ -41,68 +41,133 @@ function ServiceCard({
   desc,
   tags = [],
   detailPath,
-  accent,
 }) {
   return (
     <a
       href={detailPath || "#"}
-      className={`group flex h-full flex-col overflow-hidden
-      rounded-xl border border-blue-100
-      bg-gradient-to-br from-white via-sky-50/90 to-blue-50/80
-      shadow-[0_12px_30px_rgba(15,23,42,0.05)]
-      transition-colors duration-200 ${accent.hover}`}
+      className="
+      group flex flex-col
+      rounded-2xl
+      border border-slate-200
+      bg-white
+      p-6
+      transition-all duration-300
+      hover:-translate-y-1
+      hover:shadow-lg"
     >
-      <div className={`h-1 bg-gradient-to-r ${accent.line}`} />
+      {/* Top */}
+      <div className="flex items-start gap-4">
 
-      <div className="flex flex-1 flex-col p-4 sm:p-5">
         <div
-          className={`mb-3 flex h-10 w-10 items-center
-          justify-center rounded-xl border ${accent.icon}`}
+          className="
+          flex h-12 w-12
+          flex-shrink-0
+          items-center justify-center
+          rounded-xl
+          bg-[#eff6ff]
+          border border-[#bfdbfe]"
         >
-          <i className={`${icon} text-lg`}></i>
+          <i
+            className={`${icon}
+            text-[#0284c7]
+            text-lg`}
+          />
         </div>
 
-        <h3
-          className="font-display text-lg font-bold
-          leading-tight text-slate-900"
-        >
-          {title}
-        </h3>
+        <div>
+          <h3
+            className="
+            text-lg font-bold
+            text-slate-900
+            leading-snug"
+          >
+            {title}
+          </h3>
 
-        <p
-          className="mt-2 flex-1 text-[13px] leading-5
-          text-slate-600"
-          style={{
-            display: "-webkit-box",
-            WebkitLineClamp: 3,
-            WebkitBoxOrient: "vertical",
-            overflow: "hidden",
-          }}
-        >
-          {desc}
-        </p>
-
-        <div className="mt-3 flex flex-wrap gap-1.5">
-          {tags.slice(0, 3).map((tag) => (
-            <span
-              key={tag}
-              className="rounded-full border border-slate-200
-              bg-white/80 px-2.5 py-0.5 text-[11px] font-medium
-              text-slate-600"
-            >
-              {tag}
-            </span>
-          ))}
+          <p
+            className="
+            mt-2 text-sm
+            leading-6
+            text-slate-500"
+          >
+            {desc}
+          </p>
         </div>
+
+      </div>
+
+      {/* Features */}
+      {/* Key Features */}
+<div className="mt-5">
+  <p
+    className="
+    mb-3 text-[10px]
+    font-black uppercase
+    tracking-widest
+    text-[#0284c7]"
+  >
+     Service Scope
+  </p>
+
+  <div className="grid grid-cols-2 gap-x-3 gap-y-2.5">
+    {tags.slice(0, 4).map((tag) => (
+      <div
+        key={tag}
+        className="flex items-center gap-2"
+      >
+        <span
+          className="
+          flex h-4 w-4
+          flex-shrink-0
+          items-center
+          justify-center
+          rounded-full
+          bg-[#0284c7]/10"
+        >
+          <i
+            className="
+            fas fa-check
+            text-[8px]
+            text-[#0284c7]"
+          />
+        </span>
 
         <span
-          className={`mt-4 inline-flex w-fit items-center gap-2
-          rounded-full bg-gradient-to-r ${accent.line}
-          px-3.5 py-1.5 text-[13px] font-semibold text-white
-          shadow-sm shadow-blue-500/15`}
+          className="
+          text-xs
+          font-medium
+          text-slate-600"
         >
-          Read More..
-          <i className="fas fa-arrow-right text-xs"></i>
+          {tag}
+        </span>
+      </div>
+    ))}
+  </div>
+</div>
+      {/* Footer */}
+      <div
+        className="
+        mt-5 flex items-center
+        justify-between
+        border-t border-slate-100
+        pt-4"
+      >
+        <span
+          className="
+          text-xs font-semibold
+          text-slate-400"
+        >
+          Professional Service
+        </span>
+
+        <span
+          className="
+          flex items-center gap-2
+          text-sm font-bold
+          text-[#0284c7]"
+        >
+          Read More...
+          <i className="fas fa-arrow-right text-xs" />
         </span>
       </div>
     </a>
@@ -155,14 +220,14 @@ export default function Services() {
 
           <div
             className="inline-flex items-center gap-2
-  rounded-full border border-blue-200
-  bg-gradient-to-r
-  from-blue-500 to-cyan-500
-  px-4 py-2 text-[10px]
-  font-semibold uppercase
-  tracking-[0.16em] text-white
-  shadow-lg shadow-cyan-500/20"
-          >
+            rounded-full border border-blue-200
+            bg-gradient-to-r
+            from-blue-500 to-cyan-500
+            px-4 py-2 text-[10px]
+            font-semibold uppercase
+            tracking-[0.16em] text-white
+            shadow-lg shadow-cyan-500/20"
+                    >
             <img
               src="https://cdn-icons-png.flaticon.com/512/1067/1067566.png"
               alt="services"
