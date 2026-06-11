@@ -116,8 +116,7 @@ export default function App() {
 
           {/* Whatsapp Icon */}
               <a
-              href="https://wa.me/919109470875?text=Hi%20Innotix%20Solution,%20I%20need%20more%20information."
-              target="_blank"
+              href="https://wa.me/919109470875"             target="_blank"
               rel="noopener noreferrer"
               className="fixed bottom-24 right-7 z-50 group"
             >
