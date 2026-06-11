@@ -105,7 +105,7 @@ export default function App() {
 
         {/* Back to Top */}
         {/* Back To Top */}
-          {showBTT && (
+          {/* {showBTT && (
             <button
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
               className="
@@ -125,7 +125,7 @@ export default function App() {
             >
               <i className="fas fa-chevron-up text-lg"></i>
             </button>
-          )}
+          )} */}
 
           {/* Whatsapp Icon */}
               <a
