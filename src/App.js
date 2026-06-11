@@ -113,16 +113,28 @@ export default function App() {
             <i className="fas fa-arrow-up"></i>
           </button>
         )}
+
           {/* Whatsapp Icon */}
-                <a
-          href="https://wa.me/919109470875"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="fixed bottom-7 left-7 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-green-500 shadow-lg hover:scale-110 transition-all duration-300"
-        >
-          <i className="fab fa-whatsapp text-3xl text-white"></i>
-        </a>
-        
+              <a
+              href="https://wa.me/919109470875?text=Hi%20Innotix%20Solution,%20I%20need%20more%20information."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="fixed bottom-24 right-7 z-50 group"
+            >
+              <div className="flex items-center gap-3 rounded-full bg-green-500 px-4 py-3 text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                
+                <i className="fab fa-whatsapp text-2xl"></i>
+
+                <div className="hidden sm:block">
+                  <p className="text-xs opacity-90">Need Help?</p>
+                  <p className="text-sm font-semibold">
+                    Chat on WhatsApp
+                  </p>
+                </div>
+
+              </div>
+            </a>
+
       </div>
     </BrowserRouter>
   );
