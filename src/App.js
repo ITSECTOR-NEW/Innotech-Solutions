@@ -104,15 +104,28 @@ export default function App() {
         <Footer />
 
         {/* Back to Top */}
-        {/* {showBTT && (
-          <button
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="fixed bottom-7 right-7 w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-400 to-blue-500 text-white grid place-items-center shadow-lg shadow-cyan-500/30 hover:-translate-y-1 hover:shadow-cyan-500/50 transition-all z-50"
-            title="Back to top"
-          >
-            <i className="fas fa-arrow-up"></i>
-          </button>
-        )} */}
+        {/* Back To Top */}
+          {showBTT && (
+            <button
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              className="
+                fixed bottom-7 right-7 z-50
+                flex h-12 w-12 items-center justify-center
+                rounded-full
+                bg-slate-900
+                text-white
+                shadow-[0_8px_25px_rgba(0,0,0,0.25)]
+                ring-2 ring-white
+                transition-all duration-300
+                hover:-translate-y-1
+                hover:scale-110
+                hover:bg-slate-800
+              "
+              title="Back to Top"
+            >
+              <i className="fas fa-chevron-up text-lg"></i>
+            </button>
+          )}
 
           {/* Whatsapp Icon */}
               <a
