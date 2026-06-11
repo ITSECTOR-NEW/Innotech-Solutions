@@ -124,13 +124,14 @@ export default function App() {
                 
                 <i className="fab fa-whatsapp text-2xl"></i>
 
-                <div className="hidden sm:block">
-                  <p className="text-xs opacity-90">Need Help?</p>
-                  <p className="text-sm font-semibold">
-                    Chat on WhatsApp
-                  </p>
-                </div>
-
+                 <div>
+                <p className="text-[10px] opacity-90 leading-none">
+                  Need Help?
+                </p>
+                <p className="text-xs font-semibold">
+                  Chat on WhatsApp
+                </p>
+              </div>
               </div>
             </a>
 
