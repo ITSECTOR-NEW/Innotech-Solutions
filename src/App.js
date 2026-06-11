@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ScrollToHash from "./components/ScrollToHash/ScrollToHash";
 import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/Hero/Hero";
 import Marquee from "./components/Marquee/Marquee";
@@ -43,7 +44,16 @@ export default function App() {
 
   return (
     <BrowserRouter>
-      <div className={`min-h-screen ${theme === "dark" ? "bg-dark-900 text-slate-100" : "bg-blue-50 text-slate-900"}`}>
+  <ScrollToHash />
+
+   <div
+      className={`min-h-screen ${
+        theme === "dark"
+          ? "bg-dark-900 text-slate-100"
+          : "bg-blue-50 text-slate-900"
+      }`}
+    >
+     
 
         {/* Navbar */}
         <Navbar theme={theme} toggleTheme={toggleTheme} />
@@ -103,6 +113,16 @@ export default function App() {
             <i className="fas fa-arrow-up"></i>
           </button>
         )}
+          {/* Whatsapp Icon */}
+                <a
+          href="https://wa.me/919109470875"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="fixed bottom-7 left-7 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-green-500 shadow-lg hover:scale-110 transition-all duration-300"
+        >
+          <i className="fab fa-whatsapp text-3xl text-white"></i>
+        </a>
+        
       </div>
     </BrowserRouter>
   );

@@ -3,8 +3,8 @@ export const COMPANY = {
   name: "Innotech Solutions",
   tagline: "Technology. Innovation. Transformation.",
   email: "info@innotech-solutions.in",
-  phone: "+91 7803956101",
-  whatsapp: "7803956101",
+  phone: "+91 9109470875",
+  whatsapp: "9109470875",
   address: "Indore, Madhya Pradesh, India",
   hours: "Mon–Sat: 9 AM – 9 PM IST",
   socials: {
@@ -743,52 +743,71 @@ price: "Starting From ₹25,000",
 
 export const App_Dev_Description = [
   {
-    icon: "fas fa-mobile-screen-button",
-    title: "Business Applications",
-    desc: "Custom business applications designed to streamline operations, improve productivity, and enhance workflow management.",
-    image:
-      "https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=1200&auto=format&fit=crop",
-  },
-
-  {
-    icon: "fas fa-cart-shopping",
-    title: "E-Commerce Apps",
-    desc: "Modern e-commerce mobile applications with secure payment integration, product management, and smooth user experiences.",
-    image:
-      "https://images.unsplash.com/photo-1607082350899-7e105aa886ae?q=80&w=1200&auto=format&fit=crop",
-  },
-
-  {
-    icon: "fas fa-graduation-cap",
-    title: "Educational Applications",
-    desc: "Interactive learning and training applications for schools, institutes, coaching centers, and online education platforms.",
-    image:
-      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop",
-  },
-
-  {
-    icon: "fas fa-hospital",
-    title: "Healthcare Applications",
-    desc: "Healthcare and appointment management applications focused on patient engagement, booking, and digital records.",
-    image:
-      "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=1200&auto=format&fit=crop",
-  },
-
-  {
-    icon: "fas fa-truck-fast",
-    title: "Delivery & Booking Apps",
-    desc: "On-demand delivery and booking applications with real-time tracking, notifications, and order management systems.",
-    image:
-      "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1200&auto=format&fit=crop",
-  },
-
-  {
-    icon: "fas fa-comments",
-    title: "Social & Chat Applications",
-    desc: "Modern social networking and chat applications with real-time communication and engaging user interfaces.",
-    image:
-      "https://images.unsplash.com/photo-1611605698335-8b1569810432?q=80&w=1200&auto=format&fit=crop",
-  },
+      icon: "fab fa-android",
+      title: "Android Development",
+      desc: "Native Android apps built with Kotlin and Java, optimised for performance, battery life, and the full Google ecosystem.",
+      features: ["Kotlin & Java", "Material Design", "Google Play Ready", "Offline Support"],
+      timeline: "6–10 weeks",
+      price: "₹40,000 – ₹2,00,000",
+      accent: "from-green-500/15 to-green-500/5",
+      accentBorder: "border-green-200",
+      accentIcon: "text-green-600",
+    },
+    {
+      icon: "fab fa-apple",
+      title: "iOS Development",
+      desc: "Polished iOS apps crafted in Swift for iPhone and iPad, meeting every Apple guideline with seamless UX.",
+      features: ["Swift & SwiftUI", "Apple HIG", "App Store Ready", "iCloud Integration"],
+      timeline: "6–10 weeks",
+      price: "₹50,000 – ₹2,50,000",
+      accent: "from-slate-500/10 to-slate-500/5",
+      accentBorder: "border-slate-200",
+      accentIcon: "text-slate-700",
+    },
+    {
+      icon: "fas fa-layer-group",
+      title: "Cross-Platform Apps",
+      desc: "Single codebase, dual-platform deployment using React Native and Flutter — faster to ship, cheaper to maintain.",
+      features: ["React Native", "Flutter", "Shared Codebase", "Native Performance"],
+      timeline: "5–8 weeks",
+      price: "₹35,000 – ₹1,75,000",
+      accent: "from-[#0ea5e9]/15 to-[#0ea5e9]/5",
+      accentBorder: "border-sky-200",
+      accentIcon: "text-[#0ea5e9]",
+    },
+    {
+      icon: "fas fa-shopping-bag",
+      title: "E-Commerce Apps",
+      desc: "Feature-rich shopping apps with secure payments, real-time inventory, push notifications, and loyalty systems.",
+      features: ["Payment Gateway", "Cart & Wishlist", "Push Notifications", "Analytics"],
+      timeline: "8–12 weeks",
+      price: "₹60,000 – ₹3,00,000",
+      accent: "from-orange-500/15 to-orange-500/5",
+      accentBorder: "border-orange-200",
+      accentIcon: "text-orange-500",
+    },
+    {
+      icon: "fas fa-heartbeat",
+      title: "Healthcare Apps",
+      desc: "Secure health and wellness apps with appointment booking, teleconsultation, and patient record management.",
+      features: ["Appointment Booking", "Teleconsultation", "Health Tracking", "Secure Records"],
+      timeline: "10–14 weeks",
+      price: "₹80,000 – ₹4,00,000",
+      accent: "from-rose-500/15 to-rose-500/5",
+      accentBorder: "border-rose-200",
+      accentIcon: "text-rose-500",
+    },
+    {
+      icon: "fas fa-graduation-cap",
+      title: "EdTech Apps",
+      desc: "Engaging learning apps with video courses, quizzes, progress tracking, and live class support for all age groups.",
+      features: ["Video Courses", "Live Classes", "Progress Tracking", "Gamification"],
+      timeline: "8–12 weeks",
+      price: "₹55,000 – ₹2,50,000",
+      accent: "from-violet-500/15 to-violet-500/5",
+      accentBorder: "border-violet-200",
+      accentIcon: "text-violet-500",
+    },
 ];
 export const UI_Web_Design_Description = [
   {
@@ -1078,5 +1097,43 @@ export const Web_Tech_Stack = [
       tagText: "text-emerald-700",
       tagBg: "bg-emerald-50",
       items: ["MongoDB", "PostgreSQL", "AWS", "Vercel"],
+    },
+  ];
+
+
+// Tech stack used for  App Development Page
+  export const App_Tech_Stack = [
+    {
+      category: "Mobile Frameworks",
+      icon: "fas fa-mobile-alt",
+      color: "from-[#0ea5e9]/15 to-[#0ea5e9]/5",
+      border: "border-sky-200",
+      iconColor: "text-[#0ea5e9]",
+      tagBorder: "border-sky-200",
+      tagText: "text-sky-700",
+      tagBg: "bg-sky-50",
+      items: ["React Native", "Flutter", "Swift", "Kotlin"],
+    },
+    {
+      category: "Backend & APIs",
+      icon: "fas fa-server",
+      color: "from-violet-500/15 to-violet-500/5",
+      border: "border-violet-200",
+      iconColor: "text-violet-500",
+      tagBorder: "border-violet-200",
+      tagText: "text-violet-700",
+      tagBg: "bg-violet-50",
+      items: ["Node.js", "Firebase", "GraphQL", "REST APIs"],
+    },
+    {
+      category: "Cloud & DevOps",
+      icon: "fas fa-cloud-upload-alt",
+      color: "from-emerald-500/15 to-emerald-500/5",
+      border: "border-emerald-200",
+      iconColor: "text-emerald-500",
+      tagBorder: "border-emerald-200",
+      tagText: "text-emerald-700",
+      tagBg: "bg-emerald-50",
+      items: ["AWS", "GCP", "CI/CD", "Docker"],
     },
   ];
