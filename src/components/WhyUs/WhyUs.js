@@ -29,9 +29,12 @@ export default function WhyChoose() {
   };
 
   return (
-    <section className="relative overflow-hidden bg-[#0d1117] py-16 sm:py-20 lg:py-28">
+    <section className="relative overflow-hidden bg-[#13181f] py-16 sm:py-20 lg:py-28">
 
-      {/* Ambient glows — different positions from Services */}
+      {/* Top divider — pink/violet to distinguish from blue sections */}
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-pink-500/50 to-transparent" />
+
+      {/* Ambient glows — pink/violet instead of blue */}
       <div className="pointer-events-none absolute right-0 top-1/3 h-[380px] w-[380px] translate-x-1/2 rounded-full bg-pink-600/8 blur-[130px]" />
       <div className="pointer-events-none absolute bottom-0 left-1/4 h-[300px] w-[300px] rounded-full bg-violet-600/10 blur-[120px]" />
 
@@ -133,7 +136,7 @@ export default function WhyChoose() {
                 </p>
 
                 {/* Bottom read more */}
-                <div className="mt-5 flex items-center gap-2 opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0.5">
+                <div className="mt-5 flex translate-x-0 items-center gap-2 opacity-0 transition-all duration-300 group-hover:translate-x-0.5 group-hover:opacity-100">
                   <span className="text-xs font-bold" style={{ color: a.icon }}>
                     Learn More
                   </span>
@@ -145,7 +148,7 @@ export default function WhyChoose() {
         </div>
 
         {/* ── Bottom CTA strip ── */}
-        <div className="mt-14 flex flex-col items-center justify-between gap-5 rounded-2xl border border-white/[0.07] bg-white/[0.03] px-6 py-6 sm:flex-row sm:px-10">
+        <div className="mt-14 flex flex-col items-center justify-between gap-5 rounded-2xl border border-pink-500/15 bg-pink-500/[0.03] px-6 py-6 sm:flex-row sm:px-10">
           <div>
             <p className="text-base font-bold text-white">
               Turning Ideas Into{" "}
@@ -167,7 +170,7 @@ export default function WhyChoose() {
 
           <button
             onClick={requestDemo}
-            className="flex-shrink-0 inline-flex items-center gap-2.5 rounded-full bg-gradient-to-r from-pink-500 to-violet-500 px-7 py-3 text-sm font-bold text-white shadow-lg shadow-pink-500/20 transition-all duration-200 hover:scale-105 hover:shadow-pink-500/30"
+            className="inline-flex flex-shrink-0 items-center gap-2.5 rounded-full bg-gradient-to-r from-pink-500 to-violet-500 px-7 py-3 text-sm font-bold text-white shadow-lg shadow-pink-500/20 transition-all duration-200 hover:scale-105 hover:shadow-pink-500/30"
           >
             Get Free Consultation
             <i className="fas fa-arrow-right text-xs" />
