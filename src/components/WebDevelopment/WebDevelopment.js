@@ -320,10 +320,12 @@ export default function WebDevelopment() {
 
             {/* Left */}
             <div>
-              <div className="mb-5 flex items-center gap-3">
-                <span className="h-px w-7 bg-cyan-400" />
-                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-cyan-400">Technology Expertise</span>
-              </div>
+              <div className="mb-6 flex items-center gap-4">
+              <span className="h-px w-10 bg-white/70" />
+              <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-cyan-400">
+                Technology Expertise
+              </span>
+            </div>
               <h2
                 className="font-black leading-tight text-white"
                 style={{ fontSize: "clamp(1.6rem, 3vw, 2.4rem)" }}
@@ -467,7 +469,7 @@ export default function WebDevelopment() {
             {/* Left */}
             <div>
               <div className="mb-5 flex items-center gap-3">
-                <span className="h-px w-7 bg-sky-400" />
+                <span className="h-px w-7 bg-white/70" />
                 <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-sky-400">Why Choose Us</span>
               </div>
               <h2
