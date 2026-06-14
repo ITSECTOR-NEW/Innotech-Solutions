@@ -655,97 +655,96 @@ export const AI_SERVICE_PAGES = {
 };
 
 export const Web_Development_Description = [
-    {
-icon: "fas fa-building",
-title: "Corporate & Business Websites",
-desc: "Professional websites crafted to strengthen brand identity, build trust, and generate valuable business enquiries.",
-features: [
-"Professional Branding",
-"Lead Generation",
-"Mobile Responsive",
-"SEO Ready Structure"
-],
-freeIncluded: "Digital Business Card QR",
-timeline: "2–4 Weeks",
-price: "Starting From ₹20,000",
+{
+  icon: "fas fa-building",
+  title: "Business & Corporate Websites",
+  desc: "Professional websites designed to establish credibility, showcase services, and generate business leads.",
+  features: [
+    "Professional Branding",
+    "Lead Generation",
+    "Mobile Responsive",
+    "SEO Ready Structure"
+  ],
+  freeIncluded: "Digital Business Card QR",
+  timeline: "2–4 Weeks",
+  price: "Starting From ₹20,000",
 },
 
 {
-icon: "fas fa-shopping-cart",
-title: "E-Commerce Solutions",
-desc: "Online stores designed to deliver seamless shopping experiences and support sustainable sales growth.",
-features: [
-"Secure Payments",
-"Product Management",
-"Order Tracking",
-"Customer Dashboard"
-],
-freeIncluded: "WhatsApp Order Support",
-timeline: "3–6 Weeks",
-price: "Starting From ₹35,000",
+  icon: "fas fa-shopping-cart",
+  title: "E-Commerce Websites",
+  desc: "Scalable online stores with secure payments, inventory management, and customer-friendly shopping experiences.",
+  features: [
+    "Secure Payments",
+    "Product Management",
+    "Order Tracking",
+    "Customer Dashboard"
+  ],
+  freeIncluded: "WhatsApp Order Support",
+  timeline: "3–6 Weeks",
+  price: "Starting From ₹35,000",
 },
 
 {
-icon: "fas fa-graduation-cap",
-title: "Educational Platforms",
-desc: "Interactive learning portals that simplify course delivery and improve student engagement.",
-features: [
-"Course Management",
-"Student Dashboard",
-"Online Assessments",
-"Progress Tracking"
-],
-freeIncluded: "Assessment Portal Included",
-timeline: "3–5 Weeks",
-price: "Starting From ₹30,000",
+  icon: "fas fa-graduation-cap",
+  title: "School & Coaching Platforms",
+  desc: "Modern educational websites with learning tools, student management, and online examination capabilities.",
+  features: [
+    "Course Management",
+    "Student Dashboard",
+    "Online Assessments",
+    "Progress Tracking"
+  ],
+  freeIncluded: "Secure Online Examination Platform",
+  timeline: "3–5 Weeks",
+  price: "Starting From ₹30,000",
 },
 
 {
-icon: "fas fa-plane-departure",
-title: "Travel & Booking Platforms",
-desc: "Modern travel websites with booking capabilities, destination listings, and streamlined user journeys.",
-features: [
-"Online Reservations",
-"Tour Listings",
-"Customer Enquiries",
-"Booking Management"
-],
- freeIncluded: "Trip Enquiry Dashboard",
-timeline: "3–6 Weeks",
-price: "Starting From ₹40,000",
+  icon: "fas fa-hospital",
+  title: "Healthcare & Clinic Websites",
+  desc: "Professional healthcare portals with appointment booking and patient engagement features.",
+  features: [
+    "Appointment Booking",
+    "Doctor Profiles",
+    "Patient Enquiries",
+    "Mobile Friendly Design"
+  ],
+  freeIncluded: "Online Appointment System",
+  timeline: "2–5 Weeks",
+  price: "Starting From ₹25,000",
 },
 
 {
-icon: "fas fa-briefcase",
-title: "Recruitment & Job Portals",
-desc: "Smart hiring platforms connecting employers and candidates through efficient recruitment workflows.",
-features: [
-"Job Listings",
-"Application Tracking",
-"Employer Dashboard",
-"Candidate Management"
-],
-freeIncluded: "Candidate Tracking System",
-timeline: "4–6 Weeks",
-price: "Starting From ₹45,000",
+  icon: "fas fa-home",
+  title: "Real Estate Websites",
+  desc: "Property listing platforms designed to showcase projects and generate qualified buyer enquiries.",
+  features: [
+    "Property Listings",
+    "Photo Galleries",
+    "Lead Management",
+    "Location Integration"
+  ],
+  freeIncluded: "Property QR System",
+  timeline: "3–6 Weeks",
+  price: "Starting From ₹40,000",
 },
 
 {
-icon: "fas fa-newspaper",
-title: "Media & Publishing Websites",
-desc: "Content-focused platforms built for publishing, audience engagement, and digital media growth.",
-features: [
-"Content Management",
-"Category Organization",
-"Audience Engagement",
-"Advertising Support"
-],
- freeIncluded: "SEO Blog Setup",
-timeline: "2–5 Weeks",
-price: "Starting From ₹25,000",
+  icon: "fas fa-briefcase",
+  title: "Job Portal & Recruitment Websites",
+  desc: "Smart hiring platforms connecting employers and candidates through efficient recruitment workflows.",
+  features: [
+    "Job Listings",
+    "Application Tracking",
+    "Employer Dashboard",
+    "Candidate Management"
+  ],
+  freeIncluded: "Candidate Tracking System",
+  timeline: "4–6 Weeks",
+  price: "Starting From ₹45,000",
 },
-
-  ];
+];
 
 export const App_Dev_Description = [
   {
