@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { App_Dev_Description, App_Tech_Stack } from "../../data/siteData";
 
-// Violet/purple accent — distinct from WebDev (sky-blue)
 const ACCENT = {
   primary: "#8b5cf6",
   secondary: "#a78bfa",
@@ -45,7 +44,7 @@ export default function MobileApp() {
   ];
 
   const whyUs = [
-    { icon: "fab fa-android",   text: "Android & iOS Expertise" },
+    { icon: "fab fa-android",    text: "Android & iOS Expertise" },
     { icon: "fas fa-paint-brush", text: "Intuitive UI/UX Design" },
     { icon: "fas fa-shield-alt", text: "Secure & Encrypted Apps" },
     { icon: "fas fa-bolt",       text: "High-Performance Architecture" },
@@ -71,109 +70,127 @@ export default function MobileApp() {
     },
   ];
 
-  const heroStats = [
-    { value: "2+",    label: "Apps Shipped",     icon: "fas fa-mobile-alt",  color: "#a78bfa" },
-    { value: "4.8★",  label: "Avg Store Rating", icon: "fas fa-star",        color: "#f59e0b" },
-    { value: "2 Plat",label: "Android + iOS",    icon: "fas fa-layer-group", color: "#818cf8" },
-    { value: "6 wks", label: "Avg Delivery",     icon: "fas fa-clock",       color: "#10b981" },
+  const qualityBars = [
+    { label: "On-time Delivery",    value: 95, color: "#8b5cf6" },
+    { label: "Client Satisfaction", value: 98, color: "#a78bfa" },
+    { label: "Crash-Free Rate",     value: 99, color: "#10b981" },
+    { label: "Store Approval Rate", value: 100, color: "#818cf8" },
+  ];
+
+  const miniStats = [
+    { value: "2+",    label: "Apps Shipped",      icon: "fas fa-mobile-alt",  color: "#a78bfa" },
+    { value: "4.8★",  label: "Avg Store Rating",  icon: "fas fa-star",        color: "#f59e0b" },
+    { value: "2 Plat",label: "Android + iOS",     icon: "fas fa-layer-group", color: "#818cf8" },
+    { value: "6 wks", label: "Avg Delivery",      icon: "fas fa-clock",       color: "#10b981" },
   ];
 
   return (
     <main className="min-h-screen bg-[#13181f]" style={{ fontFamily: "inherit" }}>
 
       {/* ═══════════════════════════════════════
-          HERO — split layout (vs WebDev centered)
+          HERO — centered, matching WebDev layout
       ═══════════════════════════════════════ */}
-      <section className="relative overflow-hidden bg-[#0d1117]">
+      <section className="relative flex min-h-[100svh] items-center overflow-hidden bg-[#0d1117]">
 
         <div className={`absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent ${ACCENT.divider} to-transparent`} />
-        <div className="pointer-events-none absolute -left-32 top-0 h-[550px] w-[550px] rounded-full bg-violet-700/10 blur-[150px]" />
-        <div className="pointer-events-none absolute -right-20 bottom-0 h-[400px] w-[400px] rounded-full bg-indigo-600/8 blur-[130px]" />
+
+        <div className="pointer-events-none absolute -left-32 top-1/4 h-[500px] w-[500px] rounded-full bg-violet-700/10 blur-[140px]" />
+        <div className="pointer-events-none absolute -right-32 bottom-0 h-[400px] w-[400px] rounded-full bg-indigo-600/8 blur-[120px]" />
         <div
-          className="pointer-events-none absolute inset-0 opacity-[0.025]"
+          className="pointer-events-none absolute inset-0 opacity-[0.03]"
           style={{ backgroundImage: "radial-gradient(#ffffff 1px, transparent 1px)", backgroundSize: "22px 22px" }}
         />
 
-        <div className="relative z-10 mx-auto w-full max-w-7xl px-5 pb-16 pt-28 sm:px-6 sm:pt-32 lg:px-8 lg:pb-20 lg:pt-28">
-          <div className="grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
+        {/* Back Button */}
+        <div className="absolute left-3 top-20 z-30 sm:left-6 sm:top-28 lg:left-8 lg:top-32">
+          <a
+            href="/"
+            className="flex items-center justify-center h-10 w-10 sm:h-auto sm:w-auto sm:px-5 sm:py-2.5 rounded-full border border-white/10 bg-black/40 backdrop-blur-md text-slate-300 transition-all duration-300 hover:border-violet-500/40 hover:bg-violet-500/10 hover:text-white"
+          >
+            <i className="fas fa-arrow-left text-sm" />
+            <span className="hidden sm:inline ml-2 text-sm font-semibold">Back to Home</span>
+          </a>
+        </div>
 
-            {/* Left — text */}
-            <div>
-              {/* Back to home */}
-              <a
-                href="/"
-                className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/[0.08] bg-white/[0.03] px-4 py-2 text-xs font-bold uppercase tracking-wide text-slate-400 transition-all hover:border-white/20 hover:text-white"
-              >
-                <i className="fas fa-arrow-left text-[10px]" />
-                Back to Home
-              </a>
+        {/* Content */}
+        <div className="relative z-10 mx-auto w-full max-w-6xl px-5 pb-12 pt-32 sm:px-6 sm:pt-36 lg:px-8 lg:pt-24">
+          <div className="mx-auto max-w-4xl text-center">
 
-              {/* Pill */}
-              <div className={`mb-5 inline-flex items-center gap-2 rounded-full border px-4 py-1.5 ${ACCENT.pill}`}>
-                <span className={`h-1.5 w-1.5 rounded-full ${ACCENT.pillDot}`} />
-                <span className={`text-[10px] font-bold uppercase tracking-[0.18em] ${ACCENT.pillText}`}>
-                  Mobile App Development
-                </span>
-              </div>
-
-              <h1
-                className="font-black leading-[1.1] text-white"
-                style={{ fontSize: "clamp(2rem, 4.5vw, 3.8rem)" }}
-              >
-                Apps That Users
-                <span
-                  className="block"
-                  style={{ background: ACCENT.gradientText, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}
-                >
-                  Love & Return To
-                </span>
-              </h1>
-
-              <p className="mt-5 max-w-lg text-base leading-8 text-slate-400">
-                We design and develop Android, iOS, and cross-platform apps that combine
-                stunning UI with rock-solid performance — from idea to store launch.
-              </p>
-
-              {/* Platform badges */}
-              <div className="mt-6 flex flex-wrap gap-2">
-                {["Android", "iOS", "React Native", "Flutter"].map((p) => (
-                  <span key={p} className={`rounded-full border px-3 py-1 text-xs font-semibold ${ACCENT.tagBorder} ${ACCENT.tagBg} ${ACCENT.tagText}`}>
-                    {p}
-                  </span>
-                ))}
-              </div>
-
-              <div className="mt-8 flex flex-wrap gap-4">
-                <button
-                  onClick={() => requestDemo()}
-                  className={`inline-flex items-center gap-2 rounded-full px-8 py-3.5 text-sm font-bold uppercase tracking-wide text-white shadow-lg transition-all ${ACCENT.btnBg} ${ACCENT.btnHover} ${ACCENT.shadow}`}
-                >
-                  Start Your App
-                  <i className="fas fa-arrow-right text-xs" />
-                </button>
-                <button className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-8 py-3.5 text-sm font-bold uppercase tracking-wide text-white transition-all hover:bg-white/[0.08]">
-                  View Case Studies
-                  <i className="fas fa-external-link-alt text-xs" />
-                </button>
-              </div>
+            {/* Pill */}
+            <div className={`mb-6 inline-flex items-center gap-2 rounded-full border px-4 py-1.5 ${ACCENT.pill}`}>
+              <span className={`h-1.5 w-1.5 rounded-full ${ACCENT.pillDot}`} />
+              <span className={`text-[10px] font-bold uppercase tracking-[0.18em] ${ACCENT.pillText}`}>
+                Mobile App Development
+              </span>
             </div>
 
-            {/* Right — stat cards grid */}
-            <div className="grid grid-cols-2 gap-3 sm:gap-4">
-              {heroStats.map((s) => (
-                <div
-                  key={s.label}
-                  className="rounded-2xl border border-white/[0.07] bg-white/[0.03] p-5 transition-all duration-300 hover:-translate-y-1 hover:border-violet-500/20 hover:bg-violet-500/5 sm:p-6"
-                >
-                  <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-white/[0.08] bg-white/[0.04]">
-                    <i className={`${s.icon} text-sm`} style={{ color: s.color }} />
-                  </div>
-                  <p className="mt-4 font-black text-white" style={{ fontSize: "clamp(1.3rem, 2vw, 1.8rem)", color: s.color }}>
+            {/* Heading */}
+            <h1
+              className="font-black leading-[1.05] text-white"
+              style={{ fontSize: "clamp(2.2rem, 5vw, 4.8rem)" }}
+            >
+              We Build Apps That
+              <span
+                className="block mt-1"
+                style={{ background: ACCENT.gradientText, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}
+              >
+                Users Love & Return To
+              </span>
+            </h1>
+
+            {/* Description */}
+            <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-slate-400 sm:text-lg">
+              Modern, scalable mobile solutions delivered fast.
+              From idea to App Store — designed for performance, built for results.
+            </p>
+
+            {/* Hero stats */}
+            <div className="mt-10 flex flex-wrap justify-center gap-8 sm:gap-14">
+              {[
+                { value: "2+",    label: "Apps Shipped" },
+                { value: "4.8★",  label: "Store Rating" },
+                { value: "6 wks", label: "Avg. Delivery" },
+              ].map((s) => (
+                <div key={s.label} className="text-center">
+                  <p
+                    className="font-black"
+                    style={{
+                      fontSize: "clamp(1.4rem, 2.5vw, 2rem)",
+                      background: ACCENT.gradientText,
+                      WebkitBackgroundClip: "text",
+                      WebkitTextFillColor: "transparent",
+                      backgroundClip: "text",
+                    }}
+                  >
                     {s.value}
                   </p>
-                  <p className="mt-1 text-xs font-medium text-slate-500">{s.label}</p>
+                  <p className="mt-1 text-[10px] font-bold uppercase tracking-widest text-slate-500">{s.label}</p>
                 </div>
               ))}
+            </div>
+
+            {/* Platform badges */}
+            <div className="mt-6 flex flex-wrap justify-center gap-2">
+              {["Android", "iOS", "React Native", "Flutter"].map((p) => (
+                <span key={p} className={`rounded-full border px-3 py-1 text-xs font-semibold ${ACCENT.tagBorder} ${ACCENT.tagBg} ${ACCENT.tagText}`}>
+                  {p}
+                </span>
+              ))}
+            </div>
+
+            {/* CTAs */}
+            <div className="mt-10 flex flex-wrap justify-center gap-4">
+              <button
+                onClick={() => requestDemo()}
+                className={`inline-flex items-center gap-2 rounded-full px-8 py-3.5 text-sm font-bold uppercase tracking-wide text-white shadow-lg transition-all ${ACCENT.btnBg} ${ACCENT.btnHover} shadow-violet-500/25 hover:shadow-violet-400/40`}
+              >
+                Start Your App
+                <i className="fas fa-arrow-right text-xs" />
+              </button>
+              <button className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.05] px-8 py-3.5 text-sm font-bold uppercase tracking-wide text-white backdrop-blur-sm transition-all hover:bg-white/[0.09]">
+                View Case Studies
+                <i className="fas fa-external-link-alt text-xs" />
+              </button>
             </div>
           </div>
         </div>
@@ -185,7 +202,7 @@ export default function MobileApp() {
       <section className="relative overflow-hidden bg-[#13181f] py-20">
 
         <div className={`absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent ${ACCENT.divider} to-transparent`} />
-        <div className="pointer-events-none absolute right-0 top-0 h-[300px] w-[300px] translate-x-1/2 rounded-full bg-violet-600/8 blur-[110px]" />
+        <div className="pointer-events-none absolute right-0 top-0 h-[350px] w-[350px] translate-x-1/2 rounded-full bg-violet-600/8 blur-[120px]" />
 
         <div className="relative mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
 
@@ -215,12 +232,10 @@ export default function MobileApp() {
                   onMouseLeave={() => setHoveredCard(null)}
                   className={`group relative flex flex-col overflow-hidden rounded-2xl border border-white/[0.07] bg-white/[0.03] transition-all duration-300 hover:-translate-y-1 ${ACCENT.cardHover}`}
                 >
-                  {/* Top accent line */}
                   <span
                     className="absolute left-0 top-0 h-[2px] w-full opacity-0 transition-opacity duration-300 group-hover:opacity-100"
                     style={{ background: `linear-gradient(90deg, ${ACCENT.primary}, transparent)` }}
                   />
-                  {/* Ghost number */}
                   <span
                     className="pointer-events-none absolute right-4 top-2 select-none font-black leading-none text-white/[0.03] transition-all duration-300 group-hover:text-white/[0.06]"
                     style={{ fontSize: "5rem" }} aria-hidden="true"
@@ -280,7 +295,7 @@ export default function MobileApp() {
       </section>
 
       {/* ═══════════════════════════════════════
-          PLATFORM TABS — unique to MobileApp
+          PLATFORM TABS
       ═══════════════════════════════════════ */}
       <section className="relative overflow-hidden bg-[#0d1117] py-20">
 
@@ -306,7 +321,6 @@ export default function MobileApp() {
             </h2>
           </div>
 
-          {/* Tab switcher */}
           <div className="mb-8 flex justify-center gap-2">
             {platforms.map((p, i) => (
               <button
@@ -324,14 +338,9 @@ export default function MobileApp() {
             ))}
           </div>
 
-          {/* Tab content */}
           {platforms.map((p, i) => (
-            <div
-              key={p.label}
-              className={`transition-all duration-300 ${activePlat === i ? "block" : "hidden"}`}
-            >
+            <div key={p.label} className={`transition-all duration-300 ${activePlat === i ? "block" : "hidden"}`}>
               <div className="grid gap-6 lg:grid-cols-[1fr_1.4fr] lg:items-center">
-                {/* Left — description */}
                 <div className="rounded-2xl border border-white/[0.07] bg-white/[0.03] p-7 sm:p-8">
                   <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl border border-white/[0.08] bg-white/[0.04]">
                     <i className={`${p.icon} text-2xl`} style={{ color: p.color }} />
@@ -347,9 +356,8 @@ export default function MobileApp() {
                   </button>
                 </div>
 
-                {/* Right — feature chips grid */}
                 <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
-                  {p.features.map((f, fi) => (
+                  {p.features.map((f) => (
                     <div
                       key={f}
                       className="flex items-center gap-3 rounded-xl border border-white/[0.07] bg-white/[0.03] px-4 py-3.5 transition-all duration-200 hover:border-violet-500/25 hover:bg-violet-500/5"
@@ -368,56 +376,84 @@ export default function MobileApp() {
       </section>
 
       {/* ═══════════════════════════════════════
-          TECH STACK
+          TECH STACK — left text + right cards (matching WebDev layout)
       ═══════════════════════════════════════ */}
       <section className="relative overflow-hidden bg-[#13181f] py-20">
 
         <div className={`absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent ${ACCENT.divider} to-transparent`} />
-        <div className="pointer-events-none absolute right-0 bottom-0 h-[300px] w-[300px] translate-x-1/3 rounded-full bg-violet-600/8 blur-[110px]" />
+        <div className="pointer-events-none absolute left-0 top-1/2 h-[350px] w-[350px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-violet-600/8 blur-[130px]" />
+        <div
+          className="pointer-events-none absolute inset-0 opacity-[0.025]"
+          style={{ backgroundImage: "radial-gradient(#ffffff 1px, transparent 1px)", backgroundSize: "22px 22px" }}
+        />
 
         <div className="relative mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+          <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
 
-          <div className="mx-auto mb-12 max-w-2xl text-center">
-            <div className={`mb-4 inline-flex items-center gap-2 rounded-full border px-4 py-1.5 ${ACCENT.pill}`}>
-              <span className={`h-1.5 w-1.5 rounded-full ${ACCENT.pillDot}`} />
-              <span className={`text-[10px] font-bold uppercase tracking-[0.18em] ${ACCENT.pillText}`}>Technology Stack</span>
-            </div>
-            <h2 className="font-black leading-[1.15] text-white" style={{ fontSize: "clamp(1.8rem, 3.2vw, 2.6rem)" }}>
-              Built With{" "}
-              <span style={{ background: ACCENT.gradientText, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
-                Industry-Leading Tools
-              </span>
-            </h2>
-            <p className="mx-auto mt-4 max-w-xl text-sm leading-7 text-slate-400 sm:text-[15px]">
-              From cross-platform frameworks to scalable cloud backends — we use what's best for your app.
-            </p>
-          </div>
-
-          {/* 3-col centered cards */}
-          <div className="grid gap-4 md:grid-cols-3">
-            {App_Tech_Stack.map((stack) => (
-              <div
-                key={stack.category}
-                className={`group rounded-2xl border border-white/[0.07] bg-white/[0.03] p-6 text-center transition-all duration-300 hover:-translate-y-1 ${ACCENT.cardHover} sm:p-8`}
-              >
-                {/* Top accent line */}
-                <span
-                  className="absolute left-0 top-0 h-[2px] w-full rounded-t-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-                  style={{ background: `linear-gradient(90deg, ${ACCENT.primary}, transparent)` }}
-                />
-                <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-xl border border-violet-500/20 bg-violet-500/10 transition-all duration-300 group-hover:scale-105">
-                  <i className={`${stack.icon} text-xl text-violet-400`} />
-                </div>
-                <h3 className="text-base font-black text-white">{stack.category}</h3>
-                <div className="mt-5 flex flex-wrap justify-center gap-2">
-                  {stack.items.map((tech) => (
-                    <span key={tech} className="rounded-full border border-violet-500/20 bg-violet-500/5 px-3 py-1 text-[11px] font-semibold text-violet-300">
-                      {tech}
-                    </span>
-                  ))}
-                </div>
+            {/* Left */}
+            <div>
+              <div className="mb-6 flex items-center gap-4">
+                <span className="h-px w-10 bg-white/70" />
+                <span className={`text-[10px] font-bold uppercase tracking-[0.25em] ${ACCENT.pillText}`}>
+                  Technology Expertise
+                </span>
               </div>
-            ))}
+              <h2 className="font-black leading-tight text-white" style={{ fontSize: "clamp(1.6rem, 3vw, 2.4rem)" }}>
+                Technologies Behind
+                <span
+                  className="block"
+                  style={{ background: ACCENT.gradientText, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}
+                >
+                  Every Mobile Product
+                </span>
+              </h2>
+              <div className="my-5 h-px w-full bg-white/[0.06]" />
+              <p className="text-sm leading-7 text-slate-400">
+                We combine trusted mobile frameworks, modern toolchains, and scalable cloud
+                technologies to build secure, high-performance, and future-ready apps.
+              </p>
+
+              <ul className="mt-6 space-y-3">
+                {["Battle-tested mobile stacks", "Cloud-native & scalable backend", "Security-first architecture", "Continuous integration & delivery"].map((pt) => (
+                  <li key={pt} className="flex items-center gap-3">
+                    <span className={`flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full ${ACCENT.iconBg}`}>
+                      <i className={`fas fa-check text-[8px] ${ACCENT.pillText}`} />
+                    </span>
+                    <span className="text-sm text-slate-400">{pt}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Right — stacked cards (matching WebDev) */}
+            <div className="space-y-4">
+              {App_Tech_Stack.map((stack) => (
+                <div
+                  key={stack.category}
+                  className={`group rounded-2xl border border-white/[0.07] bg-white/[0.03] p-5 transition-all duration-300 ${ACCENT.cardHover} sm:p-6`}
+                >
+                  <div className="flex items-center gap-4">
+                    <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-xl border border-violet-500/20 bg-violet-500/10">
+                      <i className={`${stack.icon} text-base text-violet-400`} />
+                    </div>
+                    <div>
+                      <h3 className="text-sm font-bold text-white sm:text-[15px]">{stack.category}</h3>
+                      <p className="text-[11px] text-slate-500">Production Ready Technologies</p>
+                    </div>
+                  </div>
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {stack.items.map((tech) => (
+                      <span
+                        key={tech}
+                        className="rounded-full border border-violet-500/20 bg-violet-500/5 px-3 py-1 text-[11px] font-semibold text-violet-300"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -438,18 +474,18 @@ export default function MobileApp() {
           <div className="mx-auto mb-14 max-w-2xl text-center">
             <div className={`mb-4 inline-flex items-center gap-2 rounded-full border px-4 py-1.5 ${ACCENT.pill}`}>
               <span className={`h-1.5 w-1.5 rounded-full ${ACCENT.pillDot}`} />
-              <span className={`text-[10px] font-bold uppercase tracking-[0.18em] ${ACCENT.pillText}`}>How We Deliver</span>
+              <span className={`text-[10px] font-bold uppercase tracking-[0.18em] ${ACCENT.pillText}`}>How We Work</span>
             </div>
             <h2 className="font-black leading-[1.15] text-white" style={{ fontSize: "clamp(1.8rem, 3.2vw, 2.6rem)" }}>
-              From Idea To{" "}
+              Our{" "}
               <span style={{ background: ACCENT.gradientText, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
-                App Store
+                Development Process
               </span>
             </h2>
           </div>
 
           <div className="relative grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-            <div className="pointer-events-none absolute left-[12.5%] right-[12.5%] top-[38px] hidden h-px border-t border-dashed border-violet-500/20 lg:block" />
+            <div className={`pointer-events-none absolute left-[12.5%] right-[12.5%] top-[38px] hidden h-px border-t border-dashed border-violet-500/20 lg:block`} />
 
             {process.map((step, idx) => (
               <div
@@ -483,53 +519,21 @@ export default function MobileApp() {
       </section>
 
       {/* ═══════════════════════════════════════
-          WHY CHOOSE — reversed (panel LEFT, text RIGHT)
+          WHY CHOOSE — text LEFT, quality panel RIGHT (matching WebDev)
       ═══════════════════════════════════════ */}
       <section className="relative overflow-hidden bg-[#13181f] py-20">
 
         <div className={`absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent ${ACCENT.divider} to-transparent`} />
-        <div className="pointer-events-none absolute right-0 top-1/3 h-[350px] w-[350px] translate-x-1/2 rounded-full bg-violet-600/8 blur-[120px]" />
+        <div className="pointer-events-none absolute left-0 top-1/3 h-[380px] w-[380px] -translate-x-1/2 rounded-full bg-violet-600/8 blur-[130px]" />
+        <div
+          className="pointer-events-none absolute inset-0 opacity-[0.025]"
+          style={{ backgroundImage: "radial-gradient(#ffffff 1px, transparent 1px)", backgroundSize: "22px 22px" }}
+        />
 
         <div className="relative mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
           <div className="grid items-start gap-12 lg:grid-cols-2 lg:gap-16">
 
-            {/* Left — platform panel (unique visual) */}
-            <div className="rounded-2xl border border-white/[0.07] bg-white/[0.03] p-7 sm:p-8">
-              <p className="mb-6 text-[9px] font-black uppercase tracking-[0.2em] text-slate-500">Platform Comparison</p>
-
-              {[
-                { platform: "Android",        icon: "fab fa-android",    color: "#22c55e", features: ["Kotlin", "Material You", "Play Store", "Widgets"] },
-                { platform: "iOS",            icon: "fab fa-apple",      color: "#e2e8f0", features: ["Swift", "SwiftUI", "App Store", "Face ID"] },
-                { platform: "Cross-Platform", icon: "fas fa-layer-group",color: "#a78bfa", features: ["React Native", "Flutter", "Single Build", "60fps"] },
-              ].map((plat) => (
-                <div key={plat.platform} className="mb-3 rounded-xl border border-white/[0.06] bg-white/[0.03] p-4 transition-all duration-200 hover:border-violet-500/20 hover:bg-violet-500/5">
-                  <div className="mb-3 flex items-center gap-3">
-                    <i className={`${plat.icon} text-lg`} style={{ color: plat.color }} />
-                    <span className="text-sm font-black text-white">{plat.platform}</span>
-                  </div>
-                  <div className="flex flex-wrap gap-1.5">
-                    {plat.features.map((f) => (
-                      <span key={f} className="rounded-full border border-white/[0.06] bg-white/[0.03] px-2.5 py-1 text-[10px] font-semibold text-slate-400">{f}</span>
-                    ))}
-                  </div>
-                </div>
-              ))}
-
-              <div className="mt-5 grid grid-cols-2 gap-3">
-                {[
-                  { value: "2+",  label: "Apps Launched",  icon: "fas fa-rocket",     color: ACCENT.primary },
-                  { value: "98%", label: "Crash-Free Rate", icon: "fas fa-shield-alt", color: "#10b981" },
-                ].map((s) => (
-                  <div key={s.label} className="rounded-xl border border-white/[0.06] bg-white/[0.03] p-4 text-center transition-all duration-200 hover:border-violet-500/20">
-                    <i className={`${s.icon} text-lg`} style={{ color: s.color }} />
-                    <p className="mt-2 text-xl font-black text-white">{s.value}</p>
-                    <p className="mt-0.5 text-xs text-slate-500">{s.label}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Right — text */}
+            {/* Left — text */}
             <div>
               <div className="mb-5 flex items-center gap-3">
                 <span className="h-px w-7" style={{ background: ACCENT.primary }} />
@@ -543,8 +547,8 @@ export default function MobileApp() {
               </h2>
               <div className="my-5 h-px w-full bg-white/[0.06]" />
               <p className="text-sm leading-7 text-slate-400">
-                We don't just code apps — we craft digital products that users keep opening.
-                Every decision from architecture to animation is intentional.
+                We combine technical depth, design precision, and mobile strategy to build apps
+                that perform — not just look good. Here's what sets us apart.
               </p>
 
               <div className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2">
@@ -558,8 +562,10 @@ export default function MobileApp() {
                       className={`flex items-center gap-3 rounded-xl border border-white/[0.07] bg-white/[0.03] px-4 py-3.5 transition-all duration-200 ${ACCENT.cardHover}`}
                     >
                       <div className={`flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg border border-white/[0.08] ${ACCENT.iconBg} transition-all duration-200`}>
-                        <i className={`${item.icon} text-xs transition-colors duration-200`}
-                          style={{ color: isHov ? ACCENT.secondary : "#64748b" }} />
+                        <i
+                          className={`${item.icon} text-xs transition-colors duration-200`}
+                          style={{ color: isHov ? ACCENT.secondary : "#64748b" }}
+                        />
                       </div>
                       <span className="text-sm font-semibold text-slate-300">{item.text}</span>
                     </div>
@@ -571,9 +577,44 @@ export default function MobileApp() {
                 onClick={() => requestDemo()}
                 className={`mt-10 inline-flex items-center gap-2.5 rounded-full px-8 py-3.5 text-sm font-bold text-white shadow-lg transition-all hover:scale-105 ${ACCENT.btnBg} ${ACCENT.btnHover} ${ACCENT.shadow}`}
               >
-                Build Your App
+                Start Your App
                 <i className="fas fa-arrow-right text-xs" />
               </button>
+            </div>
+
+            {/* Right — quality panel with bars (matching WebDev structure) */}
+            <div className="rounded-2xl border border-white/[0.07] bg-white/[0.03] p-7 sm:p-8">
+              <p className="mb-6 text-[9px] font-black uppercase tracking-[0.2em] text-slate-500">
+                Our Commitment To Quality
+              </p>
+
+              {qualityBars.map((bar) => (
+                <div key={bar.label} className="mb-5">
+                  <div className="mb-2 flex justify-between">
+                    <span className="text-sm font-semibold text-slate-300">{bar.label}</span>
+                    <span className="text-sm font-black text-white">{bar.value}%</span>
+                  </div>
+                  <div className="h-2 w-full rounded-full bg-white/[0.06]">
+                    <div
+                      className="h-2 rounded-full transition-all duration-500"
+                      style={{ width: `${bar.value}%`, background: bar.color }}
+                    />
+                  </div>
+                </div>
+              ))}
+
+              <div className="mt-8 grid grid-cols-2 gap-3">
+                {miniStats.map((s) => (
+                  <div
+                    key={s.label}
+                    className={`rounded-xl border border-white/[0.06] bg-white/[0.03] p-4 text-center transition-all duration-200 hover:border-violet-500/20 hover:bg-violet-500/5`}
+                  >
+                    <i className={`${s.icon} text-lg`} style={{ color: s.color }} />
+                    <p className="mt-2 text-xl font-black text-white">{s.value}</p>
+                    <p className="mt-0.5 text-xs text-slate-500">{s.label}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
