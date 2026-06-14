@@ -1,6 +1,6 @@
 // ── COMPANY INFO ── Edit your details here
 export const COMPANY = {
-  name: "Innotech Solutions",
+  name: "Innotech-Solutions",
   tagline: "Technology. Innovation. Transformation.",
   email: "info@innotech-solutions.in",
   phone: "+91 9109470875",
@@ -665,6 +665,7 @@ features: [
 "Mobile Responsive",
 "SEO Ready Structure"
 ],
+freeIncluded: "Digital Business Card QR",
 timeline: "2–4 Weeks",
 price: "Starting From ₹20,000",
 },
@@ -679,6 +680,7 @@ features: [
 "Order Tracking",
 "Customer Dashboard"
 ],
+freeIncluded: "WhatsApp Order Support",
 timeline: "3–6 Weeks",
 price: "Starting From ₹35,000",
 },
@@ -693,6 +695,7 @@ features: [
 "Online Assessments",
 "Progress Tracking"
 ],
+freeIncluded: "Assessment Portal Included",
 timeline: "3–5 Weeks",
 price: "Starting From ₹30,000",
 },
@@ -707,6 +710,7 @@ features: [
 "Customer Enquiries",
 "Booking Management"
 ],
+ freeIncluded: "Trip Enquiry Dashboard",
 timeline: "3–6 Weeks",
 price: "Starting From ₹40,000",
 },
@@ -721,6 +725,7 @@ features: [
 "Employer Dashboard",
 "Candidate Management"
 ],
+freeIncluded: "Candidate Tracking System",
 timeline: "4–6 Weeks",
 price: "Starting From ₹45,000",
 },
@@ -735,6 +740,7 @@ features: [
 "Audience Engagement",
 "Advertising Support"
 ],
+ freeIncluded: "SEO Blog Setup",
 timeline: "2–5 Weeks",
 price: "Starting From ₹25,000",
 },
