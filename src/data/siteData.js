@@ -748,71 +748,94 @@ export const Web_Development_Description = [
 
 export const App_Dev_Description = [
   {
-      icon: "fab fa-android",
-      title: "Android Development",
-      desc: "Native Android apps built with Kotlin and Java, optimised for performance, battery life, and the full Google ecosystem.",
-      features: ["Kotlin & Java", "Material Design", "Google Play Ready", "Offline Support"],
-      timeline: "6–10 weeks",
-      price: "₹40,000 – ₹2,00,000",
-      accent: "from-green-500/15 to-green-500/5",
-      accentBorder: "border-green-200",
-      accentIcon: "text-green-600",
-    },
-    {
-      icon: "fab fa-apple",
-      title: "iOS Development",
-      desc: "Polished iOS apps crafted in Swift for iPhone and iPad, meeting every Apple guideline with seamless UX.",
-      features: ["Swift & SwiftUI", "Apple HIG", "App Store Ready", "iCloud Integration"],
-      timeline: "6–10 weeks",
-      price: "₹50,000 – ₹2,50,000",
-      accent: "from-slate-500/10 to-slate-500/5",
-      accentBorder: "border-slate-200",
-      accentIcon: "text-slate-700",
-    },
-    {
-      icon: "fas fa-layer-group",
-      title: "Cross-Platform Apps",
-      desc: "Single codebase, dual-platform deployment using React Native and Flutter — faster to ship, cheaper to maintain.",
-      features: ["React Native", "Flutter", "Shared Codebase", "Native Performance"],
-      timeline: "5–8 weeks",
-      price: "₹35,000 – ₹1,75,000",
-      accent: "from-[#0ea5e9]/15 to-[#0ea5e9]/5",
-      accentBorder: "border-sky-200",
-      accentIcon: "text-[#0ea5e9]",
-    },
-    {
-      icon: "fas fa-shopping-bag",
-      title: "E-Commerce Apps",
-      desc: "Feature-rich shopping apps with secure payments, real-time inventory, push notifications, and loyalty systems.",
-      features: ["Payment Gateway", "Cart & Wishlist", "Push Notifications", "Analytics"],
-      timeline: "8–12 weeks",
-      price: "₹60,000 – ₹3,00,000",
-      accent: "from-orange-500/15 to-orange-500/5",
-      accentBorder: "border-orange-200",
-      accentIcon: "text-orange-500",
-    },
-    {
-      icon: "fas fa-heartbeat",
-      title: "Healthcare Apps",
-      desc: "Secure health and wellness apps with appointment booking, teleconsultation, and patient record management.",
-      features: ["Appointment Booking", "Teleconsultation", "Health Tracking", "Secure Records"],
-      timeline: "10–14 weeks",
-      price: "₹80,000 – ₹4,00,000",
-      accent: "from-rose-500/15 to-rose-500/5",
-      accentBorder: "border-rose-200",
-      accentIcon: "text-rose-500",
-    },
-    {
-      icon: "fas fa-graduation-cap",
-      title: "EdTech Apps",
-      desc: "Engaging learning apps with video courses, quizzes, progress tracking, and live class support for all age groups.",
-      features: ["Video Courses", "Live Classes", "Progress Tracking", "Gamification"],
-      timeline: "8–12 weeks",
-      price: "₹55,000 – ₹2,50,000",
-      accent: "from-violet-500/15 to-violet-500/5",
-      accentBorder: "border-violet-200",
-      accentIcon: "text-violet-500",
-    },
+    icon: "fas fa-briefcase",
+    title: "Business Mobile Apps",
+    desc: "Custom mobile applications for businesses, startups, service providers, and corporate organizations.",
+    features: [
+      "Custom Features",
+      "User Management",
+      "Push Notifications",
+      "Analytics Dashboard"
+    ],
+    freeIncluded: "App Publishing Support",
+    timeline: "6–10 Weeks",
+    price: "₹40,000 – ₹2,00,000",
+  },
+
+  {
+    icon: "fas fa-shopping-cart",
+    title: "E-Commerce Apps",
+    desc: "Feature-rich shopping applications with secure payments, order management, and customer engagement tools.",
+    features: [
+      "Secure Payments",
+      "Order Tracking",
+      "Product Management",
+      "Customer Dashboard"
+    ],
+    freeIncluded: "WhatsApp Order Integration",
+    timeline: "8–12 Weeks",
+    price: "₹60,000 – ₹3,00,000",
+  },
+
+  {
+    icon: "fas fa-graduation-cap",
+    title: "Education & Coaching Apps",
+    desc: "Learning platforms for schools, colleges, coaching institutes, and online training providers.",
+    features: [
+      "Course Management",
+      "Live Classes",
+      "Student Dashboard",
+      "Progress Tracking"
+    ],
+    freeIncluded: "Secure Online Examination Platform",
+    timeline: "8–12 Weeks",
+    price: "₹55,000 – ₹2,50,000",
+  },
+
+  {
+    icon: "fas fa-heartbeat",
+    title: "Healthcare Apps",
+    desc: "Healthcare and wellness applications with appointment booking, patient management, and teleconsultation.",
+    features: [
+      "Appointment Booking",
+      "Patient Records",
+      "Teleconsultation",
+      "Health Tracking"
+    ],
+    freeIncluded: "Appointment Management Dashboard",
+    timeline: "10–14 Weeks",
+    price: "₹80,000 – ₹4,00,000",
+  },
+
+  {
+    icon: "fas fa-home",
+    title: "Booking & Service Apps",
+    desc: "Apps for hotels, travel agencies, salons, gyms, restaurants, and service-based businesses.",
+    features: [
+      "Online Booking",
+      "Service Management",
+      "Customer Notifications",
+      "Reviews & Ratings"
+    ],
+    freeIncluded: "QR Booking System",
+    timeline: "6–10 Weeks",
+    price: "₹50,000 – ₹2,50,000",
+  },
+
+  {
+    icon: "fas fa-industry",
+    title: "Industrial & IoT Apps",
+    desc: "Smart industrial applications for monitoring, automation, tracking, and operational visibility.",
+    features: [
+      "Real-Time Monitoring",
+      "IoT Integration",
+      "Live Dashboards",
+      "Analytics & Reports"
+    ],
+    freeIncluded: "Dashboard Setup Consultation",
+    timeline: "8–16 Weeks",
+    price: "₹75,000 – ₹5,00,000",
+  },
 ];
 export const UI_Web_Design_Description = [
   {

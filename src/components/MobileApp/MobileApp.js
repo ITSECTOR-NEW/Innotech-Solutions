@@ -273,6 +273,21 @@ export default function MobileApp() {
                     </div>
                   </div>
 
+                {/* Freebies for every customer*/}
+
+                  {item.freeIncluded && (
+                    <div className="mx-6 mb-4">
+                      <div className="inline-flex items-center gap-2 rounded-full border border-emerald-500/20 bg-emerald-500/10 px-3 py-1.5">
+                        <i className="fas fa-gift text-[10px] text-emerald-400" />
+                        <span className="text-[10px] font-bold uppercase tracking-wide text-emerald-400">
+                          Free {item.freeIncluded}
+                        </span>
+                      </div>
+                    </div>
+                  )}
+
+
+
                   <div className="mx-6 border-t border-white/[0.05]" />
                   <div className="flex items-center justify-between gap-3 px-6 py-4">
                     <div className="flex items-center gap-1.5 text-slate-500">
