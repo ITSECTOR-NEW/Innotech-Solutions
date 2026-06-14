@@ -2,26 +2,41 @@ import React, { useState } from "react";
 import { App_Dev_Description, App_Tech_Stack } from "../../data/siteData";
 
 const ACCENT = {
-  primary: "#8b5cf6",
-  secondary: "#a78bfa",
-  gradient: "linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%)",
-  gradientText: "linear-gradient(135deg, #a78bfa 0%, #818cf8 100%)",
-  glow: "bg-violet-600/10",
-  glowAlt: "bg-indigo-500/8",
-  border: "border-violet-500/20",
-  pill: "border-violet-500/20 bg-violet-500/10",
-  pillText: "text-violet-400",
-  pillDot: "bg-violet-400",
-  divider: "via-violet-400/50",
-  cardHover: "hover:border-violet-500/30 hover:bg-violet-500/[0.05]",
-  iconBg: "bg-violet-500/10",
-  iconHover: "#a78bfa",
-  tagBorder: "border-violet-500/20",
-  tagBg: "bg-violet-500/5",
-  tagText: "text-violet-300",
-  btnBg: "bg-violet-600",
-  btnHover: "hover:bg-violet-500",
-  shadow: "shadow-violet-500/20",
+  primary: "#0ea5e9",
+  secondary: "#38bdf8",
+
+  gradient:
+    "linear-gradient(135deg, #0ea5e9 0%, #22d3ee 100%)",
+
+  gradientText:
+    "linear-gradient(135deg, #38bdf8 0%, #22d3ee 100%)",
+
+  glow: "bg-sky-600/10",
+  glowAlt: "bg-cyan-500/8",
+
+  border: "border-sky-500/20",
+
+  pill: "border-sky-500/20 bg-sky-500/10",
+  pillText: "text-sky-400",
+  pillDot: "bg-sky-400",
+
+  divider: "via-sky-400/50",
+
+  cardHover:
+    "hover:border-sky-500/30 hover:bg-white/[0.055]",
+
+  iconBg: "bg-sky-500/10",
+
+  iconHover: "#38bdf8",
+
+  tagBorder: "border-sky-500/20",
+  tagBg: "bg-sky-500/5",
+  tagText: "text-sky-300",
+
+  btnBg: "bg-[#0ea5e9]",
+  btnHover: "hover:bg-[#38bdf8]",
+
+  shadow: "shadow-sky-500/20",
 };
 
 export default function MobileApp() {
@@ -94,8 +109,8 @@ export default function MobileApp() {
 
         <div className={`absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent ${ACCENT.divider} to-transparent`} />
 
-        <div className="pointer-events-none absolute -left-32 top-1/4 h-[500px] w-[500px] rounded-full bg-violet-700/10 blur-[140px]" />
-        <div className="pointer-events-none absolute -right-32 bottom-0 h-[400px] w-[400px] rounded-full bg-indigo-600/8 blur-[120px]" />
+        <div className="pointer-events-none absolute -left-32 top-1/4 h-[500px] w-[500px] rounded-full bg-sky-600/10 blur-[140px]" />
+        <div className="pointer-events-none absolute -right-32 bottom-0 h-[400px] w-[400px] rounded-full bg-cyan-500/8 blur-[120px]" />
         <div
           className="pointer-events-none absolute inset-0 opacity-[0.03]"
           style={{ backgroundImage: "radial-gradient(#ffffff 1px, transparent 1px)", backgroundSize: "22px 22px" }}
@@ -105,7 +120,7 @@ export default function MobileApp() {
         <div className="absolute left-3 top-20 z-30 sm:left-6 sm:top-28 lg:left-8 lg:top-32">
           <a
             href="/"
-            className="flex items-center justify-center h-10 w-10 sm:h-auto sm:w-auto sm:px-5 sm:py-2.5 rounded-full border border-white/10 bg-black/40 backdrop-blur-md text-slate-300 transition-all duration-300 hover:border-violet-500/40 hover:bg-violet-500/10 hover:text-white"
+            className="flex items-center justify-center h-10 w-10 sm:h-auto sm:w-auto sm:px-5 sm:py-2.5 rounded-full border border-white/10 bg-black/40 backdrop-blur-md text-slate-300 transition-all duration-300 hover:border-sky-500/40 hover:bg-sky-500/10 hover:text-white"
           >
             <i className="fas fa-arrow-left text-sm" />
             <span className="hidden sm:inline ml-2 text-sm font-semibold">Back to Home</span>
@@ -202,7 +217,7 @@ export default function MobileApp() {
       <section className="relative overflow-hidden bg-[#13181f] py-20">
 
         <div className={`absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent ${ACCENT.divider} to-transparent`} />
-        <div className="pointer-events-none absolute right-0 top-0 h-[350px] w-[350px] translate-x-1/2 rounded-full bg-violet-600/8 blur-[120px]" />
+        <div className="pointer-events-none absolute right-0 top-0 h-[350px] w-[350px] translate-x-1/2 rounded-full bg-sky-600/10 blur-[120px]" />
 
         <div className="relative mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
 
@@ -244,7 +259,7 @@ export default function MobileApp() {
                   </span>
 
                   <div className="p-6">
-                    <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl border border-white/[0.08] bg-violet-500/10 transition-all duration-300 group-hover:scale-105 group-hover:border-violet-500/30">
+                    <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl border border-white/[0.08] bg-sky-500/10 transition-all duration-300 group-hover:scale-105 group-hover:border-sky-500/30">
                       <i
                         className={`${item.icon} text-base transition-colors duration-300`}
                         style={{ color: isHov ? ACCENT.secondary : "#64748b" }}
@@ -296,7 +311,7 @@ export default function MobileApp() {
                     </div>
                     <button
                       onClick={() => requestDemo(item.title)}
-                      className="inline-flex flex-shrink-0 items-center gap-1.5 rounded-full border border-violet-500/20 bg-violet-500/10 px-4 py-2 text-[11px] font-bold text-violet-400 transition-all hover:bg-violet-500/20 hover:text-white"
+                      className="inline-flex flex-shrink-0 items-center gap-1.5 rounded-full border border-sky-500/20 bg-sky-500/10 px-4 py-2 text-[11px] font-bold text-sky-400 transition-all hover:bg-violet-500/20 hover:text-white"
                     >
                       Request Pricing
                       <i className="fas fa-arrow-right text-[9px]" />
@@ -343,7 +358,7 @@ export default function MobileApp() {
                 onClick={() => setActivePlat(i)}
                 className={`flex items-center gap-2 rounded-full border px-5 py-2.5 text-sm font-bold transition-all duration-200 ${
                   activePlat === i
-                    ? "border-violet-500/40 bg-violet-500/15 text-white"
+                    ? "border-sky-500/40 bg-sky-500/15 text-white"
                     : "border-white/[0.07] bg-white/[0.03] text-slate-400 hover:border-white/20 hover:text-slate-200"
                 }`}
               >
@@ -448,7 +463,7 @@ export default function MobileApp() {
                   className={`group rounded-2xl border border-white/[0.07] bg-white/[0.03] p-5 transition-all duration-300 ${ACCENT.cardHover} sm:p-6`}
                 >
                   <div className="flex items-center gap-4">
-                    <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-xl border border-violet-500/20 bg-violet-500/10">
+                    <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-xl border border-sky-500/20 bg-sky-500/10">
                       <i className={`${stack.icon} text-base text-violet-400`} />
                     </div>
                     <div>
@@ -460,7 +475,7 @@ export default function MobileApp() {
                     {stack.items.map((tech) => (
                       <span
                         key={tech}
-                        className="rounded-full border border-violet-500/20 bg-violet-500/5 px-3 py-1 text-[11px] font-semibold text-violet-300"
+                        className="rounded-full border border-sky-500/20 bg-sky-500/5 px-3 py-1 text-[11px] font-semibold text-sky-300"
                       >
                         {tech}
                       </span>
@@ -479,7 +494,7 @@ export default function MobileApp() {
       <section className="relative overflow-hidden bg-[#0d1117] py-20">
 
         <div className={`absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent ${ACCENT.divider} to-transparent`} />
-        <div className="pointer-events-none absolute left-0 bottom-0 h-[300px] w-[300px] -translate-x-1/3 rounded-full bg-violet-600/8 blur-[110px]" />
+        <div className="pointer-events-none absolute left-0 bottom-0 h-[300px] w-[300px] -translate-x-1/3 rounded-full bg-sky-600/8 blur-[110px]" />
         <div
           className="pointer-events-none absolute inset-0 opacity-[0.025]"
           style={{ backgroundImage: "radial-gradient(#ffffff 1px, transparent 1px)", backgroundSize: "22px 22px" }}
@@ -500,7 +515,7 @@ export default function MobileApp() {
           </div>
 
           <div className="relative grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-            <div className={`pointer-events-none absolute left-[12.5%] right-[12.5%] top-[38px] hidden h-px border-t border-dashed border-violet-500/20 lg:block`} />
+            <div className={`pointer-events-none absolute left-[12.5%] right-[12.5%] top-[38px] hidden h-px border-t border-dashed border-sky-500/20 lg:block`} />
 
             {process.map((step, idx) => (
               <div
@@ -512,9 +527,9 @@ export default function MobileApp() {
                   style={{ background: `linear-gradient(90deg, ${ACCENT.primary}, transparent)` }}
                 />
 
-                <div className="relative mb-5 flex h-16 w-16 items-center justify-center rounded-full border border-white/[0.1] bg-white/[0.04] transition-all duration-300 group-hover:border-violet-500/40 group-hover:bg-violet-500/10">
-                  <i className={`${step.icon} text-lg text-slate-500 transition-colors duration-300 group-hover:text-violet-400`} />
-                  <span className="absolute -right-1 -top-1 flex h-5 w-5 items-center justify-center rounded-full bg-violet-500/20 text-[9px] font-black text-violet-300">
+                <div className="relative mb-5 flex h-16 w-16 items-center justify-center rounded-full border border-white/[0.1] bg-white/[0.04] transition-all duration-300 group-hover:border-sky-500/40 group-hover:bg-sky-500/10">
+                  <i className={`${step.icon} text-lg text-slate-500 transition-colors duration-300 group-hover:text-sky-400`} />
+                  <span className="absolute -right-1 -top-1 flex h-5 w-5 items-center justify-center rounded-full bg-sky-500/20 text-[9px] font-black text-sky-300">
                     {step.step}
                   </span>
                 </div>
@@ -622,7 +637,7 @@ export default function MobileApp() {
                 {miniStats.map((s) => (
                   <div
                     key={s.label}
-                    className={`rounded-xl border border-white/[0.06] bg-white/[0.03] p-4 text-center transition-all duration-200 hover:border-violet-500/20 hover:bg-violet-500/5`}
+                    className={`rounded-xl border border-white/[0.06] bg-white/[0.03] p-4 text-center transition-all duration-200 hover:border-sky-500/20 hover:bg-sky-500/5`}
                   >
                     <i className={`${s.icon} text-lg`} style={{ color: s.color }} />
                     <p className="mt-2 text-xl font-black text-white">{s.value}</p>
