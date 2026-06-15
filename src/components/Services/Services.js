@@ -131,7 +131,7 @@ export default function Services() {
 
         {/* ── FOOTER: stats + checklist ── */}
         <div className="mt-6 flex flex-wrap items-center gap-6 border-t border-white/[0.06] pt-5 sm:gap-8">
-          <div>
+          {/* <div>
             <p className="text-xl font-black text-white sm:text-2xl">
               {SERVICES.length}
             </p>
@@ -149,7 +149,7 @@ export default function Services() {
             </p>
           </div>
 
-          <div className="h-8 w-px bg-white/[0.08]" />
+          <div className="h-8 w-px bg-white/[0.08]" /> */}
 
           <div className="flex flex-wrap gap-x-6 gap-y-2">
             {[

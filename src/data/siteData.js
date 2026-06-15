@@ -214,114 +214,117 @@ export const WHY_CHOOSE_US = [
 //   },
 // ];
 
-export const IOT_FEATURES = [
-  {
-    icon: "fas fa-chart-line",
-    title: "Analytics Dashboards",
-    desc: "Real-time industrial analytics dashboards for production monitoring, KPI tracking, and operational insights.",
-    image:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop",
-  },
+// export const IOT_FEATURES = [
+//   {
+//     icon: "fas fa-chart-line",
+//     title: "Analytics Dashboards",
+//     desc: "Real-time industrial analytics dashboards for production monitoring, KPI tracking, and operational insights.",
+//     image:
+//       "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop",
+//   },
 
-  {
-    icon: "fas fa-robot",
-    title: "AI-Based Automation",
-    desc: "Smart AI-driven automation systems designed to improve manufacturing efficiency and reduce manual operations.",
-    image:
-      "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=1200&auto=format&fit=crop",
-  },
+//   {
+//     icon: "fas fa-robot",
+//     title: "AI-Based Automation",
+//     desc: "Smart AI-driven automation systems designed to improve manufacturing efficiency and reduce manual operations.",
+//     image:
+//       "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=1200&auto=format&fit=crop",
+//   },
 
-  {
-    icon: "fas fa-microchip",
-    title: "IoT Monitoring Systems",
-    desc: "Industrial IoT solutions with live sensor monitoring, machine connectivity, and real-time operational tracking.",
-    image:
-      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop",
-  },
+//   {
+//     icon: "fas fa-microchip",
+//     title: "IoT Monitoring Systems",
+//     desc: "Industrial IoT solutions with live sensor monitoring, machine connectivity, and real-time operational tracking.",
+//     image:
+//       "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop",
+//   },
 
-  {
-    icon: "fas fa-screwdriver-wrench",
-    title: "Predictive Maintenance",
-    desc: "AI-powered maintenance systems for fault prediction, downtime reduction, and machine health monitoring.",
-    image:
-      "https://images.unsplash.com/photo-1581092921461-eab10380b8e0?q=80&w=1200&auto=format&fit=crop",
-  },
+//   {
+//     icon: "fas fa-screwdriver-wrench",
+//     title: "Predictive Maintenance",
+//     desc: "AI-powered maintenance systems for fault prediction, downtime reduction, and machine health monitoring.",
+//     image:
+//       "https://images.unsplash.com/photo-1581092921461-eab10380b8e0?q=80&w=1200&auto=format&fit=crop",
+//   },
 
-  {
-    icon: "fas fa-boxes-stacked",
-    title: "Smart Tool Management",
-    desc: "Digital tool tracking and management systems with live monitoring, usage tracking, and inventory optimization.",
-    image:
-      "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=1200&auto=format&fit=crop",
-  },
+//   {
+//     icon: "fas fa-boxes-stacked",
+//     title: "Smart Tool Management",
+//     desc: "Digital tool tracking and management systems with live monitoring, usage tracking, and inventory optimization.",
+//     image:
+//       "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=1200&auto=format&fit=crop",
+//   },
 
-  {
-    icon: "fas fa-network-wired",
-    title: "Connected Manufacturing",
-    desc: "Integrated digital manufacturing solutions connecting machines, systems, and industrial operations seamlessly.",
-    image:
-      "https://images.unsplash.com/photo-1565008447742-97f6f38c985c?q=80&w=1200&auto=format&fit=crop",
-  },
-];
+//   {
+//     icon: "fas fa-network-wired",
+//     title: "Connected Manufacturing",
+//     desc: "Integrated digital manufacturing solutions connecting machines, systems, and industrial operations seamlessly.",
+//     image:
+//       "https://images.unsplash.com/photo-1565008447742-97f6f38c985c?q=80&w=1200&auto=format&fit=crop",
+//   },
+// ];
 
-export const IOT_PAGE_IMAGES = {
-  hero:
-    "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1600&auto=format&fit=crop",
-  intro:
-    "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1600&auto=format&fit=crop",
-  why:
-    "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1600&auto=format&fit=crop",
-};
+// export const IOT_PAGE_IMAGES = {
+//   hero:
+//     "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1600&auto=format&fit=crop",
+//   intro:
+//     "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1600&auto=format&fit=crop",
+//   why:
+//     "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1600&auto=format&fit=crop",
+// };
 
-export const IOT_WORK_SPEAK_SECTION = {
-  eyebrow: "We Will Let Our Work Speak First",
-  title: "From discovery to execution",
-  services: [
-    {
-      title: "IoT App Development",
-      desc: "We create web and mobile interfaces for connected devices so teams can monitor equipment, view live status, receive alerts, and control workflows from one clean application.",
-    },
-    {
-      title: "Device Integration",
-      desc: "We connect sensors, gateways, controllers, and industrial devices into a reliable data flow using practical protocols and APIs suited to your hardware environment.",
-    },
-    {
-      title: "Edge Computing Solutions",
-      desc: "We design edge-based processing for faster local decisions, reduced latency, and stable operations even when cloud connectivity is limited or intermittent.",
-    },
-    {
-      title: "IoT Analytics",
-      desc: "We turn sensor and machine data into useful insights through dashboards, trend analysis, alert rules, and predictive indicators that help teams monitor performance and act earlier.",
-    },
-  ],
-};
+// export const IOT_WORK_SPEAK_SECTION = {
+//   eyebrow: "We Will Let Our Work Speak First",
+//   title: "From discovery to execution",
+//   services: [
+//     {
+//       title: "IoT App Development",
+//       desc: "We create web and mobile interfaces for connected devices so teams can monitor equipment, view live status, receive alerts, and control workflows from one clean application.",
+//     },
+//     {
+//       title: "Device Integration",
+//       desc: "We connect sensors, gateways, controllers, and industrial devices into a reliable data flow using practical protocols and APIs suited to your hardware environment.",
+//     },
+//     {
+//       title: "Edge Computing Solutions",
+//       desc: "We design edge-based processing for faster local decisions, reduced latency, and stable operations even when cloud connectivity is limited or intermittent.",
+//     },
+//     {
+//       title: "IoT Analytics",
+//       desc: "We turn sensor and machine data into useful insights through dashboards, trend analysis, alert rules, and predictive indicators that help teams monitor performance and act earlier.",
+//     },
+//   ],
+// };
 
-export const IOT_APPROACH_STEPS = [
-  {
-    title: "Requirement Discovery",
-    desc: "We understand your machines, workflows, data points, and automation goals before planning the right industrial solution.",
-  },
-  {
-    title: "Device & Sensor Planning",
-    desc: "We identify practical sensors, controllers, gateways, and connectivity options suited to your industrial environment.",
-  },
-  {
-    title: "Connectivity & Data Flow",
-    desc: "We connect devices using reliable communication patterns such as MQTT, Wi-Fi, Bluetooth, APIs, and cloud-ready pipelines.",
-  },
-  {
-    title: "Dashboard & Analytics",
-    desc: "We convert live industrial data into dashboards, alerts, reports, and insights that are easy for teams to act on.",
-  },
-  {
-    title: "Testing & Deployment",
-    desc: "We validate data accuracy, system reliability, security, and real-world performance before final deployment.",
-  },
-  {
-    title: "Support & Scale",
-    desc: "We help improve alerts, expand devices, refine dashboards, and scale the system as your operations grow.",
-  },
-];
+// export const IOT_APPROACH_STEPS = [
+//   {
+//     title: "Requirement Discovery",
+//     desc: "We understand your machines, workflows, data points, and automation goals before planning the right industrial solution.",
+//   },
+//   {
+//     title: "Device & Sensor Planning",
+//     desc: "We identify practical sensors, controllers, gateways, and connectivity options suited to your industrial environment.",
+//   },
+//   {
+//     title: "Connectivity & Data Flow",
+//     desc: "We connect devices using reliable communication patterns such as MQTT, Wi-Fi, Bluetooth, APIs, and cloud-ready pipelines.",
+//   },
+//   {
+//     title: "Dashboard & Analytics",
+//     desc: "We convert live industrial data into dashboards, alerts, reports, and insights that are easy for teams to act on.",
+//   },
+//   {
+//     title: "Testing & Deployment",
+//     desc: "We validate data accuracy, system reliability, security, and real-world performance before final deployment.",
+//   },
+//   {
+//     title: "Support & Scale",
+//     desc: "We help improve alerts, expand devices, refine dashboards, and scale the system as your operations grow.",
+//   },
+// ];
+
+
+// AI Service Page Content
 
 export const AI_SERVICE_PAGES = {
   "ai-services": {
@@ -406,6 +409,9 @@ export const AI_SERVICE_PAGES = {
       "Scalable architecture for future AI expansion.",
     ],
   },
+
+
+  // AI and coding training program for student Page Content
   "ai-coding-training-schools": {
     eyebrow: "AI & Coding Training for Schools",
     title: "Future-Ready AI And Coding Programs",
@@ -488,6 +494,9 @@ export const AI_SERVICE_PAGES = {
       "Mentorship for student projects and innovation events.",
     ],
   },
+
+
+  //  Business Automation Page Content
   "business-automation-solutions": {
     eyebrow: "Business Automation Solutions",
     title: "Automate Repetitive Business Work",
@@ -570,6 +579,9 @@ export const AI_SERVICE_PAGES = {
       "Integrations with websites, apps, sheets, and databases.",
     ],
   },
+
+
+  //  Industrial IoT Page Content
   "industrial-internet-of-things": {
     eyebrow: "Industrial Internet of Things",
     title: "Connected Industrial IoT Systems",
@@ -654,6 +666,7 @@ export const AI_SERVICE_PAGES = {
   },
 };
 
+//  Web Development Page Content
 export const Web_Development_Description = [
 {
   icon: "fas fa-building",
@@ -746,6 +759,7 @@ export const Web_Development_Description = [
 },
 ];
 
+//  App Development Page Content
 export const App_Dev_Description = [
   {
     icon: "fas fa-briefcase",
@@ -837,135 +851,135 @@ export const App_Dev_Description = [
     price: "₹75,000 – ₹5,00,000",
   },
 ];
-export const UI_Web_Design_Description = [
-  {
-    title: "Website UI Design",
-    desc: "Modern and responsive website interfaces focused on branding, usability, and customer engagement.",
-    image:
-      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop",
-  },
+// export const UI_Web_Design_Description = [
+//   {
+//     title: "Website UI Design",
+//     desc: "Modern and responsive website interfaces focused on branding, usability, and customer engagement.",
+//     image:
+//       "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop",
+//   },
 
-  {
-    title: "Mobile App UI/UX",
-    desc: "Creative mobile application designs with smooth navigation and user-friendly experiences.",
-    image:
-      "https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=1200&auto=format&fit=crop",
-  },
+//   {
+//     title: "Mobile App UI/UX",
+//     desc: "Creative mobile application designs with smooth navigation and user-friendly experiences.",
+//     image:
+//       "https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=1200&auto=format&fit=crop",
+//   },
 
-  {
-    title: "Dashboard Design",
-    desc: "Professional admin dashboards and management panels with clean layouts and modern UI systems.",
-    image:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop",
-  },
+//   {
+//     title: "Dashboard Design",
+//     desc: "Professional admin dashboards and management panels with clean layouts and modern UI systems.",
+//     image:
+//       "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop",
+//   },
 
-  {
-    title: "Brand Identity Design",
-    desc: "Creative branding solutions including typography, color systems, layouts, and visual identity.",
-    image:
-      "https://images.unsplash.com/photo-1522542550221-31fd19575a2d?q=80&w=1200&auto=format&fit=crop",
-  },
-];
+//   {
+//     title: "Brand Identity Design",
+//     desc: "Creative branding solutions including typography, color systems, layouts, and visual identity.",
+//     image:
+//       "https://images.unsplash.com/photo-1522542550221-31fd19575a2d?q=80&w=1200&auto=format&fit=crop",
+//   },
+// ];
 
-export const DIGITAL_MARKETING_SERVICES = [
-  {
-    icon: "fas fa-magnifying-glass-chart",
-    title: "Search Engine Optimization",
-    desc: "Improve website visibility and Google rankings with professional SEO strategies and performance optimization.",
-    image:
-      "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?q=80&w=1200&auto=format&fit=crop",
-  },
+// export const DIGITAL_MARKETING_SERVICES = [
+//   {
+//     icon: "fas fa-magnifying-glass-chart",
+//     title: "Search Engine Optimization",
+//     desc: "Improve website visibility and Google rankings with professional SEO strategies and performance optimization.",
+//     image:
+//       "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?q=80&w=1200&auto=format&fit=crop",
+//   },
 
-  {
-    icon: "fas fa-bullhorn",
-    title: "Social Media Marketing",
-    desc: "Creative social media campaigns for Instagram, Facebook, LinkedIn, and other platforms to grow your brand presence.",
-    image:
-      "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1200&auto=format&fit=crop",
-  },
+//   {
+//     icon: "fas fa-bullhorn",
+//     title: "Social Media Marketing",
+//     desc: "Creative social media campaigns for Instagram, Facebook, LinkedIn, and other platforms to grow your brand presence.",
+//     image:
+//       "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1200&auto=format&fit=crop",
+//   },
 
-  {
-    icon: "fas fa-chart-line",
-    title: "Performance Marketing",
-    desc: "Data-driven marketing campaigns focused on lead generation, customer engagement, and business growth.",
-    image:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop",
-  },
+//   {
+//     icon: "fas fa-chart-line",
+//     title: "Performance Marketing",
+//     desc: "Data-driven marketing campaigns focused on lead generation, customer engagement, and business growth.",
+//     image:
+//       "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop",
+//   },
 
-  {
-    icon: "fas fa-envelope-open-text",
-    title: "Email Marketing",
-    desc: "Professional email marketing campaigns designed to improve customer communication and conversion rates.",
-    image:
-      "https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1200&auto=format&fit=crop",
-  },
+//   {
+//     icon: "fas fa-envelope-open-text",
+//     title: "Email Marketing",
+//     desc: "Professional email marketing campaigns designed to improve customer communication and conversion rates.",
+//     image:
+//       "https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1200&auto=format&fit=crop",
+//   },
 
-  {
-    icon: "fas fa-pen-nib",
-    title: "Content Marketing",
-    desc: "High-quality content creation for blogs, websites, social media, and branding to increase audience engagement.",
-    image:
-      "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1200&auto=format&fit=crop",
-  },
+//   {
+//     icon: "fas fa-pen-nib",
+//     title: "Content Marketing",
+//     desc: "High-quality content creation for blogs, websites, social media, and branding to increase audience engagement.",
+//     image:
+//       "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1200&auto=format&fit=crop",
+//   },
 
-  {
-    icon: "fas fa-ad",
-    title: "Google & Meta Ads",
-    desc: "Targeted advertising campaigns using Google Ads and Meta Ads to increase reach, traffic, and conversions.",
-    image:
-      "https://images.unsplash.com/photo-1557838923-2985c318be48?q=80&w=1200&auto=format&fit=crop",
-  },
-];
+//   {
+//     icon: "fas fa-ad",
+//     title: "Google & Meta Ads",
+//     desc: "Targeted advertising campaigns using Google Ads and Meta Ads to increase reach, traffic, and conversions.",
+//     image:
+//       "https://images.unsplash.com/photo-1557838923-2985c318be48?q=80&w=1200&auto=format&fit=crop",
+//   },
+// ];
 
-export const TRAINING_PROGRAMS = [
-  {
-    icon: "fas fa-code",
-    title: "Web Development Training",
-    desc: "Hands-on training in modern website development using React.js, HTML, CSS, JavaScript, and responsive design.",
-    image:
-      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop",
-  },
+// export const TRAINING_PROGRAMS = [
+//   {
+//     icon: "fas fa-code",
+//     title: "Web Development Training",
+//     desc: "Hands-on training in modern website development using React.js, HTML, CSS, JavaScript, and responsive design.",
+//     image:
+//       "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop",
+//   },
 
-  {
-    icon: "fas fa-mobile-screen",
-    title: "Application Development",
-    desc: "Learn mobile and application development with real-world projects using Flutter, React Native, and Firebase.",
-    image:
-      "https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=1200&auto=format&fit=crop",
-  },
+//   {
+//     icon: "fas fa-mobile-screen",
+//     title: "Application Development",
+//     desc: "Learn mobile and application development with real-world projects using Flutter, React Native, and Firebase.",
+//     image:
+//       "https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=1200&auto=format&fit=crop",
+//   },
 
-  {
-    icon: "fas fa-robot",
-    title: "AI & Robotics Training",
-    desc: "Practical AI and robotics training with automation concepts, smart systems, and industrial applications.",
-    image:
-      "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=1200&auto=format&fit=crop",
-  },
+//   {
+//     icon: "fas fa-robot",
+//     title: "AI & Robotics Training",
+//     desc: "Practical AI and robotics training with automation concepts, smart systems, and industrial applications.",
+//     image:
+//       "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=1200&auto=format&fit=crop",
+//   },
 
-  {
-    icon: "fas fa-microchip",
-    title: "IoT & Embedded Systems",
-    desc: "Build IoT and embedded projects using Arduino, ESP32, Raspberry Pi, and real-time monitoring systems.",
-    image:
-      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop",
-  },
+//   {
+//     icon: "fas fa-microchip",
+//     title: "IoT & Embedded Systems",
+//     desc: "Build IoT and embedded projects using Arduino, ESP32, Raspberry Pi, and real-time monitoring systems.",
+//     image:
+//       "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop",
+//   },
 
-  {
-    icon: "fas fa-industry",
-    title: "Industrial Automation",
-    desc: "Industrial automation training covering PLC, HMI, SCADA, sensors, and smart manufacturing systems.",
-    image:
-      "https://images.unsplash.com/photo-1567789884554-0b844b597180?q=80&w=1200&auto=format&fit=crop",
-  },
+//   {
+//     icon: "fas fa-industry",
+//     title: "Industrial Automation",
+//     desc: "Industrial automation training covering PLC, HMI, SCADA, sensors, and smart manufacturing systems.",
+//     image:
+//       "https://images.unsplash.com/photo-1567789884554-0b844b597180?q=80&w=1200&auto=format&fit=crop",
+//   },
 
-  {
-    icon: "fas fa-user-graduate",
-    title: "Internship & Mentorship",
-    desc: "Industry-focused internship and mentorship programs designed to improve practical skills and career growth.",
-    image:
-      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop",
-  },
-];
+//   {
+//     icon: "fas fa-user-graduate",
+//     title: "Internship & Mentorship",
+//     desc: "Industry-focused internship and mentorship programs designed to improve practical skills and career growth.",
+//     image:
+//       "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop",
+//   },
+// ];
 export const CLIENTS = [
   {
     name: "Local Business Teams",
