@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-// import ayushImage from "../assets/team/ayush.png";
-// import khushiImage from "../assets/team/khushi.png";
-// import sachinImage from "../assets/team/sachin.png";
+import ayushImage from "../assets/team/ ayush.png";
+import khushiImage from "../assets/team/ khushi.png";
+import sachinImage from "../assets/team/ sachin.png";
 
 const ABOUT_POINTS = [
   "Delivering innovative digital and automation solutions tailored to modern business needs.",
@@ -29,7 +29,7 @@ const VALUES = [
 
 const STATS = [
   { label: "Years of Excellence", value: "2+" },
-  { label: "Projects Delivered", value: "10+" },
+  { label: "Projects Delivered", value: "8+" },
   { label: "Happy Clients", value: "8+" },
   { label: "Team Members", value: "3+" },
 ];
@@ -38,23 +38,23 @@ const TEAM_MEMBERS = [
   {
     name: "Ayush Sharma",
     role: "Director",
-    // image: ayushImage,
+    image: ayushImage,
     icon: "fas fa-user-tie",
     desc: "Driven technology professional with a strong background in automation, IoT, robotics, and software development, dedicated to creating innovative and efficient solutions for modern businesses and industries.",
   },
   {
     name: "Khushi Sikarwar",
     role: "Chief Technology Officer",
-    // image: khushiImage,
+    image: khushiImage,
     icon: "fas fa-code",
     desc: "Technical expert with strong experience in software solutions, digital transformation, and strategic technology management. Skilled in web technologies, system planning, and innovative solution building.",
   },
   {
     name: "Sachin Talwar",
     role: "Industrial Automation Expert",
-    // image: sachinImage,
+    image: sachinImage,
     icon: "fas fa-cogs",
-    desc: "Industrial automation specialist with deep expertise in IoT, robotics, and manufacturing systems. Focused on implementing smart industrial solutions that optimize production processes.",
+    desc: "Technology innovator specializing in Full-Stack Development, Industrial Automation, IoT, and smart digital solutions. Experienced in delivering scalable technologies that enhance efficiency, innovation, and business growth.",
   },
 ];
 
@@ -85,7 +85,7 @@ export default function AboutPage() {
 
   const miniStats = [
     { value: "2+", label: "Years Active", icon: "fas fa-calendar", color: "#0fb7c5" },
-    { value: "10+", label: "Projects Done", icon: "fas fa-check-circle", color: "#10b981" },
+    { value: "8+", label: "Projects Done", icon: "fas fa-check-circle", color: "#10b981" },
     { value: "8+", label: "Happy Clients", icon: "fas fa-users", color: "#f59e0b" },
     { value: "3", label: "Expert Members", icon: "fas fa-user-tie", color: "#8b5cf6" },
   ];
@@ -96,7 +96,7 @@ export default function AboutPage() {
       {/* ═══════════════════════════════════════
           HERO SECTION
       ═══════════════════════════════════════ */}
-      <section className="relative py-20 px-6 bg-gradient-to-b from-[#1a1f2e] to-[#0f1419] border-b-2 border-[#0fb7c5]">
+      <section className="relative py-20 px-6 bg-gradient-to-b from-[#1a1f2e] to-[#0f1419] border-b border-[#0fb7c5]/40">
         <div className="mx-auto max-w-6xl">
           {/* Back Button */}
           <a
@@ -127,7 +127,7 @@ export default function AboutPage() {
             <div className="grid grid-cols-3 gap-6 mb-10 max-w-2xl mx-auto">
               {[
                 { value: "2+", label: "Years in Business" },
-                { value: "10+", label: "Projects Delivered" },
+                { value: "8+", label: "Projects Delivered" },
                 { value: "8+", label: "Happy Clients" },
               ].map((s) => (
                 <div key={s.label} className="text-center">
@@ -393,12 +393,11 @@ export default function AboutPage() {
             {TEAM_MEMBERS.map((member, index) => (
               <div 
                 key={index}
-                className="border-2 border-slate-700 rounded-2xl overflow-hidden bg-slate-800/50 hover:border-[#0fb7c5] hover:shadow-xl transition-all"
-              >
+className="border border-slate-700/50 rounded-2xl overflow-hidden bg-slate-800/50 hover:border-[#0fb7c5]/50 hover:shadow-lg transition-all duration-300"              >
                 {/* Image Container */}
                 <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-8 h-56 flex items-center justify-center hover:bg-gradient-to-br hover:from-[#0fb7c5]/10 hover:to-slate-900 transition-all">
                   <div className="relative">
-                    <div className="w-40 h-40 rounded-full border-4 border-[#0fb7c5] overflow-hidden shadow-lg">
+                    <div className="w-40 h-40 rounded-full border-1 border-[#0fb7c5] overflow-hidden shadow-lg">
                       <img
                         src={member.image}
                         alt={member.name}
