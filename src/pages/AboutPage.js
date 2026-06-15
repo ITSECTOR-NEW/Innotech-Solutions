@@ -371,10 +371,10 @@ export default function AboutPage() {
       {/* ═══════════════════════════════════════
           TEAM SECTION
       ═══════════════════════════════════════ */}
-      <section className="py-20 px-6 bg-slate-900/50">
-        <div className="mx-auto max-w-6xl">
+      {/* <section className="py-20 px-6 bg-slate-900/50">
+        <div className="mx-auto max-w-6xl"> */}
           {/* Section Header */}
-          <div className="text-center mb-16 max-w-3xl mx-auto">
+          {/* <div className="text-center mb-16 max-w-3xl mx-auto">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#0fb7c5]/10 border border-[#0fb7c5]/30 text-[#0fb7c5] text-xs font-semibold uppercase tracking-wide mb-6">
               <span className="w-1.5 h-1.5 rounded-full bg-[#0fb7c5]"></span>
               Our Leadership
@@ -386,16 +386,16 @@ export default function AboutPage() {
             <p className="text-slate-300 leading-relaxed">
               Visionary leaders driving innovation and excellence in every project we undertake
             </p>
-          </div>
+          </div> */}
 
           {/* Team Members Grid - 3 Columns */}
-          <div className="grid md:grid-cols-3 gap-8">
+          {/* <div className="grid md:grid-cols-3 gap-8">
             {TEAM_MEMBERS.map((member, index) => (
-              <div 
-                key={index}
-className="border border-slate-700/50 rounded-2xl overflow-hidden bg-slate-800/50 hover:border-[#0fb7c5]/50 hover:shadow-lg transition-all duration-300"              >
+              <div  */}
+                {/* key={index} */}
+{/* className="border border-slate-700/50 rounded-2xl overflow-hidden bg-slate-800/50 hover:border-[#0fb7c5]/50 hover:shadow-lg transition-all duration-300"              > */}
                 {/* Image Container */}
-                <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-8 h-56 flex items-center justify-center hover:bg-gradient-to-br hover:from-[#0fb7c5]/10 hover:to-slate-900 transition-all">
+                {/* <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-8 h-56 flex items-center justify-center hover:bg-gradient-to-br hover:from-[#0fb7c5]/10 hover:to-slate-900 transition-all">
                   <div className="relative">
                     <div className="w-40 h-40 rounded-full border-1 border-[#0fb7c5] overflow-hidden shadow-lg">
                       <img
@@ -405,11 +405,11 @@ className="border border-slate-700/50 rounded-2xl overflow-hidden bg-slate-800/5
                       />
                     </div>
                   </div>
-                </div>
+                </div> */}
 
                 {/* Info Container */}
-                <div className="p-6 text-center">
-                  <p className="text-xs font-bold uppercase tracking-widest text-[#0fb7c5] mb-2">
+                {/* <div className="p-6 text-center"> */}
+                  {/* <p className="text-xs font-bold uppercase tracking-widest text-[#0fb7c5] mb-2">
                     {member.role}
                   </p>
                   <h3 className="font-bold text-xl text-white mb-3">
@@ -417,10 +417,10 @@ className="border border-slate-700/50 rounded-2xl overflow-hidden bg-slate-800/5
                   </h3>
                   <p className="text-sm text-slate-300 leading-6 mb-6 min-h-24">
                     {member.desc}
-                  </p>
+                  </p> */}
 
                   {/* Social Links */}
-                  <div className="flex justify-center gap-4 pt-4 border-t border-slate-700">
+                  {/* <div className="flex justify-center gap-4 pt-4 border-t border-slate-700">
                     <a 
                       href="#"
                       className="w-10 h-10 rounded-full bg-[#0fb7c5]/10 hover:bg-[#0fb7c5] text-[#0fb7c5] hover:text-[#0f1419] flex items-center justify-center transition-all"
@@ -442,13 +442,13 @@ className="border border-slate-700/50 rounded-2xl overflow-hidden bg-slate-800/5
                     >
                       <i className="fab fa-twitter text-sm"></i>
                     </a>
-                  </div>
-                </div>
+                  </div> */}
+                {/* </div>
               </div>
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ═══════════════════════════════════════
           BOTTOM CTA
