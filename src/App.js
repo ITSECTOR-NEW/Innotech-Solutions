@@ -129,7 +129,7 @@ export default function App() {
 
           {/* Whatsapp Icon */}
               <a
-              href="https://wa.me/919109470875"             target="_blank"
+              href="https://wa.me/0000000000"             target="_blank"
               rel="noopener noreferrer"
               className="fixed bottom-24 right-7 z-50 group"
             >
