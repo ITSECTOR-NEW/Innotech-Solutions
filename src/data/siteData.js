@@ -47,15 +47,15 @@ export const NAV_LINKS = [
           href: "/services/industrial-internet-of-things",
         },
 
-        {
-          label: "AI & Coding Training for Schools",
-          href: "/services/ai-coding-training-schools",
-        },
+        // {
+        //   label: "AI & Coding Training for Schools",
+        //   href: "/services/ai-coding-training-schools",
+        // },
 
-        {
-          label: "Business Automation Solutions",
-          href: "/services/business-automation-solutions",
-        },
+        // {
+        //   label: "Business Automation Solutions",
+        //   href: "/services/business-automation-solutions",
+        // },
       ],
     },
 
@@ -118,22 +118,22 @@ export const SERVICES = [
     gradient: "from-cyan-400 to-green-500",
     detailPath: "/services/industrial-internet-of-things",
   },
-  {
-    icon: "fas fa-graduation-cap",
-    title: "AI & Coding Training for Schools",
-    desc: "Practical AI, coding, robotics, and project-based technology training for schools, colleges, and student innovation programs.",
-    tags: ["Schools", "Colleges", "Training Centers"],
-    gradient: "from-pink-500 to-purple-600",
-    detailPath: "/services/ai-coding-training-schools",
-  },
-  {
-    icon: "fas fa-gears",
-    title: "Business Automation Solutions",
-    desc: "Workflow automation, custom dashboards, reporting systems, CRM tools, and internal software that reduce manual business work.",
-    tags: ["SMEs", "Growing Businesses", "Enterprises"],
-    gradient: "from-orange-400 to-green-500",
-    detailPath: "/services/business-automation-solutions",
-  },
+  // {
+  //   icon: "fas fa-graduation-cap",
+  //   title: "AI & Coding Training for Schools",
+  //   desc: "Practical AI, coding, robotics, and project-based technology training for schools, colleges, and student innovation programs.",
+  //   tags: ["Schools", "Colleges", "Training Centers"],
+  //   gradient: "from-pink-500 to-purple-600",
+  //   detailPath: "/services/ai-coding-training-schools",
+  // },
+  // {
+  //   icon: "fas fa-gears",
+  //   title: "Business Automation Solutions",
+  //   desc: "Workflow automation, custom dashboards, reporting systems, CRM tools, and internal software that reduce manual business work.",
+  //   tags: ["SMEs", "Growing Businesses", "Enterprises"],
+  //   gradient: "from-orange-400 to-green-500",
+  //   detailPath: "/services/business-automation-solutions",
+  // },
 ];
 
 export const WHY_CHOOSE_US = [
@@ -326,345 +326,704 @@ export const WHY_CHOOSE_US = [
 
 // AI Service Page Content
 
+// AI Services Page Content
 export const AI_SERVICE_PAGES = {
-  "ai-services": {
-    eyebrow: "AI Services",
-    title: "Practical AI Solutions For Modern Work",
-    subtitle:
-      "We provide AI solutions across business, healthcare, education, support, analytics, documents, and internal operations from one clear service page.",
-    heroImage:
-      "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1600&auto=format&fit=crop",
-    introTitle: "AI Solutions Built Around",
-    introAccent: " Your Workflow",
-    intro:
-      "AI works best when it is connected to clear business problems. We study your operations, customer journeys, data sources, and team needs to create useful AI systems.",
-    introSecond:
-      "Instead of making separate pages for every industry, we keep AI Services as one complete offering and explain where we can apply AI for your organization.",
-    introImage:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1600&auto=format&fit=crop",
-    points: [
-      "AI solutions for healthcare, education, operations, and customer support.",
-      "Business process mapping, data readiness, and implementation planning.",
-      "AI assistants, document intelligence, analytics, and reporting tools.",
-      "Custom AI features integrated into websites, apps, and dashboards.",
+  eyebrow: "AI Services",
+  title: "Practical AI Solutions For Modern Work",
+  subtitle:
+    "We provide AI solutions across business, healthcare, education, support, analytics, documents, and internal operations from one clear service page.",
+  heroImage:
+    "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1600&auto=format&fit=crop",
+  introTitle: "AI Solutions Built Around",
+  introAccent: " Your Workflow",
+  intro:
+    "AI works best when it is connected to clear business problems. We study your operations, customer journeys, data sources, and team needs to create useful AI systems.",
+  introSecond:
+    "Instead of making separate pages for every industry, we keep AI Services as one complete offering and explain where we can apply AI for your organization.",
+  introImage:
+    "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1600&auto=format&fit=crop",
+  points: [
+    "AI solutions for healthcare, education, operations, and customer support.",
+    "Business process mapping, data readiness, and implementation planning.",
+    "AI assistants, document intelligence, analytics, and reporting tools.",
+    "Custom AI features integrated into websites, apps, and dashboards.",
+  ],
+  servicesTitle: "Where We Provide AI",
+  servicesIntro:
+    "One AI service, multiple practical fields of application based on your business needs.",
+  services: [
+    {
+      icon: "fas fa-heart-pulse",
+      title: "Healthcare AI",
+      desc: "Patient support assistants, appointment workflows, report summaries, admin dashboards, and healthcare operations automation.",
+      image:
+        "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=1200&auto=format&fit=crop",
+    },
+    {
+      icon: "fas fa-industry",
+      title: "Business & Industrial AI",
+      desc: "Predictive insights, production analytics, anomaly alerts, quality support, and operational decision dashboards.",
+      image:
+        "https://images.unsplash.com/photo-1565008447742-97f6f38c985c?q=80&w=1200&auto=format&fit=crop",
+    },
+    {
+      icon: "fas fa-comments",
+      title: "Customer Support AI",
+      desc: "Website assistants, inquiry handling, lead qualification, FAQ support, and guided customer service workflows.",
+      image:
+        "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?q=80&w=1200&auto=format&fit=crop",
+    },
+    {
+      icon: "fas fa-file-lines",
+      title: "Document Intelligence",
+      desc: "AI tools for summarizing, extracting, classifying, and routing reports, forms, invoices, and internal documents.",
+      image:
+        "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1200&auto=format&fit=crop",
+    },
+    {
+      icon: "fas fa-chart-line",
+      title: "AI Analytics",
+      desc: "Dashboards, trend analysis, forecasting, KPI insights, and reporting systems that help teams make faster decisions.",
+      image:
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop",
+    },
+    {
+      icon: "fas fa-user-gear",
+      title: "Internal AI Assistants",
+      desc: "Private AI tools that help teams search knowledge, draft responses, prepare reports, and complete repetitive work.",
+      image:
+        "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop",
+    },
+  ],
+  whyTitle: "Why Choose Our AI Services?",
+  whyIntro:
+    "We focus on clear business outcomes, not AI buzzwords. Every AI feature is planned around the workflow it needs to improve.",
+  whyImage:
+    "https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=1600&auto=format&fit=crop",
+  whyPoints: [
+    "One complete AI service for multiple fields.",
+    "Custom AI features for your website, app, or dashboard.",
+    "Healthcare, education, business, and operational AI use cases.",
+    "Practical data and workflow planning before development.",
+    "Privacy-aware and role-based implementation approach.",
+    "Scalable architecture for future AI expansion.",
+  ],
+};
+
+// AI & Coding Training for Schools Page Content
+export const AI_CODING_TRAINING_PAGE = {
+  eyebrow: "AI & Coding Training for Schools",
+  title: "Future-Ready AI And Coding Programs",
+  subtitle:
+    "We provide practical AI, coding, robotics, and technology training programs for schools, colleges, and student innovation labs.",
+  heroImage:
+    "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1600&auto=format&fit=crop",
+  introTitle: "Practical Learning For",
+  introAccent: " Future Skills",
+  intro:
+    "Students learn best when technology is hands-on. Our programs introduce AI, coding, robotics, web basics, app concepts, and problem-solving through guided projects.",
+  introSecond:
+    "We design workshops and training modules for school levels, college batches, innovation clubs, and career-oriented technology programs.",
+  introImage:
+    "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1600&auto=format&fit=crop",
+  points: [
+    "AI awareness, prompt basics, and real-world AI use cases.",
+    "Coding fundamentals through practical student projects.",
+    "Robotics, IoT, and automation-based learning modules.",
+    "Workshops for schools, colleges, clubs, and innovation labs.",
+  ],
+  servicesTitle: "Training Programs",
+  servicesIntro:
+    "Structured training options for institutions that want students to learn modern technology with practical exposure.",
+  services: [
+    {
+      icon: "fas fa-brain",
+      title: "AI Basics For Students",
+      desc: "Introductory AI sessions covering everyday AI, responsible usage, prompts, tools, and practical classroom activities.",
+      image:
+        "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1200&auto=format&fit=crop",
+    },
+    {
+      icon: "fas fa-code",
+      title: "Coding Workshops",
+      desc: "Hands-on coding sessions with HTML, CSS, JavaScript, Python basics, logic building, and mini projects.",
+      image:
+        "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop",
+    },
+    {
+      icon: "fas fa-robot",
+      title: "Robotics & IoT Projects",
+      desc: "Project-based learning with sensors, controllers, simple robotics, automation ideas, and connected devices.",
+      image:
+        "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=1200&auto=format&fit=crop",
+    },
+    {
+      icon: "fas fa-laptop-code",
+      title: "Web & App Foundations",
+      desc: "Basic training in website structure, app thinking, UI flow, and how digital products are planned and built.",
+      image:
+        "https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=1200&auto=format&fit=crop",
+    },
+    {
+      icon: "fas fa-lightbulb",
+      title: "Innovation Lab Support",
+      desc: "Support for school technology clubs, project mentoring, lab activities, and student innovation showcases.",
+      image:
+        "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop",
+    },
+    {
+      icon: "fas fa-user-graduate",
+      title: "Career Awareness Sessions",
+      desc: "Guidance sessions on technology careers, AI skills, coding paths, project portfolios, and future opportunities.",
+      image:
+        "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?q=80&w=1200&auto=format&fit=crop",
+    },
+  ],
+  whyTitle: "Why Choose Our Training Programs?",
+  whyIntro:
+    "We make modern technology easier for students to understand through projects, simple explanations, and practical classroom delivery.",
+  whyImage:
+    "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1600&auto=format&fit=crop",
+  whyPoints: [
+    "Hands-on activities instead of only theory.",
+    "Programs for schools, colleges, and student clubs.",
+    "AI, coding, robotics, IoT, and web foundations.",
+    "Project-based learning for better engagement.",
+    "Flexible workshop and training formats.",
+    "Mentorship for student projects and innovation events.",
+  ],
+};
+
+// Business Automation Page Content
+export const BUSINESS_AUTOMATION_PAGE = {
+  eyebrow: "Business Automation Solutions",
+  title: "Automate Repetitive Business Work",
+  subtitle:
+    "We build custom automation, dashboards, reporting tools, CRM workflows, and internal systems that help teams save time and work with clarity.",
+  heroImage:
+    "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1600&auto=format&fit=crop",
+  introTitle: "Simplify Operations With",
+  introAccent: " Smart Systems",
+  intro:
+    "Many business teams lose time in repeated manual tasks, scattered spreadsheets, follow-ups, reports, and disconnected tools.",
+  introSecond:
+    "We create practical automation systems that connect your forms, dashboards, notifications, customer records, reports, and internal workflows.",
+  introImage:
+    "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1600&auto=format&fit=crop",
+  points: [
+    "Custom dashboards for operations, sales, and reporting.",
+    "Workflow automation for repetitive team tasks.",
+    "CRM, lead, follow-up, and customer management tools.",
+    "Role-based internal systems for daily business work.",
+  ],
+  servicesTitle: "Automation Services",
+  servicesIntro:
+    "Business automation solutions designed around your current workflow and growth needs.",
+  services: [
+    {
+      icon: "fas fa-chart-pie",
+      title: "Business Dashboards",
+      desc: "Custom dashboards for KPIs, sales activity, operations, tasks, leads, reports, and management visibility.",
+      image:
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop",
+    },
+    {
+      icon: "fas fa-filter-circle-dollar",
+      title: "Lead Management Systems",
+      desc: "Lead capture, qualification, follow-up tracking, customer notes, reminders, and simple CRM workflows.",
+      image:
+        "https://images.unsplash.com/photo-1556740749-887f6717d7e4?q=80&w=1200&auto=format&fit=crop",
+    },
+    {
+      icon: "fas fa-file-lines",
+      title: "Report Automation",
+      desc: "Automated reports from forms, sheets, databases, and internal workflows so teams can reduce manual reporting work.",
+      image:
+        "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1200&auto=format&fit=crop",
+    },
+    {
+      icon: "fas fa-gears",
+      title: "Workflow Automation",
+      desc: "Connect approvals, notifications, assignments, forms, spreadsheets, and dashboards into smoother workflows.",
+      image:
+        "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop",
+    },
+    {
+      icon: "fas fa-users-gear",
+      title: "Internal Team Portals",
+      desc: "Role-based portals for teams to manage tasks, records, customers, requests, approvals, and daily operations.",
+      image:
+        "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop",
+    },
+    {
+      icon: "fas fa-plug",
+      title: "Tool Integration",
+      desc: "Integrate websites, forms, databases, CRMs, spreadsheets, and notification tools into one reliable data flow.",
+      image:
+        "https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=1200&auto=format&fit=crop",
+    },
+  ],
+  whyTitle: "Why Choose Our Automation Solutions?",
+  whyIntro:
+    "We build practical systems that reduce manual work, improve visibility, and help teams operate with fewer disconnected tools.",
+  whyImage:
+    "https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=1600&auto=format&fit=crop",
+  whyPoints: [
+    "Custom workflows based on your real process.",
+    "Dashboards that make daily work easier to track.",
+    "Reduced manual reporting and repetitive tasks.",
+    "CRM and lead systems for growing teams.",
+    "Role-based access for internal business tools.",
+    "Integrations with websites, apps, sheets, and databases.",
+  ],
+};
+
+// Industrial IoT Page Content
+export const industrialIoT = {
+  // ---------- HERO ----------
+  eyebrow: "Industrial Internet Of Things",
+  title: "Manufacturing analytics and shop-floor automation",
+  subtitle:
+    "Connect your equipment, PLCs, and sensors into one Industrial IoT system. Automate factory operations, unlock real-time visibility, and turn shop-floor data into action.",
+  ctaLabel: "GET STARTED",
+  heroImage:
+  "https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=1600",
+  heroOverlayImages: [
+    "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=400&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1581094288338-2314dddb7ece?q=80&w=400&auto=format&fit=crop",
+  ],
+
+  // // ---------- TRUSTED BY STRIP ----------
+  // trustedByLabel: "Trusted by",
+  // trustedByLogos: [
+  //   { name: "Orbex Systems" },
+  //   { name: "Velatrix" },
+  //   { name: "Northgate Industries" },
+  //   { name: "Unilume Manufacturing" },
+  //   { name: "Ferro Dynamics" },
+  // ],
+
+  // ---------- WHAT / WHY / HOW TABS ----------
+  infoTabs: {
+    tabs: ["What", "Why", "How"],
+    what: [
+      {
+        question: "What is an Industrial IoT solution?",
+        answer:
+          "An Industrial IoT (IIoT) solution monitors, collects, and analyzes real-time data from your equipment, turning raw sensor signals into meaningful shop-floor insights.",
+      },
+      {
+        question: "What is Industry 4.0?",
+        answer:
+          "Industry 4.0 is the integration of connected sensors, automation, and intelligent software to modernize manufacturing and industrial processes end to end.",
+      },
     ],
-    servicesTitle: "Where We Provide AI",
-    servicesIntro:
-      "One AI service, multiple practical fields of application based on your business needs.",
-    services: [
-      {
-        icon: "fas fa-heart-pulse",
-        title: "Healthcare AI",
-        desc: "Patient support assistants, appointment workflows, report summaries, admin dashboards, and healthcare operations automation.",
-        image:
-          "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=1200&auto=format&fit=crop",
-      },
-      {
-        icon: "fas fa-industry",
-        title: "Business & Industrial AI",
-        desc: "Predictive insights, production analytics, anomaly alerts, quality support, and operational decision dashboards.",
-        image:
-          "https://images.unsplash.com/photo-1565008447742-97f6f38c985c?q=80&w=1200&auto=format&fit=crop",
-      },
-      {
-        icon: "fas fa-comments",
-        title: "Customer Support AI",
-        desc: "Website assistants, inquiry handling, lead qualification, FAQ support, and guided customer service workflows.",
-        image:
-          "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?q=80&w=1200&auto=format&fit=crop",
-      },
-      {
-        icon: "fas fa-file-lines",
-        title: "Document Intelligence",
-        desc: "AI tools for summarizing, extracting, classifying, and routing reports, forms, invoices, and internal documents.",
-        image:
-          "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1200&auto=format&fit=crop",
-      },
-      {
-        icon: "fas fa-chart-line",
-        title: "AI Analytics",
-        desc: "Dashboards, trend analysis, forecasting, KPI insights, and reporting systems that help teams make faster decisions.",
-        image:
-          "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop",
-      },
-      {
-        icon: "fas fa-user-gear",
-        title: "Internal AI Assistants",
-        desc: "Private AI tools that help teams search knowledge, draft responses, prepare reports, and complete repetitive work.",
-        image:
-          "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop",
-      },
+    why: {
+      heading: "Why do you need IIoT?",
+      subheading: "IIoT is built to scale with your operations. It helps teams:",
+      leftPoints: [
+        "Turn real-time machine data into decisions",
+        "Spot issues early and prevent costly downtime",
+        "Drive continuous improvement across every line",
+      ],
+      rightPoints: [
+        "Apply shop-floor expertise at scale",
+        "Improve efficiency while reducing operating costs",
+      ],
+    },
+    how: {
+      heading: "How do I get started?",
+      steps: [
+        "Share your requirements with our team",
+        "We assess your site, machines, and existing setup",
+        "We walk you through a tailored demo of the platform",
+        "We propose a solution built around your goals",
+      ],
+      ctaLabel: "REQUEST DEMO",
+    },
+  },
+
+// ---------- SOLUTIONS WE DELIVER ----------
+manufacturingTypesTitle: "Solutions We Deliver",
+
+manufacturingTypesIntro:
+  "We help manufacturers collect machine data, connect industrial equipment, and build real-time dashboards for better visibility and decision-making.",
+
+manufacturingTypes: [
+  {
+    title: "Industrial Data Collection",
+    image:
+      "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=900&auto=format&fit=crop",
+    items: [
+      "PLC Data Acquisition",
+      "Machine Monitoring",
+      "Industrial IoT Integration",
+      "Modbus Communication",
+      "Profinet Connectivity",
+      "Data Logging",
+      "Real-Time Data Collection",
+      "Gateway Integration",
     ],
-    whyTitle: "Why Choose Our AI Services?",
-    whyIntro:
-      "We focus on clear business outcomes, not AI buzzwords. Every AI feature is planned around the workflow it needs to improve.",
-    whyImage:
-      "https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=1600&auto=format&fit=crop",
-    whyPoints: [
-      "One complete AI service for multiple fields.",
-      "Custom AI features for your website, app, or dashboard.",
-      "Healthcare, education, business, and operational AI use cases.",
-      "Practical data and workflow planning before development.",
-      "Privacy-aware and role-based implementation approach.",
-      "Scalable architecture for future AI expansion.",
+  },
+  {
+    title: "Industrial Dashboards & Analytics",
+    image:
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&auto=format&fit=crop",
+    items: [
+      "Production Dashboards",
+      "OEE Dashboards",
+      "Machine Performance Analytics",
+      "Downtime Monitoring",
+      "Live KPI Tracking",
+      "Cloud Dashboards",
+      "Custom Reporting",
+      "Industry 4.0 Visualization",
+    ],
+  },
+],
+  // ---------- PLATFORM SECTION: COLLECT / CONNECT / CUSTOMIZE ----------
+  platformTitle: "Inside the IIoT platform",
+  platformSubtitle:
+    "A closer look at how data moves from your machines to meaningful action.",
+  platformTabs: [
+    {
+      key: "collect",
+      label: "Collect",
+      images: [
+        "https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=900&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1565008447742-97f6f38c985c?q=80&w=900&auto=format&fit=crop",
+      ],
+      items: [
+        {
+          title: "Connect seamlessly",
+          desc:
+            "Support for multiple brands and data-collection protocols across legacy and modern machines — scale from a few units to a few hundred.",
+        },
+        {
+          title: "Collect data from devices and controllers",
+          desc:
+            "Plug into PLC/SCADA systems, sensors, and gateways using MODBUS, OPC-UA, RTU, MTConnect, Profibus, Profinet, EtherNet/IP, and more.",
+        },
+        {
+          title: "Collect a range of data types",
+          desc:
+            "Monitor sensor values, machine status, alarms, overrides, load averages, speeds, temperatures, and diagnostic parameters.",
+        },
+        {
+          title: "High-frequency data collection",
+          desc:
+            "Capture real-time data at high frequency from CNC and precision controls, ready to feed machine-learning models.",
+        },
+        {
+          title: "Configure and manage sensors remotely",
+          desc:
+            "Integrate external sensors or connect older equipment via digital/analog I/O, and manage everything from one web interface.",
+        },
+      ],
+      brandsLabel: "Brands we support",
+      brands: ["Siemens", "Mitsubishi", "Schneider", "ABB", "Fanuc", "Mazak", "Hitachi", "Beckhoff", "Delta", "Allen Bradley"],
+      protocolsLabel: "Protocols we support",
+      protocols: ["MQTT", "OPC-UA", "Modbus", "Profinet", "Profibus", "BACnet", "CANbus", "EtherCAT", "SNMP", "CoAP", "MTConnect", "EtherNet/IP"],
+    },
+    {
+      key: "connect",
+      label: "Connect",
+      images: [
+        "https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=900&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?q=80&w=900&auto=format&fit=crop",
+      ],
+      items: [
+        {
+          title: "Edge computing",
+          desc:
+            "Run localized actions and data filtering at the edge — refine what's sent for analytics and push updates without a site visit.",
+        },
+        {
+          title: "Secure data aggregation",
+          desc:
+            "Bring data together from multiple sources on a secure, scalable infrastructure with built-in data management tools.",
+        },
+        {
+          title: "Telemetry and reporting",
+          desc:
+            "Sync equipment data for consistent reporting and AI-based analytics across sensor values, statuses, alarms, and loads.",
+        },
+        {
+          title: "Remote management",
+          desc:
+            "Manage and control machines remotely, applying changes from anywhere with a click — no site visit required.",
+        },
+        {
+          title: "Secure cloud integration and storage",
+          desc:
+            "Stream and store data securely from the edge to the cloud over HTTPS/MQTT for fast, scalable access.",
+        },
+      ],
+    },
+    {
+      key: "customize",
+      label: "Customize",
+      images: [
+        "https://images.unsplash.com/photo-1581094288338-2314dddb7ece?q=80&w=900&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=900&auto=format&fit=crop",
+      ],
+      items: [
+        {
+          title: "Integrate with other applications and APIs",
+          desc:
+            "Connect machine data to your digital factory via REST APIs — link to your CRM, ERP, BI tools, and more.",
+        },
+        {
+          title: "Create workflows",
+          desc:
+            "Build rule-based workflows on shop-floor data to trigger manual actions or automated system responses.",
+        },
+        {
+          title: "Real-time insights",
+          desc:
+            "Give technicians live and historical condition monitoring with color-coded alerts for preventative maintenance.",
+        },
+        {
+          title: "Integrate AI with analytics",
+          desc:
+            "Use performance reports to identify bottlenecks, assess OEE, and gain visibility into every production line.",
+        },
+        {
+          title: "Build your own IIoT solutions",
+          desc:
+            "Develop custom apps with your own UI and integrate them with third-party tools for quality control, inventory, and more.",
+        },
+      ],
+    },
+  ],
+
+  // ---------- 10 SHOP-FLOOR AUTOMATION CATEGORIES (TABS) ----------
+  automationTitle: "One platform for complete shop-floor automation",
+   automationCategories: [
+  {
+    key: "machine-monitoring",
+    label: "Machine Monitoring Dashboards",
+    heading: "Real-time machine performance visibility",
+    intro: "Monitor machine health, uptime, downtime, and production data from a centralized dashboard.",
+    image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=900",
+    items: [
+      { title: "Live Machine Status", desc: "Track running, idle, and fault conditions in real time." },
+      { title: "Downtime Analysis", desc: "Identify production losses and machine stoppages." },
+      { title: "Performance Monitoring", desc: "Measure output, cycle time, and machine efficiency." },
+      { title: "Remote Access", desc: "Monitor factory equipment from anywhere." },
     ],
   },
 
-
-  // AI and coding training program for student Page Content
-  "ai-coding-training-schools": {
-    eyebrow: "AI & Coding Training for Schools",
-    title: "Future-Ready AI And Coding Programs",
-    subtitle:
-      "We provide practical AI, coding, robotics, and technology training programs for schools, colleges, and student innovation labs.",
-    heroImage:
-      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1600&auto=format&fit=crop",
-    introTitle: "Practical Learning For",
-    introAccent: " Future Skills",
-    intro:
-      "Students learn best when technology is hands-on. Our programs introduce AI, coding, robotics, web basics, app concepts, and problem-solving through guided projects.",
-    introSecond:
-      "We design workshops and training modules for school levels, college batches, innovation clubs, and career-oriented technology programs.",
-    introImage:
-      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1600&auto=format&fit=crop",
-    points: [
-      "AI awareness, prompt basics, and real-world AI use cases.",
-      "Coding fundamentals through practical student projects.",
-      "Robotics, IoT, and automation-based learning modules.",
-      "Workshops for schools, colleges, clubs, and innovation labs.",
-    ],
-    servicesTitle: "Training Programs",
-    servicesIntro:
-      "Structured training options for institutions that want students to learn modern technology with practical exposure.",
-    services: [
-      {
-        icon: "fas fa-brain",
-        title: "AI Basics For Students",
-        desc: "Introductory AI sessions covering everyday AI, responsible usage, prompts, tools, and practical classroom activities.",
-        image:
-          "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1200&auto=format&fit=crop",
-      },
-      {
-        icon: "fas fa-code",
-        title: "Coding Workshops",
-        desc: "Hands-on coding sessions with HTML, CSS, JavaScript, Python basics, logic building, and mini projects.",
-        image:
-          "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop",
-      },
-      {
-        icon: "fas fa-robot",
-        title: "Robotics & IoT Projects",
-        desc: "Project-based learning with sensors, controllers, simple robotics, automation ideas, and connected devices.",
-        image:
-          "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=1200&auto=format&fit=crop",
-      },
-      {
-        icon: "fas fa-laptop-code",
-        title: "Web & App Foundations",
-        desc: "Basic training in website structure, app thinking, UI flow, and how digital products are planned and built.",
-        image:
-          "https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=1200&auto=format&fit=crop",
-      },
-      {
-        icon: "fas fa-lightbulb",
-        title: "Innovation Lab Support",
-        desc: "Support for school technology clubs, project mentoring, lab activities, and student innovation showcases.",
-        image:
-          "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop",
-      },
-      {
-        icon: "fas fa-user-graduate",
-        title: "Career Awareness Sessions",
-        desc: "Guidance sessions on technology careers, AI skills, coding paths, project portfolios, and future opportunities.",
-        image:
-          "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?q=80&w=1200&auto=format&fit=crop",
-      },
-    ],
-    whyTitle: "Why Choose Our Training Programs?",
-    whyIntro:
-      "We make modern technology easier for students to understand through projects, simple explanations, and practical classroom delivery.",
-    whyImage:
-      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1600&auto=format&fit=crop",
-    whyPoints: [
-      "Hands-on activities instead of only theory.",
-      "Programs for schools, colleges, and student clubs.",
-      "AI, coding, robotics, IoT, and web foundations.",
-      "Project-based learning for better engagement.",
-      "Flexible workshop and training formats.",
-      "Mentorship for student projects and innovation events.",
+  {
+    key: "production-monitoring",
+    label: "Production Monitoring Dashboards",
+    heading: "Complete shop-floor visibility",
+    intro: "Monitor production lines and improve operational efficiency.",
+    image: "https://images.unsplash.com/photo-1567789884554-0b844b597180?w=900",
+    items: [
+      { title: "Production Tracking", desc: "Monitor actual production against targets." },
+      { title: "Cycle Time Monitoring", desc: "Identify process bottlenecks quickly." },
+      { title: "Operator Performance", desc: "Track productivity and operational efficiency." },
+      { title: "Live Dashboards", desc: "Visualize production KPIs in real time." },
     ],
   },
 
-
-  //  Business Automation Page Content
-  "business-automation-solutions": {
-    eyebrow: "Business Automation Solutions",
-    title: "Automate Repetitive Business Work",
-    subtitle:
-      "We build custom automation, dashboards, reporting tools, CRM workflows, and internal systems that help teams save time and work with clarity.",
-    heroImage:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1600&auto=format&fit=crop",
-    introTitle: "Simplify Operations With",
-    introAccent: " Smart Systems",
-    intro:
-      "Many business teams lose time in repeated manual tasks, scattered spreadsheets, follow-ups, reports, and disconnected tools.",
-    introSecond:
-      "We create practical automation systems that connect your forms, dashboards, notifications, customer records, reports, and internal workflows.",
-    introImage:
-      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1600&auto=format&fit=crop",
-    points: [
-      "Custom dashboards for operations, sales, and reporting.",
-      "Workflow automation for repetitive team tasks.",
-      "CRM, lead, follow-up, and customer management tools.",
-      "Role-based internal systems for daily business work.",
-    ],
-    servicesTitle: "Automation Services",
-    servicesIntro:
-      "Business automation solutions designed around your current workflow and growth needs.",
-    services: [
-      {
-        icon: "fas fa-chart-pie",
-        title: "Business Dashboards",
-        desc: "Custom dashboards for KPIs, sales activity, operations, tasks, leads, reports, and management visibility.",
-        image:
-          "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop",
-      },
-      {
-        icon: "fas fa-filter-circle-dollar",
-        title: "Lead Management Systems",
-        desc: "Lead capture, qualification, follow-up tracking, customer notes, reminders, and simple CRM workflows.",
-        image:
-          "https://images.unsplash.com/photo-1556740749-887f6717d7e4?q=80&w=1200&auto=format&fit=crop",
-      },
-      {
-        icon: "fas fa-file-lines",
-        title: "Report Automation",
-        desc: "Automated reports from forms, sheets, databases, and internal workflows so teams can reduce manual reporting work.",
-        image:
-          "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1200&auto=format&fit=crop",
-      },
-      {
-        icon: "fas fa-gears",
-        title: "Workflow Automation",
-        desc: "Connect approvals, notifications, assignments, forms, spreadsheets, and dashboards into smoother workflows.",
-        image:
-          "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop",
-      },
-      {
-        icon: "fas fa-users-gear",
-        title: "Internal Team Portals",
-        desc: "Role-based portals for teams to manage tasks, records, customers, requests, approvals, and daily operations.",
-        image:
-          "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop",
-      },
-      {
-        icon: "fas fa-plug",
-        title: "Tool Integration",
-        desc: "Integrate websites, forms, databases, CRMs, spreadsheets, and notification tools into one reliable data flow.",
-        image:
-          "https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=1200&auto=format&fit=crop",
-      },
-    ],
-    whyTitle: "Why Choose Our Automation Solutions?",
-    whyIntro:
-      "We build practical systems that reduce manual work, improve visibility, and help teams operate with fewer disconnected tools.",
-    whyImage:
-      "https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=1600&auto=format&fit=crop",
-    whyPoints: [
-      "Custom workflows based on your real process.",
-      "Dashboards that make daily work easier to track.",
-      "Reduced manual reporting and repetitive tasks.",
-      "CRM and lead systems for growing teams.",
-      "Role-based access for internal business tools.",
-      "Integrations with websites, apps, sheets, and databases.",
+  {
+    key: "oee-dashboard",
+    label: "OEE Dashboard",
+    heading: "Improve equipment effectiveness",
+    intro: "Track availability, performance, and quality from one dashboard.",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900",
+    items: [
+      { title: "Availability Tracking", desc: "Measure machine uptime accurately." },
+      { title: "Performance Analysis", desc: "Monitor production efficiency continuously." },
+      { title: "Quality Monitoring", desc: "Track rejection and rework rates." },
+      { title: "OEE Reporting", desc: "Generate actionable production reports." },
     ],
   },
 
+  {
+    key: "asset-tracking",
+    label: "Asset & Tool Tracking Technology",
+    heading: "Know where your assets are",
+    intro: "Track tools, equipment, and critical assets across the plant.",
+    image: "https://images.unsplash.com/photo-1553413077-190dd305871c?w=900",
+    items: [
+      { title: "Tool Management", desc: "Monitor tool usage and availability." },
+      { title: "Asset Tracking", desc: "Track equipment location in real time." },
+      { title: "Inventory Visibility", desc: "Improve stock and spare management." },
+      { title: "Usage History", desc: "Analyze asset utilization trends." },
+    ],
+  },
 
-  //  Industrial IoT Page Content
-  "industrial-internet-of-things": {
-    eyebrow: "Industrial Internet of Things",
-    title: "Connected Industrial IoT Systems",
-    subtitle:
-      "We build IIoT solutions that connect machines, sensors, gateways, cloud dashboards, and alerts for real-time industrial visibility.",
-    heroImage:
-      "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1600&auto=format&fit=crop",
-    introTitle: "Connect Machines With",
-    introAccent: " Real-Time Data",
-    intro:
-      "Industrial Internet of Things helps teams monitor equipment, collect sensor data, track production, and identify issues before they become costly downtime.",
-    introSecond:
-      "We design practical IIoT systems with sensors, PLC connectivity, edge gateways, cloud dashboards, alerts, and analytics that fit your plant workflow.",
-    introImage:
-      "https://images.unsplash.com/photo-1565008447742-97f6f38c985c?q=80&w=1600&auto=format&fit=crop",
-    points: [
-      "Sensor, machine, PLC, and gateway connectivity.",
-      "Real-time dashboards for machine and production data.",
-      "Alerts for downtime, threshold breaches, and faults.",
-      "Cloud-ready data pipelines for analytics and reporting.",
+  {
+    key: "energy-monitoring",
+    label: "Energy Monitoring Dashboards",
+    heading: "Reduce energy costs",
+    intro: "Monitor power consumption and identify opportunities for savings.",
+    image: "https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=900",
+    items: [
+      { title: "Power Monitoring", desc: "Track energy usage across machines." },
+      { title: "Consumption Analysis", desc: "Identify energy-intensive operations." },
+      { title: "Cost Optimization", desc: "Reduce unnecessary energy expenses." },
+      { title: "Utility Reporting", desc: "Generate energy performance reports." },
     ],
-    servicesTitle: "Industrial IoT Services",
-    servicesIntro:
-      "Connected industrial systems for monitoring, automation visibility, asset tracking, energy management, and smarter operations.",
-    services: [
-      {
-        icon: "fas fa-microchip",
-        title: "Sensor Integration",
-        desc: "Connect temperature, vibration, pressure, energy, proximity, and other industrial sensors into a reliable data flow.",
-        image:
-          "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop",
-      },
-      {
-        icon: "fas fa-network-wired",
-        title: "Machine Connectivity",
-        desc: "Integrate machines, PLCs, controllers, and gateways using practical industrial communication patterns.",
-        image:
-          "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop",
-      },
-      {
-        icon: "fas fa-gauge-high",
-        title: "Live Monitoring Dashboards",
-        desc: "Dashboards for machine status, production metrics, downtime events, energy usage, and operational KPIs.",
-        image:
-          "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop",
-      },
-      {
-        icon: "fas fa-bell",
-        title: "Alerts & Notifications",
-        desc: "Instant alerts for abnormal readings, machine stoppages, fault conditions, and maintenance triggers.",
-        image:
-          "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop",
-      },
-      {
-        icon: "fas fa-boxes-stacked",
-        title: "Asset & Tool Tracking",
-        desc: "Track critical assets, tools, material movement, and inventory usage with connected monitoring systems.",
-        image:
-          "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=1200&auto=format&fit=crop",
-      },
-      {
-        icon: "fas fa-cloud-arrow-up",
-        title: "Edge & Cloud Pipelines",
-        desc: "Move industrial data from edge devices to cloud platforms for analytics, reports, and future AI use cases.",
-        image:
-          "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1200&auto=format&fit=crop",
-      },
+  },
+
+  {
+    key: "industry4",
+    label: "Industry 4.0 Integration",
+    heading: "Connect machines to the cloud",
+    intro: "Enable smart factory transformation using Industrial IoT technologies.",
+    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=900",
+    items: [
+      { title: "PLC Integration", desc: "Connect Siemens, Mitsubishi, ABB and other PLCs." },
+      { title: "IoT Gateways", desc: "Collect and transfer machine data securely." },
+      { title: "Cloud Dashboards", desc: "Access production data anywhere." },
+      { title: "Custom Solutions", desc: "Build Industry 4.0 systems tailored to your plant." },
     ],
-    whyTitle: "Why Choose Our Industrial IoT?",
-    whyIntro:
-      "We build IIoT systems that are practical for real industrial environments, easy for teams to monitor, and ready to scale as operations grow.",
-    whyImage:
-      "https://images.unsplash.com/photo-1581092921461-eab10380b8e0?q=80&w=1600&auto=format&fit=crop",
-    whyPoints: [
-      "Real-time visibility across machines and processes.",
-      "Practical sensor and gateway planning.",
-      "Dashboards designed for plant teams and managers.",
-      "Alerts that help reduce downtime and response time.",
-      "Cloud-ready data for analytics and AI expansion.",
-      "Support for web, app, and industrial dashboard integration.",
-    ],
+  },
+],
+  // ---------- "DETERMINE CAUSE & EFFECT" FEATURE GRID ----------
+  // insightsTitle: "Make your machines and processes more efficient",
+  // insightsCtaLabel: "REQUEST DEMO",
+  // insightsSubtitle:
+  //   "Get clear visibility into machine, line, and building-level energy, health, usage, and performance — plus the maintenance and analytical insight to act on it.",
+  // insightsFeatures: [
+  //   {
+  //     title: "Seamless connectivity",
+  //     desc: "Connect any device, sensor, or machine regardless of brand or protocol for a smooth production process.",
+  //   },
+  //   {
+  //     title: "Workflows",
+  //     desc: "Automate the shop floor with triggers and actions based on machine or operator data.",
+  //   },
+  //   {
+  //     title: "Smart alerts and notifications",
+  //     desc: "Get notified of production shortfalls, rejection spikes, downtime, and setup changes.",
+  //   },
+  //   {
+  //     title: "Data security and privacy",
+  //     desc: "Keep your IIoT data and devices secure with built-in authentication and authorization.",
+  //   },
+  //   {
+  //     title: "Data acquisition",
+  //     desc: "Collect large-scale, real-time data from traditional and modern machines alike.",
+  //   },
+  //   {
+  //     title: "Intuitive data visualization",
+  //     desc: "Build custom dashboards with pre-built widgets for output, availability, and more.",
+  //   },
+  //   {
+  //     title: "Analytics and reporting",
+  //     desc: "Drill into performance, availability, and quality data to assess shop-floor OEE.",
+  //   },
+  //   {
+  //     title: "Data modeling",
+  //     desc: "Define how machine data should be processed and what actions it should trigger.",
+  //   },
+  //   {
+  //     title: "Business app integrations",
+  //     desc: "Connect ERP, billing, helpdesk, and other systems to streamline operations.",
+  //   },
+  //   {
+  //     title: "Mobile app",
+  //     desc: "Give your team a custom mobile experience for data-driven decisions on the floor.",
+  //   },
+  // ],
+
+  // ---------- BENEFITS GRID ----------
+  // benefitsTitle: "Get more out of your manufacturing operations",
+  // benefitsGroups: [
+  //   { heading: "Increase", items: ["Asset life cycle", "Machine efficiency", "Revenue"] },
+  //   { heading: "Improve", items: ["Operator retention", "Machine performance", "Product quality"] },
+  //   { heading: "Optimize", items: ["Machine utilization", "Maintenance cycles", "Production"] },
+  //   { heading: "Transform", items: ["Your business", "Manufacturing operations", "Workforce efficiency"] },
+  //   { heading: "Reduce", items: ["Downtime", "Energy consumption", "Maintenance & replacement costs"] },
+  // ],
+
+  // ---------- PARTNER PROGRAM ----------
+  // partnerProgram: {
+  //   eyebrow: "IIoT partner program",
+  //   title: "Envision, unite, prosper",
+  //   desc:
+  //     "A successful industrial transformation depends on a strong partner ecosystem. Our network brings together specialists who create real value for customers across discrete manufacturing.",
+  //   image:
+  //     "https://images.unsplash.com/photo-1581094288338-2314dddb7ece?q=80&w=1200&auto=format&fit=crop",
+  //   ctaLabel: "BECOME A PARTNER",
+  // },
+
+  // ---------- TESTIMONIALS ----------
+  // testimonialsTitle: "What our partners say",
+  // testimonials: [
+  //   {
+  //     quote:
+  //       "Being part of a forward-looking platform like this has let us put real effort into driving adoption across the industry. We see huge room for growth ahead.",
+  //     name: "Arvind Menon",
+  //     role: "CEO, Northgate Industries",
+  //   },
+  //   {
+  //     quote:
+  //       "This is a genuinely powerful platform for building custom IoT solutions fast. It's shortened our time to market and opened doors across multiple verticals.",
+  //     name: "Daniel Reyes",
+  //     role: "CEO, Ferro Dynamics",
+  //   },
+  // ],
+
+  // ---------- FAQ ----------
+  faqTitle: "Frequently asked questions",
+  faqs: [
+    {
+      q: "What role does IIoT play in manufacturing?",
+      a: "IIoT connects devices and systems to improve efficiency, visibility, and decision-making through real-time data collection, analysis, and automation.",
+    },
+    {
+      q: "How is IoT changing the manufacturing industry?",
+      a: "It's improved asset utilization, workforce efficiency, predictive maintenance, quality control, and overall productivity across the sector.",
+    },
+    {
+      q: "What manufacturing challenges does IIoT solve?",
+      a: "From equipment reliability and inventory management to quality control, energy efficiency, and workforce planning — IIoT addresses challenges end to end.",
+    },
+    {
+      q: "What's the difference between IoT and IIoT?",
+      a: "IIoT is a subset of IoT focused specifically on manufacturing — connecting machines and industrial processes to boost efficiency and productivity.",
+    },
+    {
+      q: "Is this a platform or a packaged solution?",
+      a: "It's a platform — the foundation for building and customizing end-to-end solutions for your digital transformation goals.",
+    },
+    {
+      q: "Can it be retrofitted to existing infrastructure?",
+      a: "Yes — it's designed to integrate with the equipment and systems you already have.",
+    },
+    {
+      q: "How do I get started?",
+      a: "Reach out to our team. We'll assess your current setup, equipment, and sensors to recommend the right path forward.",
+    },
+    {
+      q: "How do I become a solution partner?",
+      a: "Fill out our partner enquiry form and our team will follow up to discuss next steps.",
+    },
+    {
+      q: "Who can join the partner program?",
+      a: "System integrators, resellers, hardware partners, implementation partners, MSPs, and solution providers are all welcome.",
+    },
+    {
+      q: "Can the solution be customized for my customers?",
+      a: "Yes — it's fully customizable and can be bundled with any hardware or third-party application.",
+    },
+  ],
+
+  // ---------- FINAL CTA ----------
+  finalCta: {
+    title: "Kickstart your industrial machine monitoring",
+    ctaLabel: "GET STARTED",
+    image:
+      "https://images.unsplash.com/photo-1581091870627-3b58a59a8e62?q=80&w=1200&auto=format&fit=crop",
   },
 };
+  
 
 //  Web Development Page Content
 export const Web_Development_Description = [

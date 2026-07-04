@@ -87,65 +87,48 @@ const [form, setForm] = useState({
     <section
       id="contact"
       className="relative overflow-hidden
-      bg-[#eef5ff] py-12 sm:py-16"
+      border-y border-white/[0.06]
+      bg-[#13181f] py-14 sm:py-20 lg:py-24"
     >
 
-      {/* Background Glow */}
-      <div
-        className="absolute left-0 top-0
-        h-[250px] w-[250px]
-        rounded-full bg-cyan-300/20
-        blur-[100px]"
-      />
+      {/* Ambient glows */}
+      <div className="pointer-events-none absolute left-0 top-0 h-[400px] w-[400px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-blue-600/10 blur-[140px]" />
+      <div className="pointer-events-none absolute bottom-0 right-0 h-[300px] w-[300px] translate-x-1/3 translate-y-1/3 rounded-full bg-cyan-500/8 blur-[120px]" />
 
-      <div
-        className="absolute bottom-0 right-0
-        h-[220px] w-[220px]
-        rounded-full bg-blue-300/20
-        blur-[100px]"
-      />
-
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
+      <div className="relative mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
 
         {/* Heading */}
         <div className="mx-auto mb-8 max-w-2xl text-center sm:mb-10">
 
-          <div
-            className="inline-flex items-center
-            gap-2 rounded-full
-            border border-blue-200
-            bg-gradient-to-r
-            from-blue-500 to-cyan-500
-            px-5 py-2 text-[11px]
-            font-semibold uppercase
-            tracking-[0.16em] text-white
-            shadow-md"
-          >
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/3059/3059518.png"
-              alt="Contact"
-              className="h-3.5 w-3.5"
-            />
-
-            Contact Us
+          <div className="mb-4 flex items-center justify-center gap-3">
+            <span className="h-px w-7 bg-[#3b82f6]" />
+            <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#3b82f6]">
+              Contact Us
+            </span>
+            <span className="h-px w-7 bg-[#3b82f6]" />
           </div>
 
           <h2
-            className="mt-4 font-display
-            text-2xl font-black
-            leading-tight text-slate-900
-            sm:text-4xl"
+            className="font-black leading-[1.1] text-white"
+            style={{ fontSize: "clamp(1.6rem, 3vw, 2.2rem)" }}
           >
-            Let's Build Something
-            <span className="gradient-text">
-              {" "}Amazing
+            Let's Build Something{" "}
+            <span
+              style={{
+                background: "linear-gradient(135deg, #60a5fa 0%, #22d3ee 100%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundClip: "text",
+              }}
+            >
+              Amazing
             </span>
           </h2>
 
           <p
             className="mx-auto mt-4
             max-w-xl text-sm
-            leading-7 text-slate-500"
+            leading-7 text-slate-400"
           >
             Connect with our team for modern
             digital solutions and business growth.
@@ -162,23 +145,24 @@ const [form, setForm] = useState({
           <div className="space-y-4">
 
             <div
-              className="rounded-2xl
-              bg-white p-5 shadow-sm
-              sm:rounded-[28px] sm:p-6"
+              className="rounded-3xl
+              border border-cyan-500/20
+              bg-[#0f141a] p-5
+              sm:p-6"
             >
 
               <h3
                 className="font-display
                 text-xl font-bold
                 sm:text-2xl
-                text-slate-900"
+                text-white"
               >
                 Get In Touch
               </h3>
 
               <p
                 className="mt-3 text-sm
-                leading-7 text-slate-500"
+                leading-7 text-slate-400"
               >
                 We help startups, industries,
                 and businesses build modern
@@ -197,24 +181,25 @@ const [form, setForm] = useState({
                     <div
                       className="flex h-10 w-10
                       flex-shrink-0 items-center
-                      justify-center rounded-xl
-                      border border-slate-200
-                      bg-slate-50
+                      justify-center rounded-2xl
+                      border border-cyan-500/20
+                      bg-cyan-500/5
                       sm:h-12 sm:w-12"
                     >
                       <img
                         src={item.image}
                         alt={item.title}
-                        className="h-5 w-5 object-contain opacity-80"
+                        className="h-5 w-5 object-contain opacity-90
+                        invert"
                       />
                     </div>
 
                     <div>
 
                       <p
-                        className="text-[11px]
-                        uppercase tracking-[0.16em]
-                        text-slate-400"
+                        className="text-[10px]
+                        font-bold uppercase tracking-[0.2em]
+                        text-slate-500"
                       >
                         {item.title}
                       </p>
@@ -222,7 +207,7 @@ const [form, setForm] = useState({
                       <h4
                         className="mt-1 text-sm
                         font-semibold leading-6
-                        text-slate-900"
+                        text-white"
                       >
                         {item.value}
                       </h4>
@@ -232,7 +217,7 @@ const [form, setForm] = useState({
               </div>
 
               {/* Social Icons */}
-              <div className="mt-6 flex flex-wrap gap-2.5 sm:mt-8 sm:gap-3">
+              <div className="mt-6 flex flex-wrap gap-2.5 border-t border-slate-800 pt-5 sm:mt-8 sm:gap-3">
 
                 {[
                   {
@@ -273,17 +258,17 @@ const [form, setForm] = useState({
                     className="flex h-10 w-10
                     items-center justify-center
                     rounded-xl border
-                    border-slate-200 bg-white
+                    border-cyan-500/20 bg-cyan-500/5
                     transition-all duration-300
                     hover:-translate-y-1
-                    hover:border-cyan-300
-                    hover:shadow-md
+                    hover:border-cyan-400/50
+                    hover:shadow-[0_0_15px_rgba(15,183,197,0.15)]
                     sm:h-11 sm:w-11"
                   >
                     <img
                       src={s.image}
                       alt="social"
-                      className="h-5 w-5 object-contain"
+                      className="h-5 w-5 object-contain invert"
                     />
                   </a>
                 ))}
@@ -293,23 +278,24 @@ const [form, setForm] = useState({
 
           {/* Right Form */}
           <div
-            className="rounded-2xl
-            bg-white p-5 shadow-sm
-            sm:rounded-[28px] sm:p-6"
+            className="rounded-3xl
+            border border-cyan-500/20
+            bg-[#0f141a] p-5
+            sm:p-6"
           >
 
             <h3
               className="font-display
               text-xl font-bold
               sm:text-2xl
-              text-slate-900"
+              text-white"
             >
               Send Message
             </h3>
 
             <p
               className="mt-2 text-sm
-              leading-7 text-slate-500"
+              leading-7 text-slate-400"
             >
               Fill the form and our team
               will contact you shortly.
@@ -383,9 +369,9 @@ const [form, setForm] = useState({
 
                   <label
                     className="mb-2 block
-                      text-[11px] uppercase
-                      tracking-[0.15em]
-                      text-slate-400"
+                      text-[10px] font-bold uppercase
+                      tracking-[0.2em]
+                      text-slate-500"
                   >
                     Service
                   </label>
@@ -394,13 +380,14 @@ const [form, setForm] = useState({
                     name="service"
                     value={form.service}
                     onChange={handleChange}
-                    className="w-full rounded-xl sm:rounded-2xl
-                      border border-slate-200
-                      bg-slate-50
+                    className="w-full rounded-xl
+                      border border-cyan-500/20
+                      bg-[#171c24]
                       px-4 py-3 text-sm
-                      text-slate-700 outline-none"
+                      text-slate-200 outline-none
+                      focus:border-cyan-400/50"
                   >
-                    <option value="">
+                    <option value="" className="bg-[#171c24]">
                       Select Service
                     </option>
 
@@ -415,6 +402,7 @@ const [form, setForm] = useState({
                       <option
                         key={s}
                         value={s}
+                        className="bg-[#171c24]"
                       >
                         {s}
                       </option>
@@ -428,9 +416,9 @@ const [form, setForm] = useState({
 
                 <label
                   className="mb-2 block
-                    text-[11px] uppercase
-                    tracking-[0.15em]
-                    text-slate-400"
+                    text-[10px] font-bold uppercase
+                    tracking-[0.2em]
+                    text-slate-500"
                 >
                   Your Message *
                 </label>
@@ -441,12 +429,13 @@ const [form, setForm] = useState({
                   value={form.message}
                   onChange={handleChange}
                   placeholder="Tell us about your project..."
-                  className="w-full rounded-xl sm:rounded-2xl
-                    border border-slate-200
-                    bg-slate-50
+                  className="w-full rounded-xl
+                    border border-cyan-500/20
+                    bg-[#171c24]
                     px-4 py-3 text-sm
-                    text-slate-700 outline-none
-                    resize-none"
+                    text-slate-200 outline-none
+                    resize-none
+                    focus:border-cyan-400/50"
                 />
               </div>
 
@@ -456,15 +445,14 @@ const [form, setForm] = useState({
                 disabled={loading}
                 className="flex w-full
                 items-center justify-center
-                gap-3 rounded-xl sm:rounded-2xl
-                bg-gradient-to-r
-                from-black to-black
-                py-3.5 font-display
-                text-sm font-bold
-                text-white shadow-md
-                transition-all duration-300
-                hover:-translate-y-1
-                isabled:opacity-70"
+                gap-2.5 rounded-full
+                bg-[#3b82f6]
+                py-3.5 text-sm
+                font-bold text-white
+                transition-all duration-200
+                hover:bg-[#2563eb]
+                hover:shadow-lg hover:shadow-blue-500/25
+                disabled:opacity-70"
               >
                 {/* <img
                   src="https://cdn-icons-png.flaticon.com/512/3682/3682321.png"
@@ -498,9 +486,9 @@ function InputField({
 
       <label
         className="mb-2 block
-        text-[11px] uppercase
-        tracking-[0.15em]
-        text-slate-400"
+        text-[10px] font-bold uppercase
+        tracking-[0.2em]
+        text-slate-500"
       >
         {label}
       </label>
@@ -511,11 +499,12 @@ function InputField({
         value={value}
         onChange={onChange}
         placeholder={placeholder}
-        className="w-full rounded-xl sm:rounded-2xl
-        border border-slate-200
-        bg-slate-50
+        className="w-full rounded-xl
+        border border-cyan-500/20
+        bg-[#171c24]
         px-4 py-3 text-sm
-        text-slate-700 outline-none"
+        text-slate-200 outline-none
+        focus:border-cyan-400/50"
       />
     </div>
   );

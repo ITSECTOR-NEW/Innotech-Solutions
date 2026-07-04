@@ -1,10 +1,9 @@
 import React from "react";
-import IoT from "../components/IoT/IoT";
-
+import IndustrialIoT from "../components/Industries/Industries";
 export default function IndustrialIoTPage() {
   return (
     <main>
-      <IoT />
+      <IndustrialIoT />
     </main>
   );
 }

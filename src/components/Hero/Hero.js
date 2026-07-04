@@ -18,14 +18,14 @@ const heroSlides = [
     title: "Industrial IoT & Smart Dashboards",
     desc: "Connecting machines, sensors, gateways, alerts, and dashboards so industrial teams can monitor operations in real time.",
   },
-
-  {
-    image:
-      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1600&auto=format&fit=crop",
-    title: "AI, Coding Training & Business Automation",
-    desc: "Providing practical AI services, student technology training, and automation systems for modern organizations.",
-  },
 ];
+//   {
+//     image:
+//       "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1600&auto=format&fit=crop",
+//     title: "AI, Coding Training & Business Automation",
+//     desc: "Providing practical AI services, student technology training, and automation systems for modern organizations.",
+//   },
+// ];
 export default function Hero() {
   const [activeSlide, setActiveSlide] = useState(0);
   const scrollTo = (href) => document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });

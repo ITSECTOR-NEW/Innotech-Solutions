@@ -63,68 +63,70 @@ export default function Services() {
         </div>
 
         {/* ── GRID: service cards ── */}
-        <div className="grid grid-cols-1 gap-px overflow-hidden rounded-2xl border border-white/[0.07] bg-white/[0.07] sm:grid-cols-2 lg:grid-cols-3">
-          {SERVICES.map((s, i) => {
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {SERVICES.map((s, i) => {
             const num = String(i + 1).padStart(2, "0");
             const isHovered = hovered === i;
 
             return (
               <a
-                key={s.title}
-                href={s.detailPath || "#"}
-                onMouseEnter={() => setHovered(i)}
-                onMouseLeave={() => setHovered(null)}
-                className="group flex flex-col gap-2.5 bg-[#13181f] p-5 transition-colors duration-200 hover:bg-[#1a2130] sm:p-6"
-              >
-                {/* Icon row */}
-                <div className="flex items-start justify-between">
-                  <div className="flex h-9 w-9 items-center justify-center rounded-xl border border-white/[0.08] bg-white/[0.04] transition-all duration-200 group-hover:border-blue-500/30 group-hover:bg-blue-500/10">
-                    <i
-                      className={`${s.icon} text-sm transition-colors duration-200`}
-                      style={{ color: isHovered ? "#60a5fa" : "#64748b" }}
-                    />
-                  </div>
-                  <span
-                    className="flex h-7 w-7 items-center justify-center rounded-full border transition-all duration-200"
-                    style={{
-                      borderColor: isHovered ? "rgba(96,165,250,0.4)" : "rgba(255,255,255,0.07)",
-                      background: isHovered ? "rgba(96,165,250,0.1)" : "transparent",
-                    }}
-                  >
-                    <i
-                      className="fas fa-arrow-right text-[9px] transition-colors duration-200"
-                      style={{ color: isHovered ? "#60a5fa" : "#475569" }}
-                    />
-                  </span>
-                </div>
+  key={s.title}
+  href={s.detailPath || "#"}
+  onMouseEnter={() => setHovered(i)}
+  onMouseLeave={() => setHovered(null)}
+  className="group flex flex-col rounded-3xl border border-cyan-500/20 bg-[#0f141a] p-8 transition-all duration-300 hover:border-cyan-400/50 hover:shadow-[0_0_25px_rgba(15,183,197,0.15)]"
+>
+  {/* Icon */}
+  <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-cyan-500/20 bg-cyan-500/5 mb-6">
+    <i
+      className={`${s.icon} text-xl`}
+      style={{ color: isHovered ? "#22d3ee" : "#60a5fa" }}
+    />
+  </div>
 
-                {/* Title */}
-                <h3
-                  className="text-sm font-bold leading-snug transition-colors duration-200 sm:text-[15px]"
-                  style={{ color: isHovered ? "#ffffff" : "#e2e8f0" }}
-                >
-                  {s.title}
-                </h3>
+  {/* Title */}
+  <h3 className="text-xl font-bold text-white mb-3">
+    {s.title}
+  </h3>
 
-                {/* Description */}
-                <p className="text-xs leading-relaxed text-slate-500 sm:text-sm">
-                  {s.desc}
-                </p>
+  {/* Description */}
+  <p className="text-slate-400 leading-relaxed mb-6">
+    {s.desc}
+  </p>
 
-                {/* Tags */}
-                {s.tags?.length > 0 && (
-                  <div className="mt-auto flex flex-wrap gap-1.5 pt-1">
-                    {s.tags.slice(0, 4).map((tag) => (
-                      <span
-                        key={tag}
-                        className="rounded-full border border-slate-800 px-2.5 py-0.5 text-[9px] font-semibold text-slate-500 transition-all duration-200 group-hover:border-blue-500/25 group-hover:text-slate-400 sm:text-[10px]"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                )}
-              </a>
+  {/* Tags */}
+  {s.tags?.length > 0 && (
+    <div className="flex flex-wrap gap-2 border-t border-slate-800 pt-5">
+      {s.tags.slice(0, 4).map((tag) => (
+        <span
+          key={tag}
+          className="px-3 py-1 rounded-full bg-slate-800 border border-slate-700 text-slate-300 text-xs"
+        >
+          {tag}
+        </span>
+      ))}
+    </div>
+  )}
+
+  {/* Button */}
+  <button
+    className="
+      mt-6
+      w-full
+      rounded-xl
+      bg-slate-800
+      py-3
+      text-sm
+      font-semibold
+      text-white
+      transition-all
+      duration-300
+      hover:bg-[#0fb7c5]
+    "
+  >
+    Learn More →
+  </button>
+</a>
             );
           })}
         </div>

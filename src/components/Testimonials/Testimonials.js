@@ -19,8 +19,15 @@ export default function Testimonials() {
     <section
       id="testimonials"
       className="relative overflow-hidden
-      bg-[#f8fafc] py-14 sm:py-24"
+      border-y border-white/10
+      bg-slate-900 py-14 sm:py-24"
     >
+
+      {/* Top accent line */}
+      <div
+        className="absolute top-0 left-0 right-0 h-px
+        bg-gradient-to-r from-transparent via-pink-500/60 to-transparent"
+      />
 
       {/* Background Shape */}
       <div
@@ -34,8 +41,18 @@ export default function Testimonials() {
         }}
       />
 
+      {/* Ambient glow accents */}
       <div
-        className="mx-auto grid max-w-7xl
+        className="pointer-events-none absolute -top-32 -right-32
+        h-96 w-96 rounded-full bg-pink-500/10 blur-3xl"
+      />
+      <div
+        className="pointer-events-none absolute bottom-0 left-1/4
+        h-72 w-72 rounded-full bg-violet-500/10 blur-3xl"
+      />
+
+      <div
+        className="relative mx-auto grid max-w-7xl
         gap-8 px-4 sm:gap-16 sm:px-6
         lg:grid-cols-[0.8fr_1.2fr]"
       >
@@ -46,7 +63,7 @@ export default function Testimonials() {
           <span
             className="text-sm font-semibold
             uppercase tracking-[0.18em]
-            text-pink-500"
+            text-pink-400"
           >
             Clients Testimonial
           </span>
@@ -54,7 +71,7 @@ export default function Testimonials() {
           <h2
             className="mt-5 font-display
             text-3xl font-bold
-            leading-tight text-slate-900
+            leading-tight text-white
             sm:text-5xl"
           >
             What Clients Say
@@ -65,7 +82,7 @@ export default function Testimonials() {
           <p
             className="mt-4 max-w-md
             text-sm leading-7
-            text-slate-500"
+            text-slate-400"
           >
             Real feedback from startups,
             industries, and educational
@@ -94,16 +111,17 @@ export default function Testimonials() {
 
                 <div
                   className="rounded-2xl
-                  bg-white p-5
+                  bg-slate-950 p-5
                   sm:rounded-[32px] sm:p-10
-                  shadow-sm"
+                  shadow-lg shadow-black/30
+                  ring-1 ring-white/10"
                 >
 
                   {/* Quote */}
                   <div
                     className="mb-3 text-4xl
                     sm:mb-6 sm:text-6xl
-                    leading-none text-pink-100"
+                    leading-none text-pink-500/20"
                   >
                     "
                   </div>
@@ -111,7 +129,7 @@ export default function Testimonials() {
                   {/* Description */}
                   <p
                     className="text-sm
-                    leading-7 text-slate-500
+                    leading-7 text-slate-300
                     sm:text-lg sm:leading-10"
                   >
                     {item.text}
@@ -130,7 +148,8 @@ export default function Testimonials() {
                       place-items-center rounded-full
                       bg-gradient-to-br ${item.grad}
                       text-lg font-bold text-white
-                      sm:h-20 sm:w-20 sm:text-2xl`}
+                      sm:h-20 sm:w-20 sm:text-2xl
+                      ring-2 ring-white/10`}
                     >
                       {item.initials}
                     </div>
@@ -142,7 +161,7 @@ export default function Testimonials() {
                         className="font-display
                         text-lg font-bold
                         sm:text-2xl
-                        text-slate-900"
+                        text-white"
                       >
                         {item.name}
                       </h3>
@@ -150,7 +169,7 @@ export default function Testimonials() {
                       <p
                         className="mt-1 text-sm
                         sm:text-base
-                        text-slate-500"
+                        text-slate-400"
                       >
                         {item.role}
                       </p>
@@ -189,7 +208,7 @@ export default function Testimonials() {
                 ${
                   active === index
                     ? "w-8 bg-pink-500"
-                    : "bg-pink-200"
+                    : "bg-slate-700"
                 }`}
               />
             ))}

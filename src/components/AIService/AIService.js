@@ -5,7 +5,10 @@ const TEAL = "#0fb7c5";
 const TEAL_GLOW = "rgba(15,183,197,0.12)";
 
 export default function AIService({ serviceKey }) {
-  const service = AI_SERVICE_PAGES[serviceKey] || AI_SERVICE_PAGES["ai-services"];
+  const service =
+    AI_SERVICE_PAGES[serviceKey] ||
+    AI_SERVICE_PAGES["ai-services"] ||
+    AI_SERVICE_PAGES;
   const [activeService, setActiveService] = useState(0);
   const [visibleSections, setVisibleSections] = useState({});
   const sectionRefs = useRef({});
